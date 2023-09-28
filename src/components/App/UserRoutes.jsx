@@ -1,30 +1,59 @@
 import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import PrivateRoute from './PrivateRoutes/PrivateRoutes';
 import PublicRoute from './PublicRoutes/PublicRoutes';
-import { Suspense, lazy } from 'react';
-import { RedirectTo } from './RedirectTo/RedirectTo';
+import RedirectTo from './RedirectTo/RedirectTo';
+import Loader from 'compomemts/Loader/Loader';
+import Home from 'page/Home/Home';
+
+const LogIn = lazy(() => import('../../page/LogIn/LogIn'));
+const Register = lazy(() => import('../../page/Register/Register'));
+const NotPage = lazy(() => import('../../page/NotPage/NotPage'));
+const Dasboard = lazy(() => import('../../page/Dashboard/Dasboard'));
+const Currency = lazy(() => import('../../page/Currency/Currency'));
+const Statistics = lazy(() => import('../../page/Statistics/Statistics'));
 
 const UserRoutes = () => {
   return (
-    <Suspense>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route element={<PublicRoute />}>
-          <Route path="/" />
+          <Route path="/" element={<LogIn />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/register" element={<Register />} />
         </Route>
-        <Route>
-          <Route path="/home" element={<PrivateRoute></PrivateRoute>} />
-          <Route path="/statistic" element={<PrivateRoute></PrivateRoute>} />
+        <Route element={<Dasboard />}>
+          <Route
+            path="/home"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/statistic"
+            element={
+              <PrivateRoute>
+                <Statistics />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/currency"
             element={
               <RedirectTo
-                component={<PrivateRoute></PrivateRoute>}
+                component={
+                  <PrivateRoute>
+                    <Currency />
+                  </PrivateRoute>
+                }
                 redirectTo="/home"
               />
             }
           />
         </Route>
-        <Route path="*" />
+        <Route path="*" element={<NotPage />} />
       </Routes>
     </Suspense>
   );

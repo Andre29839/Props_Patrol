@@ -1,11 +1,11 @@
 import React from 'react';
-import Routes from './UserRoutes';
+import UserRoutes from './UserRoutes';
 import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div>
-      <Routes />
+      <UserRoutes />
       <ToastContainer />
     </div>
   );
