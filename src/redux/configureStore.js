@@ -13,6 +13,7 @@ import {
 import { authReducer } from './registerReducers/registerSlice';
 import { transactionsReducer } from './transactionsRedusers/transactionsSlice';
 import { currencyReducer } from './currencyRedusers/currencySlice';
+import { globalReducer } from './globalReducers/globalSlice';
 
 const authPersistConfig = {
   key: 'user',
@@ -31,6 +32,7 @@ export const store = configureStore({
     auth: persistReducer(authPersistConfig, authReducer),
     transactions: transactionsReducer,
     currency: persistReducer(currencyPersistConfig, currencyReducer),
+    global: globalReducer,
   },
 
   middleware: getDefaultMiddleware =>
