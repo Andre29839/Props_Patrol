@@ -3,13 +3,13 @@ import { Suspense, lazy } from 'react';
 import PrivateRoute from './PrivateRoutes/PrivateRoutes';
 import PublicRoute from './PublicRoutes/PublicRoutes';
 import RedirectTo from './RedirectTo/RedirectTo';
-import Loader from 'compomemts/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import Home from 'page/Home/Home';
 
 const LogIn = lazy(() => import('../../page/LogIn/LogIn'));
 const Register = lazy(() => import('../../page/Register/Register'));
 const NotPage = lazy(() => import('../../page/NotPage/NotPage'));
-const Dasboard = lazy(() => import('../../page/Dashboard/Dasboard'));
+const Dashboard = lazy(() => import('../../page/Dashboard/Dashboard'));
 const Currency = lazy(() => import('../../page/Currency/Currency'));
 const Statistics = lazy(() => import('../../page/Statistics/Statistics'));
 
@@ -22,7 +22,7 @@ const UserRoutes = () => {
           <Route path="/login" element={<LogIn />} />
           <Route path="/register" element={<Register />} />
         </Route>
-        <Route element={<Dasboard />}>
+        <Route element={<Dashboard />}>
           <Route
             path="/home"
             element={
