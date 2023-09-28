@@ -1,7 +1,7 @@
-import React from 'react';
-
-const AddBtn = () => {
-  return <div>AddBtn</div>;
-};
-
-export default AddBtn;
+export default function AddBtn({ toggleModal, text, type }) {
+  return (
+    <button type={type} onClick={toggleModal} aria-label="open modal">
+      {text}
+    </button>
+  );
+}
