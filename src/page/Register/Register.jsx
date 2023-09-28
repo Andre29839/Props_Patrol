@@ -1,7 +1,12 @@
-import React from 'react';
+import RegisterForm from 'components/RegisterForm/RegisterForm';
+import { RegisterPageWrapper } from './Register.styled';
 
 const Register = () => {
-  return <div>Register</div>;
+  return (
+    <RegisterPageWrapper>
+      <RegisterForm />
+    </RegisterPageWrapper>
+  );
 };
 
 export default Register;
