@@ -1,10 +1,10 @@
-import TransactionsList from 'components/TransactionsList/TransactionsList';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   getTransactionCategoriesThunk,
   getTransactionsThunk,
 } from 'redux/transactionsRedusers/transactionsThunks';
+import TransactionsList from 'components/TransactionsList/TransactionsList';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -17,13 +17,6 @@ const Home = () => {
   return (
     <section>
       <div>
-        <div>
-          <p>Date</p>
-          <p>Type</p>
-          <p>Category</p>
-          <p>Comment</p>
-          <p>Sum</p>
-        </div>
         <TransactionsList />
       </div>
     </section>

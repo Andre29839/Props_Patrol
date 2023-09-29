@@ -1,10 +1,11 @@
+import { IoMdCreate } from 'react-icons/io';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from '../../redux/transactionsRedusers/transactionsThunks';
-import { Button } from 'components/Button/Button';
+import Button from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
 
@@ -49,25 +50,43 @@ const TransactionsList = () => {
   }
 
   return (
-    <>
-      <ul>
+    <table>
+      <thead>
+        <tr>
+          <th columnWidth={68}>Date</th>
+          <th columnWidth={72}>Type</th>
+          <th columnWidth={116}>Category</th>
+          <th columnWidth={120}>Comment</th>
+          <th columnWidth={76}>Sum</th>
+          <th columnWidth={21}></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
         {transactions.map(
           ({ id, transactionDate, type, categoryId, comment, amount }) => (
-            <li key={id}>
-              <p>{formatDate(transactionDate)}</p>
-              <p>{transactionSymbol(type)}</p>
-              <p>{categoryNames[categoryId]}</p>
-              <p>{comment}</p>
-              <p className={type === 'INCOME' ? 'income' : 'expense'}>
-                {(amount >= 0 ? '' : '-') + Math.abs(amount).toFixed(2)}
-              </p>
-              <button>edit</button>
-              <Button onClick={() => handleDelete(id)}>delete</Button>
-            </li>
+            <tr key={id}>
+              <td columnWidth={68}>{formatDate(transactionDate)}</td>
+              <td columnWidth={72}>{transactionSymbol(type)}</td>
+              <td columnWidth={116}>{categoryNames[categoryId]}</td>
+              <td columnWidth={120}>{comment}</td>
+              <td
+                columnWidth={76}
+                className={type === 'INCOME' ? 'income' : 'expense'}
+              >
+                {Math.abs(amount).toFixed(2)}
+              </td>
+              <td columnWidth={21}>
+                <IoMdCreate />
+              </td>
+              <td columnWidth={77}>
+                <Button onclick={handleDelete([id])}>Delete</Button>
+              </td>
+            </tr>
           )
         )}
-      </ul>
-    </>
+      </tbody>
+    </table>
   );
 };
 
