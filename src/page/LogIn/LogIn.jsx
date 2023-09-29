@@ -1,11 +1,13 @@
 import { LoginForm } from 'components/LoginForm/LoginForm';
-import { BgImage } from './LogIn.styled';
+import { PublicPageBox, PublicPageContainer } from './LogIn.styled';
 
 const LogIn = () => {
   return (
-    <BgImage>
-      <LoginForm />
-    </BgImage>
+    <PublicPageContainer>
+      <PublicPageBox>
+        <LoginForm />
+      </PublicPageBox>
+    </PublicPageContainer>
   );
 };
 

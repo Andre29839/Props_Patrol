@@ -10,7 +10,8 @@ export const theme = {
     violet: '#734AEF',
     modalBackground: 'rgba(255, 255, 255, 0.10)',
     btnGradient:
-      'linear-gradient(167deg, #FFC727 0%, #9E40BA 61.46%, #7000FF 90.54%)',
+      'linear-gradient(97deg, #FFC727 -16.42%, #9E40BA 97.04%, #7000FF 150.71%)',
+    // 'linear-gradient(167deg, #FFC727 0%, #9E40BA 61.46%, #7000FF 90.54%)',
     btnWhiteBg: '#FCFCFC',
     btnVioletText: '#623F8B',
   },

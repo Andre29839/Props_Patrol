@@ -1,11 +1,13 @@
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
-import { RegisterPageWrapper } from './Register.styled';
+import { PublicPageBox, PublicPageContainer } from 'page/LogIn/LogIn.styled';
 
 const RegisterPage = () => {
   return (
-    <RegisterPageWrapper>
-      <RegisterForm />
-    </RegisterPageWrapper>
+    <PublicPageContainer>
+      <PublicPageBox>
+        <RegisterForm />
+      </PublicPageBox>
+    </PublicPageContainer>
   );
 };
 
