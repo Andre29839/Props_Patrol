@@ -17,9 +17,21 @@ export const StyledBalanceBox = styled.div`
   background: rgba(82, 59, 126, 0.6);
 
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
-  @media screen and (min-width: 768px) {
+
+  /* @media screen and (min-width: 768px) {
     width: 100%;
+    max-width: 296px;
+    padding-left: 40px;
+    border-radius: 8px;
+    margin-bottom: 0px;
   }
+
+  @media screen and (min-width: 320px) {
+    max-width: 440px;
+    padding-left: 40px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+  } */
 `;
 
 export const StyledBalanceLabel = styled.span`

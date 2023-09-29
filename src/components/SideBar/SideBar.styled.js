@@ -10,6 +10,14 @@ export const StyledSideBox = styled.div`
   justify-content: ${props => props.jc || 'normal'};
   margin-bottom: ${props => props.marB || '15px'};
   max-width: ${props => props.w || '480px'};
+
+  @media (min-width: 768px) {
+    width: ${props => props.w || '768px'};
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: ${props => props.marB || '40px'};
+  }
 `;
 
 export const StyledNavAndBalanceBox = styled.div`
