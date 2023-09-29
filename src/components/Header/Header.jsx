@@ -1,12 +1,14 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
 // import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
 import { openModalLogout } from 'redux/globalReducers/globalSlice';
 import moneylogo from '../../images/logo.svg';
-import { IoExitOutline } from 'react-icons/io5';
+import { LogoExit, WrapBtn, WrapHeader, HeaderStyled } from './Header.styled';
+import { selectAuthData } from 'redux/registerReducers/registerSelector';
 
 const Header = () => {
+  const name = useSelector(selectAuthData);
   // const isModalShow = useSelector(selectIsModalLogOut);
   const isMobilesize = useMediaQuery({ query: '(max-width:767px)' });
   const dispatch = useDispatch();
@@ -17,17 +19,17 @@ const Header = () => {
 
   return (
     <>
-      <header>
-        <div>
-          <img src={moneylogo} alt="MoneyGuard Logo" />
+      <HeaderStyled>
+        <WrapHeader>
+          <img src={moneylogo} alt="MoneyGuard_Logo" />
           <p>Money Guard</p>
-        </div>
-        <div>
-          <span>Name</span>
-          <IoExitOutline />
+        </WrapHeader>
+        <WrapBtn>
+          <span>{name.username}</span>
+          <LogoExit />
           <button onClick={handleLogout}>{isMobilesize ? '' : 'Exit'}</button>
-        </div>
-      </header>
+        </WrapBtn>
+      </HeaderStyled>
     </>
   );
 };
