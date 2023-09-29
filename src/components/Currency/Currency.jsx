@@ -19,7 +19,7 @@ import {
   StyledThBox,
 } from './Currency.styled';
 
-export const Currency = () => {
+const Currency = () => {
   const [currency, setCurrency] = useState([]);
   const dispatch = useDispatch();
   const selectedCurrency = useSelector(currencySelector);
@@ -210,3 +210,5 @@ export const Currency = () => {
     </div>
   );
 };
+
+export default Currency;
