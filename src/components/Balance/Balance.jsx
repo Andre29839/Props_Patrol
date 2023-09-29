@@ -1,16 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { selectAuthData } from '../../redux/registerReducers/registerSelector';
+// import { useSelector } from 'react-redux';
+// import { selectAuthData } from '../../redux/registerReducers/registerSelector';
 
 const Balance = () => {
-  const balance = useSelector(selectAuthData);
+  // const balance = useSelector(selectAuthData);
   return (
     <div>
       <p>Your balance</p>
       <div>
         <span>₴</span>
 
-        <p>{balance}</p>
+        {/* <p>{balance}</p> */}
       </div>
     </div>
   );

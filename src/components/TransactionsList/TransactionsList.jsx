@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import {
   selectAllTransactions,
   selectTransactionsCategories,
-} from '../../redux/transactionsRedusers/transactionsThunks';
+} from '../../redux/transactionsRedusers/transactionsSelectors';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);
