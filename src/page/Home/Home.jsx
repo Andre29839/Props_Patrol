@@ -1,5 +1,4 @@
 import TransactionsList from 'components/TransactionsList/TransactionsList';
-import { ListContainer } from 'components/TransactionsList/TransactionsList.styled';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
