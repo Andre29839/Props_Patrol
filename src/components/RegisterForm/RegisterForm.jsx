@@ -49,11 +49,13 @@ export const RegisterForm = () => {
       .then(data => {
         resetForm();
         toast.success(
-          `${data.user.username}, thanks for signing up. Welcome to Money Guard! We are happy to have you on board.`
+          `Hi! ${data.user.username}, thanks for signing up. Welcome to Money Guard! We are happy to approve you!`
         );
       })
       .catch(error => {
-        toast.error(error);
+        toast.error(
+          `${error.message}! Check your password! This Password is already used!`
+        );
       });
     resetForm();
   };
