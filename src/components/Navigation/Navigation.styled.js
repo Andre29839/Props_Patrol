@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { IoMdHome } from 'react-icons/io';
+import { PiCurrencyDollarSimple } from 'react-icons/pi';
+import { SlGraph } from 'react-icons/sl';
 
 export const StyledNavList = styled.ul`
   display: flex;
@@ -37,6 +40,75 @@ export const StyledNavLink = styled(NavLink)`
     }
   }
 
+  &:active,
+  &:hover {
+    font-weight: 700;
+    svg {
+      background-color: rgba(255, 255, 255, 1);
+      filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+      path {
+        fill: #4a56e2;
+        fill-opacity: 1;
+      }
+    }
+  }
+`;
+
+export const StyledIoMdHome = styled(IoMdHome)`
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  fill: none;
+  path {
+    fill: rgb(255, 255, 255);
+    fill-opacity: 0.6;
+  }
+  &:active,
+  &:hover {
+    font-weight: 700;
+    svg {
+      background-color: rgba(255, 255, 255, 1);
+      filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+      path {
+        fill: #4a56e2;
+        fill-opacity: 1;
+      }
+    }
+  }
+`;
+
+export const StyledSlGraph = styled(SlGraph)`
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  fill: none;
+  path {
+    fill: rgb(255, 255, 255);
+    fill-opacity: 0.6;
+  }
+  &:active,
+  &:hover {
+    font-weight: 700;
+    svg {
+      background-color: rgba(255, 255, 255, 1);
+      filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+      path {
+        fill: #4a56e2;
+        fill-opacity: 1;
+      }
+    }
+  }
+`;
+
+export const StyledPiCurrencyDollarSimple = styled(PiCurrencyDollarSimple)`
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  fill: none;
+  path {
+    fill: rgb(255, 255, 255);
+    fill-opacity: 0.6;
+  }
   &:active,
   &:hover {
     font-weight: 700;
