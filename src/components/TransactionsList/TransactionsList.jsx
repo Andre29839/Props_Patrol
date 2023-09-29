@@ -7,7 +7,6 @@ import {
 import { Button } from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
-import { List, ListContainer } from './TransactionsList.styled';
 import { IoMdCreate } from 'react-icons/io';
 
 const TransactionsList = () => {
@@ -81,7 +80,7 @@ const TransactionsList = () => {
                 <IoMdCreate />
               </td>
               <td columnWidth={77}>
-                <button onclick={handleDelete([id])}>Delete</button>
+                <Button onclick={handleDelete([id])}>Delete</Button>
               </td>
             </tr>
           )
