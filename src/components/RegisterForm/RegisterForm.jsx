@@ -23,7 +23,7 @@ import {
   WrapperIcon3,
 } from 'components/LoginForm/LoginForm.styled';
 import { toast } from 'react-toastify';
-import { Button } from 'shared/Button/Button';
+import { Button } from 'components/Button/Button';
 import { IndicatorPasswordStrength } from 'components/IndicatorPasswordStrength/IndicatorPasswordStrength';
 import { registerThunk } from 'redux/registerReducers/registerThunks';
 

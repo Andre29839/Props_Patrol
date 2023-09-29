@@ -4,7 +4,7 @@ import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from '../../redux/transactionsRedusers/transactionsThunks';
-import { Button } from 'shared/Button/Button';
+import { Button } from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
 

@@ -19,7 +19,7 @@ import {
 } from './LoginForm.styled';
 import { LinkStyled } from 'components/RegisterForm/RegisterForm.styled';
 import { usePasswordToggle } from 'Hooks/usePasswordToggle';
-import { Button } from 'shared/Button/Button';
+import { Button } from 'components/Button/Button';
 import { logInThunk } from 'redux/registerReducers/registerThunks';
 
 export const LoginForm = () => {

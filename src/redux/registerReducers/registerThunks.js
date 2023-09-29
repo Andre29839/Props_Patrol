@@ -1,4 +1,3 @@
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import {
@@ -9,40 +8,13 @@ import {
 } from 'services/api/authControlerApi';
 import { getUsersCurrentDataRequest } from 'services/api/usersCurrentControllerApi';
 
-const notifySuccess = text =>
-  toast.success(text, {
-    position: 'bottom-center',
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined,
-    theme: 'colored',
-  });
-
-const notifyError = text => {
-  toast.error(text, {
-    position: 'bottom-center',
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined,
-    theme: 'colored',
-  });
-};
-
 export const registerThunk = createAsyncThunk(
   'auth/registerThunk',
   async (formData, { rejectWithValue }) => {
     try {
       const data = await registerRequest(formData);
-      notifySuccess('Registration is success!');
       return data;
     } catch (error) {
-      notifyError('This email address already exists');
       return rejectWithValue(error.message);
     }
   }
@@ -52,10 +24,8 @@ export const logInThunk = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const data = await logInRequest(formData);
-      notifySuccess('Welcome!');
       return data;
     } catch (error) {
-      notifyError(`Email does not exist or password is incorrect`);
       return rejectWithValue(error.message);
     }
   }
