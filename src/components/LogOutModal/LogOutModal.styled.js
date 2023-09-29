@@ -30,19 +30,43 @@ export const ModalLogOut = styled.div`
     rgb(76, 50, 113) 100%
   );
 
-  button {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    padding: 2px;
+  p {
+    width: 214px;
+    font-family: 'Poppins', sans-serif;
+    color: var(--total-white);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media only screen and (min-width: 768px) {
     width: 533px;
     max-height: 448px;
+
+    p {
+      margin-top: 0;
+    }
+  }
+`;
+
+export const BtnClose = styled.button`
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 60px;
+  right: 50px;
+  background-color: transparent;
+  padding: 2px;
+
+  @media only screen and (min-width: 768px) {
+    top: 20px;
+    right: 20px;
   }
 `;
 
@@ -65,7 +89,9 @@ export const WrapLogo = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+    margin-bottom: 52px;
   }
+
   img {
     width: 23px;
     height: 23px;
@@ -79,4 +105,19 @@ export const WrapLogo = styled.div`
     font-weight: 400;
     line-height: normal;
   }
+
+  @media only screen and (min-width: 1280px) {
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+`;
+
+export const BtnWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 `;

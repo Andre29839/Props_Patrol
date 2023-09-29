@@ -66,14 +66,19 @@ export const WrapBtn = styled.div`
 
   button {
     display: flex;
-    width: 28px;
-    height: 28px;
     font-size: 100%;
     background-color: transparent;
     color: var(--white-60);
     align-items: center;
     vertical-align: sub;
     padding: 4px;
+  }
+
+  div {
+    height: 30px;
+    width: 1px;
+    background-color: var(--white-60);
+    margin-right: 6px;
   }
 
   @media only screen and (min-width: 768px) {
@@ -85,7 +90,6 @@ export const WrapBtn = styled.div`
       width: 66px;
       height: 32px;
       color: var(--white-60);
-      border-left: 1px solid var(--white-60);
     }
   }
 `;
@@ -97,10 +101,10 @@ export const LogoExit = styled(IoExitOutline)`
   fill: currentColor;
   transform: scaleY(1.4);
   vertical-align: sub;
+  margin-right: 4px;
 
   @media only screen and (min-width: 1280px) {
     transform: scaleY(1.5);
     margin-right: 6px;
-    margin-left: 6px;
   }
 `;
