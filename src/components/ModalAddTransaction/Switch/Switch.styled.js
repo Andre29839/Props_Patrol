@@ -8,7 +8,7 @@ export const StyledSwitch = styled.div`
 `;
 export const SwitchText = styled.p`
   text-align: right;
-  color: var(--red);
+  color: var(--dashboard-text);
   font-size: 16px;
   font-weight: 600;
   margin: 0;
@@ -21,7 +21,7 @@ export const SwitchText = styled.p`
 
   &:last-of-type {
     color: ${props =>
-      props.checked ? 'var(--total-white)' : '--dashboard-text'};
+      props.checked ? 'var(--total-white)' : 'var(--dashboard-text)'};
   }
 `;
 

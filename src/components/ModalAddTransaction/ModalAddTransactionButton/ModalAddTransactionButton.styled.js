@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CommonBtnStyles = styled.button`
-  color: #ffffff;
+  color: var(--total-white);
   text-align: center;
 
   font-size: 14px;
@@ -19,11 +19,8 @@ export const AddBtn = styled(CommonBtnStyles)`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(
-    --button-gradient,
-    linear-gradient(167deg, #ffc727 0%, #9e40ba 61.46%, #7000ff 90.54%)
-  );
-  box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
+  background: var(--button-gradient);
+  box-shadow: 1px 9px 15px 0px var(--transparency-20);
   svg {
     width: 28px;
     height: 28px;
@@ -33,8 +30,7 @@ export const AddBtn = styled(CommonBtnStyles)`
 export const BtnRightCorner = styled.div`
   position: fixed;
 
-  z-index: 10;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.9px) {
     right: 20px;
     bottom: 20px;
   }
@@ -43,4 +39,10 @@ export const BtnRightCorner = styled.div`
     right: 40px;
     bottom: 40px;
   }
+`;
+
+export const EditBtn = styled(CommonBtnStyles)`
+  color: var(--grey);
+  background: none;
+  padding: 0;
 `;

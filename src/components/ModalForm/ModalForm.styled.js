@@ -26,7 +26,6 @@ export const ModalBackdrop = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  height: 511px;
   width: 540px;
   padding: 41px 40px;
   display: flex;

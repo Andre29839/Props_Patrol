@@ -1,7 +1,10 @@
-import React from 'react';
+import { useField } from 'formik';
+import { StyledTextArea } from './TextArea.styled';
 
-const TextArea = () => {
-  return <div>TextArea</div>;
+const TextArea = ({ ...props }) => {
+  const [field] = useField(props);
+
+  return <StyledTextArea {...field} {...props} />;
 };
 
 export default TextArea;
