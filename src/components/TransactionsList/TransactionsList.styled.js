@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const TableContainer = styled.div`
   height: 344px;
-  overflow: auto;
   ::-webkit-scrollbar {
     width: 0px;
     display: none;
@@ -107,14 +106,21 @@ export const ThLast = styled.th`
   border-radius: 0 8px 8px 0;
 `;
 
-export const ThSum = styled(Th)`
-  text-align: right;
+export const ThType = styled(Th)`
+  padding-right: 51px;
 `;
 
+export const ThCategory = styled(Th)`
+  padding-right: 69px;
+`;
+
+export const ThComment = styled(Th)`
+  padding-right: 104px;
+`;
 export const ThDate = styled(Th)`
   @media screen and (min-width: 768px) {
     border-radius: 8px 0 0 8px;
-    padding: 16px 32px 16px 20px;
+    padding: 16px 64px 16px 20px;
   }
 `;
 
@@ -141,4 +147,72 @@ export const MobileTransactionListWrapper = styled.div`
   @media (min-width: 768px) {
     display: none;
   }
+`;
+
+export const ButtonDelete = styled.button`
+  width: 65px;
+  height: 29px;
+  padding: 4px 12px;
+  background: ${({ theme }) => theme.colors.btnGradient};
+  border-radius: 20px;
+  box-shadow: ${({ theme }) => theme.shadows.secondary};
+
+  color: var(--white, #fbfbfb);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform ${({ theme }) => theme.transitions.regular};
+
+  &:focus,
+  &:hover {
+    /* border-radius: 18px; */
+    border: 1px solid yellow;
+    transform: scale(1.01);
+    box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  }
+`;
+
+export const Td = styled.td`
+  text-align: left;
+
+  &.income {
+    color: #ffb627;
+  }
+
+  &.expense {
+    color: #ff868d;
+  }
+
+  @media screen and (max-width: 767.5px) {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+
+    height: 18.4px;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.32px;
+    &:last-child {
+      height: 24.7px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    border-bottom: 1px solid #4e4677;
+  }
+`;
+
+export const TdDate = styled(Td)`
+  padding: 16px 0 16px 15px;
+`;
+
+export const TdType = styled(Td)`
+  padding-left: 15px;
 `;

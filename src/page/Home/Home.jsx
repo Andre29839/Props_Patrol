@@ -35,18 +35,15 @@ const Home = () => {
 
   return (
     <section>
-      <container>
-        <TransactionsListWrapper
-          className={isMobileView ? 'mobile' : 'desktop'}
-        >
-          <TransactionsList />
-        </TransactionsListWrapper>
-        <MobileTransactionListWrapper
-          className={isMobileView ? 'desktop' : 'mobile'}
-        >
-          <MobileTransactionList />
-        </MobileTransactionListWrapper>
-      </container>
+      <TransactionsListWrapper className={isMobileView ? 'mobile' : 'desktop'}>
+        <TransactionsList />
+      </TransactionsListWrapper>
+      <MobileTransactionListWrapper
+        className={isMobileView ? 'desktop' : 'mobile'}
+      >
+        <MobileTransactionList />
+      </MobileTransactionListWrapper>
+
       <ModalAddTransactionButton />
     </section>
   );

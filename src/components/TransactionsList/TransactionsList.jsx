@@ -5,20 +5,27 @@ import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from '../../redux/transactionsRedusers/transactionsThunks';
-import Button from 'components/Button/Button';
+
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
 import {
+  ButtonDelete,
   NoTransactionsText,
   Table,
   TableContainer,
+  Td,
+  TdDate,
+  TdType,
   Th,
+  ThCategory,
+  ThComment,
   ThDate,
   ThEdit,
   ThLast,
-  ThSum,
+  ThType,
   Thead,
 } from './TransactionsList.styled';
+import EditTransactionModal from 'components/ModalEdit/EditTransactionModal';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);
@@ -62,12 +69,12 @@ const TransactionsList = () => {
         <Table>
           <Thead>
             <tr>
-              <ThDate columnWidth={68}>Date</ThDate>
-              <Th columnWidth={72}>Type</Th>
-              <Th columnWidth={116}>Category</Th>
-              <Th columnWidth={120}>Comment</Th>
-              <ThSum columnWidth={76}>Sum</ThSum>
-              <ThEdit columnWidth={21}></ThEdit>
+              <ThDate>Date</ThDate>
+              <ThType>Type</ThType>
+              <ThCategory>Category</ThCategory>
+              <ThComment>Comment</ThComment>
+              <Th>Sum</Th>
+              <ThEdit></ThEdit>
               <ThLast></ThLast>
             </tr>
           </Thead>
@@ -89,22 +96,21 @@ const TransactionsList = () => {
                   amount,
                 }) => (
                   <tr key={id}>
-                    <td columnWidth={68}>{formatDate(transactionDate)}</td>
-                    <td columnWidth={72}>{transactionSymbol(type)}</td>
-                    <td columnWidth={116}>{categoryNames[categoryId]}</td>
-                    <td columnWidth={120}>{comment}</td>
-                    <td
-                      columnWidth={76}
-                      className={type === 'INCOME' ? 'income' : 'expense'}
-                    >
+                    <TdDate>{formatDate(transactionDate)}</TdDate>
+                    <TdType>{transactionSymbol(type)}</TdType>
+                    <Td>{categoryNames[categoryId]}</Td>
+                    <Td>{comment}</Td>
+                    <Td className={type === 'INCOME' ? 'income' : 'expense'}>
                       {Math.abs(amount).toFixed(2)}
-                    </td>
-                    <td columnWidth={21}>
+                    </Td>
+                    <Td>
                       <IoMdCreate />
-                    </td>
-                    <td columnWidth={77}>
-                      <Button onClick={() => handleDelete(id)}>Delete</Button>
-                    </td>
+                    </Td>
+                    <Td>
+                      <ButtonDelete onClick={() => handleDelete(id)}>
+                        Delete
+                      </ButtonDelete>
+                    </Td>
                   </tr>
                 )
               )
@@ -112,6 +118,7 @@ const TransactionsList = () => {
           </tbody>
         </Table>
       </TableContainer>
+      <EditTransactionModal />
     </section>
   );
 };

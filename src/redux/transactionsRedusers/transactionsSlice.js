@@ -67,7 +67,7 @@ const transactionsSlice = createSlice({
       })
       .addCase(addTransactionsThunk.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.transactions = [action.payload, ...state.transactions];
+        state.transactions.push(action.payload);
       })
       .addCase(addTransactionsThunk.rejected, (state, { error }) => {
         state.isLoading = false;
