@@ -9,7 +9,7 @@ import {
 import moneylogo from '../../images/logo.svg';
 import { LogoExit, WrapBtn, WrapHeader, HeaderStyled } from './Header.styled';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
-import { ModalLogout } from 'components/LogOutModal/LogOutModal';
+import ModalLogout from 'components/LogOutModal/LogOutModal';
 
 const Header = () => {
   const userData = useSelector(selectAuthData);

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { closeModalLogout } from 'redux/globalReducers/globalSlice';
 import { logOutThunk } from 'redux/registerReducers/registerThunks';
-import { Button } from 'shared/Button/Button';
+import Button from 'components/Button/Button';
 import moneylogo from '../../images/logo.svg';
 import {
   BackdropLogOut,
@@ -11,7 +11,7 @@ import {
   WrapLogo,
 } from './LogOutModal.styled';
 
-export const ModalLogout = ({ closeReducer }) => {
+const ModalLogout = ({ closeReducer }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -67,3 +67,5 @@ export const ModalLogout = ({ closeReducer }) => {
     </BackdropLogOut>
   );
 };
+
+export default ModalLogout;
