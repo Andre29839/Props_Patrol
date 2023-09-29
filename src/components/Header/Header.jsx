@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 // import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
 import { openModalLogout } from 'redux/globalReducers/globalSlice';
 import moneylogo from '../../images/logo.svg';
+import { IoExitOutline } from 'react-icons/io5';
 
 const Header = () => {
   // const isModalShow = useSelector(selectIsModalLogOut);
@@ -23,6 +24,7 @@ const Header = () => {
         </div>
         <div>
           <span>Name</span>
+          <IoExitOutline />
           <button onClick={handleLogout}>{isMobilesize ? '' : 'Exit'}</button>
         </div>
       </header>
