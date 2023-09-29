@@ -90,7 +90,7 @@ export const LoginForm = () => {
             <FormError name="password" />
           </WrapperField>
           <WrapperButton>
-            <Button type="submit" text="log in" />
+            <Button variant="primary" type="submit" text="log in" />
           </WrapperButton>
         </FormStyled>
       </Formik>
