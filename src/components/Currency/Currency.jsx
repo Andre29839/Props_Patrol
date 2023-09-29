@@ -210,3 +210,5 @@ export const Currency = () => {
     </div>
   );
 };
+
+console.log(123);
