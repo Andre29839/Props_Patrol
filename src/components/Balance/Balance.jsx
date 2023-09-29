@@ -12,6 +12,12 @@ export const Balance = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
+import React from 'react';
+// import { useSelector } from 'react-redux';
+// import { selectAuthData } from '../../redux/registerReducers/registerSelector';
+
+const Balance = () => {
+  // const balance = useSelector(selectAuthData);
   return (
     <div>
       {isDesktop && (
@@ -19,7 +25,6 @@ export const Balance = () => {
           <StyledBalanceLabel>Your balance</StyledBalanceLabel>
           <StyledBalance>
             <span>₴ </span>
-
             {balance ? <>{balance.balance}</> : ''}
           </StyledBalance>
         </StyledBalanceBox>
@@ -45,6 +50,8 @@ export const Balance = () => {
           </StyledBalance>
         </StyledBalanceBox>
       )}
+        {/* <p>{balance}</p> */}
+      </div>
     </div>
   );
 };

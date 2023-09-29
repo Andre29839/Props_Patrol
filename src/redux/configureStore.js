@@ -16,7 +16,7 @@ import { currencyReducer } from './currencyRedusers/currencySlice';
 import { globalReducer } from './globalReducers/globalSlice';
 
 const authPersistConfig = {
-  key: 'user',
+  key: 'token',
   storage,
   whitelist: ['token'],
 };

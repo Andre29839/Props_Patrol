@@ -6,13 +6,20 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from 'react-router-dom';
 import App from 'components/App/App';
 import { persistor, store } from 'redux/configureStore';
+import { ThemeProvider } from 'styled-components';
+import { theme } from 'services/styles/theme';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="/Props_Patrol">
-        <App />
-      </BrowserRouter>
-    </PersistGate>
-  </Provider>
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename="/Props_Patrol">
+          <App />
+          <ToastContainer autoClose={2500} theme="dark" />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
+  </ThemeProvider>
 );

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { ToastContainer } from 'react-toastify';
 import { useDispatch, useSelector } from 'react-redux';
 import { refreshAuthThunk } from 'redux/registerReducers/registerThunks';
 import UserRoutes from './UserRoutes';
@@ -22,7 +21,6 @@ function App() {
   return (
     <div>
       <UserRoutes />
-      <ToastContainer />
     </div>
   );
 }
