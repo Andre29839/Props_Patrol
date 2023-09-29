@@ -9,7 +9,7 @@ export const StyledDateTime = styled(Datetime)`
     color: var(--white);
     background-color: transparent;
     padding-left: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 4.5px;
     cursor: pointer;
 
     &:focus-visible {

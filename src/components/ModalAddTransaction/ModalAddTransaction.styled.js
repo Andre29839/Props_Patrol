@@ -50,7 +50,7 @@ export const BaseInput = styled.input`
   font-style: normal;
   font-weight: 600;
   line-height: 1.33;
-  color: #fbfbfb;
+  color: var(--white);
   background-color: transparent;
   max-width: 100%;
   margin-bottom: 10px;
@@ -87,6 +87,7 @@ export const BaseInput = styled.input`
     width: 409.5px;
   }
 `;
+
 export const placeholderStyles = {
   placeholder: provided => ({
     ...provided,
