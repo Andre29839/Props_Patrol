@@ -12,7 +12,7 @@ export const StyledSideBox = styled.div`
   max-width: ${props => props.w || '768px'};
 
   @media (min-width: 768px) {
-    width: ${props => props.w || '768px'};
+    width: ${props => props.w || '675px'};
     display: flex;
     flex-direction: row;
     gap: 32px;
