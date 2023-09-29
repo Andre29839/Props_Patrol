@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteTransactionsThunk,
   getTransactionsThunk,
-  selectAllTransactions,
 } from '../../redux/transactionsRedusers/transactionsThunks';
 import { Button } from 'shared/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
+ import {selectAllTransactions,selectTransactionsCategories} from '../../redux/transactionsRedusers/transactionsSelectors';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);

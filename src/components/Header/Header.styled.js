@@ -1,12 +1,17 @@
+import { IoExitOutline } from 'react-icons/io5';
 import styled from 'styled-components';
 
-export const Header = styled.header`
+export const HeaderStyled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   background: var(--header-color);
   box-shadow: var(--header-shadow);
+
+  @media only screen and (min-width: 768px) {
+    padding: 16px 32px;
+  }
 `;
 
 export const WrapHeader = styled.div`
@@ -26,6 +31,23 @@ export const WrapHeader = styled.div`
     color: var(--white);
     font-weight: 400;
   }
+
+  @media only screen and (min-width: 768px) {
+    width: 115px;
+    height: 48px;
+    text-align: center;
+
+    p {
+      font-size: 17px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      img {
+        width: 23px;
+        height: 22px;
+      }
+    }
+  }
 `;
 
 export const WrapBtn = styled.div`
@@ -40,5 +62,45 @@ export const WrapBtn = styled.div`
     font-weight: 400;
     line-height: normal;
     margin-right: 8px;
+  }
+
+  button {
+    display: flex;
+    width: 28px;
+    height: 28px;
+    font-size: 100%;
+    background-color: transparent;
+    color: var(--white-60);
+    align-items: center;
+    vertical-align: sub;
+    padding: 4px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    span {
+      margin-right: 12px;
+    }
+
+    button {
+      width: 66px;
+      height: 32px;
+      color: var(--white-60);
+      border-left: 1px solid var(--white-60);
+    }
+  }
+`;
+
+export const LogoExit = styled(IoExitOutline)`
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: currentColor;
+  transform: scaleY(1.4);
+  vertical-align: sub;
+
+  @media only screen and (min-width: 1280px) {
+    transform: scaleY(1.5);
+    margin-right: 6px;
+    margin-left: 6px;
   }
 `;

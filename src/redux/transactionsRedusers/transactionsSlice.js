@@ -3,7 +3,7 @@ import {
   addTransactionsThunk,
   deleteTransactionsThunk,
   getTransactionCategoriesThunk,
-  getTransactionsSummaryThunk,
+  getTransactionsStatisticThunk,
   getTransactionsThunk,
   patchTransactionsThunk,
 } from './transactionsThunks';
@@ -22,15 +22,15 @@ const transactionsSlice = createSlice({
   extraReducers: builder =>
     builder
       //----------------------------- Get transactions currency ------------------------------
-      .addCase(getTransactionsSummaryThunk.pending, state => {
+      .addCase(getTransactionsStatisticThunk.pending, state => {
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(getTransactionsSummaryThunk.fulfilled, (state, action) => {
+      .addCase(getTransactionsStatisticThunk.fulfilled, (state, action) => {
         state.isLoading = false;
         state.summary = action.payload;
       })
-      .addCase(getTransactionsSummaryThunk.rejected, (state, { error }) => {
+      .addCase(getTransactionsStatisticThunk.rejected, (state, { error }) => {
         state.isLoading = false;
         state.error = error;
       })
