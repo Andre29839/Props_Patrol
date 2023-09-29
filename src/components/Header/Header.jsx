@@ -30,6 +30,7 @@ const Header = () => {
         </WrapHeader>
         <WrapBtn>
           <span>{userData?.username}</span>
+          <div></div>
           <button onClick={handleLogout}>
             <LogoExit />
             {isMobilesize ? '' : 'Exit'}

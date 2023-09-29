@@ -6,6 +6,8 @@ import Button from 'components/Button/Button';
 import moneylogo from '../../images/logo.svg';
 import {
   BackdropLogOut,
+  BtnClose,
+  BtnWrapper,
   CancelSvg,
   ModalLogOut,
   WrapLogo,
@@ -43,26 +45,28 @@ const ModalLogout = ({ closeReducer }) => {
   return (
     <BackdropLogOut onClick={onCloseModal}>
       <ModalLogOut>
-        <button onClick={handleCloseModal}>
+        <BtnClose onClick={handleCloseModal}>
           <CancelSvg />
-        </button>
+        </BtnClose>
         <WrapLogo>
           <img src={moneylogo} alt="MoneyGuard Logo" />
           <h3>Money Guard</h3>
         </WrapLogo>
         <p>Are you sure you want to log out?</p>
-        <Button
-          type="button"
-          onClick={handlerLogout}
-          variant="primary"
-          text="Logout"
-        />
-        <Button
-          type="button"
-          onClick={() => dispatch(closeModalLogout())}
-          variant="secondary"
-          text="Cancel"
-        />
+        <BtnWrapper>
+          <Button
+            type="button"
+            onClick={handlerLogout}
+            variant="primary"
+            text="Logout"
+          />
+          <Button
+            type="button"
+            onClick={() => dispatch(closeModalLogout())}
+            variant="secondary"
+            text="Cancel"
+          />
+        </BtnWrapper>
       </ModalLogOut>
     </BackdropLogOut>
   );
