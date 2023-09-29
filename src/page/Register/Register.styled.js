@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import mobile from '../../image/register-bg/bg-register-mobile.ipg';
-import mobile2x from '../../image/register-bg/bg-register-mobile@2x.ipg';
-import tablet from '../../image/register-bg/bg-register-tablet.ipg';
-import tablet2x from '../../image/register-bg/bg-register-tablet@2x.ipg';
-import desctop from '../../image/register-bg/bg-register-desktop.ipg';
-import desctop2x from '../../image/register-bg/bg-register-desktop@2x.ipg';
+import mobile from 'images/register-bg/bg-register-mobile.jpg';
+import mobile2x from 'images/register-bg/bg-register-mobile@2x.jpg';
+import tablet from 'images/register-bg/bg-register-tablet.jpg';
+import tablet2x from 'images/register-bg/bg-register-tablet@2x.jpg';
+import desctop from 'images/register-bg/bg-register-desktop.jpg';
+import desctop2x from 'images/register-bg/bg-register-desktop@2x.jpg';
 
 export const PublicPageContainer = styled.div`
   position: fixed;
@@ -28,7 +28,7 @@ export const PublicPageContainer = styled.div`
     background-image: url(${mobile2x});
   }
 
-  @media (min-width: 321px) {
+  @media (min-width: 768px) {
     background-image: url(${tablet});
 
     @media (min-device-pixel-ratio: 2),
@@ -38,7 +38,7 @@ export const PublicPageContainer = styled.div`
       background-image: url(${tablet2x});
     }
   }
-  @media (min-width: 769px) {
+  @media (min-width: 1280px) {
     background-image: url(${desctop});
 
     @media (min-device-pixel-ratio: 2),
