@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/313.8d5e1d29.chunk.js","mappings":"mKAMA,UAJgB,WACd,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,WACd,C","sources":["page/NotPage/NotPage.jsx"],"sourcesContent":["import React from 'react';\n\nconst NotPage = () => {\n  return <div>NotPage</div>;\n};\n\nexport default NotPage;\n"],"names":["_jsx","children"],"sourceRoot":""}

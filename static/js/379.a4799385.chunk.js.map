@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/379.a4799385.chunk.js","mappings":"mKAMA,UAJmB,WACjB,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,cACd,C","sources":["page/Statistics/Statistics.jsx"],"sourcesContent":["import React from 'react';\n\nconst Statistics = () => {\n  return <div>Statistics</div>;\n};\n\nexport default Statistics;\n"],"names":["_jsx","children"],"sourceRoot":""}
