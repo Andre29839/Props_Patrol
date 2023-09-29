@@ -8,7 +8,7 @@ import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from 'redux/transactionsRedusers/transactionsThunks';
-import EditTransactionModal from 'components/ModalEdit/EditTransactionModal';
+
 import {
   DeleteBtn,
   MobileTable,
@@ -16,8 +16,9 @@ import {
   Td,
   Th,
   ThDate,
+  ButtonEdit,
 } from './MobileList.styled';
-import { IoMdCreate } from 'react-icons/io';
+import EditTransactionModal from 'components/ModalEdit/EditTransactionModal';
 
 const MobileTransactionList = () => {
   const transactions = useSelector(selectAllTransactions);
@@ -90,7 +91,7 @@ const MobileTransactionList = () => {
                   </Td>
                   <Td>
                     <EditTransactionModal />
-                    <button>edit</button>
+                    <ButtonEdit>edit</ButtonEdit>
                   </Td>
                 </tr>
               </tbody>

@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const ButtonEdit = styled.button`
+  background: transparent;
+  border: none;
+  color: var(--white);
+`;
+
 export const TableListSection = styled.div`
   height: 344px;
   overflow: auto;
@@ -60,7 +66,11 @@ export const MobileTable = styled.table`
 
   td {
     padding: 12px 20px 12px 0;
-    height: 43px;
+    height: 43.1px;
+  }
+
+  td:last-child {
+    border-bottom: none;
   }
 
   th:not(:last-child),
@@ -122,7 +132,7 @@ export const Td = styled.td`
   line-height: 1.5;
   letter-spacing: 0.32px;
   &:last-child {
-    height: 24.7px;
+    height: 53px;
   }
 
   border-bottom: 1px solid #4e4677;

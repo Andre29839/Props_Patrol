@@ -104,7 +104,16 @@ const TransactionsList = () => {
                       {Math.abs(amount).toFixed(2)}
                     </Td>
                     <Td>
-                      <IoMdCreate />
+                      <EditTransactionModal
+                        item={{
+                          id,
+                          transactionDate,
+                          type,
+                          categoryId,
+                          comment,
+                          amount,
+                        }}
+                      />
                     </Td>
                     <Td>
                       <ButtonDelete onClick={() => handleDelete(id)}>
@@ -118,7 +127,6 @@ const TransactionsList = () => {
           </tbody>
         </Table>
       </TableContainer>
-      <EditTransactionModal />
     </section>
   );
 };
