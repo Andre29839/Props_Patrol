@@ -28,6 +28,16 @@ export const PublicPageContainer = styled.div`
     background-image: url(${mobile2x});
   }
 
+  @media (min-width: 480px) {
+    background-image: url(${tablet});
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${tablet2x});
+    }
+  }
   @media (min-width: 768px) {
     background-image: url(${tablet});
 
@@ -38,6 +48,7 @@ export const PublicPageContainer = styled.div`
       background-image: url(${tablet2x});
     }
   }
+
   @media (min-width: 1280px) {
     background-image: url(${desctop});
 
