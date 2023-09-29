@@ -8,7 +8,7 @@ export const StyledSwitch = styled.div`
 `;
 export const SwitchText = styled.p`
   text-align: right;
-  color: 'var(--red)';
+  color: var(--red);
   font-size: 16px;
   font-weight: 600;
   margin: 0;
@@ -31,7 +31,7 @@ export const SwitchSlider = styled.label`
   border: none;
   outline: none;
   border-radius: 30px;
-  background-color: 'var(--total-white)';
+  background-color: var(--total-white);
   position: relative;
   cursor: pointer;
 

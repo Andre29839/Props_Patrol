@@ -6,7 +6,7 @@ export const StyledDateTime = styled(Datetime)`
     border: none;
     border-bottom: 1px solid var(--transparency-60);
     font-size: 18px;
-    color: #fbfbfb;
+    color: var(--white);
     background-color: transparent;
     padding-left: 20px;
     padding-bottom: 20px;
