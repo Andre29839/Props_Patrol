@@ -8,6 +8,16 @@ import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from 'redux/transactionsRedusers/transactionsThunks';
+import EditTransactionModal from 'components/ModalEdit/EditTransactionModal';
+import {
+  DeleteBtn,
+  MobileTable,
+  TableListContainer,
+  Td,
+  Th,
+  ThDate,
+} from './MobileList.styled';
+import { IoMdCreate } from 'react-icons/io';
 
 const MobileTransactionList = () => {
   const transactions = useSelector(selectAllTransactions);
@@ -46,52 +56,49 @@ const MobileTransactionList = () => {
     type === 'INCOME' ? '+' : type === 'EXPENSE' ? '-' : '';
 
   return transactions.length === 0 ? (
-    <tr>
-      <NoTransactionsText colSpan="7">
-        Your transactions will be here
-      </NoTransactionsText>
-    </tr>
+    <NoTransactionsText colSpan="7">
+      Your transactions will be here
+    </NoTransactionsText>
   ) : (
-    <section>
-      <container>
-        <ul>
-          {transactions.map(item => (
-            <li key={item.id}>
-              <table type={item.type === 'INCOME' ? 1 : 0}>
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Type</th>
-                    <th>Category</th>
-                    <th>Comment</th>
-                    <th>Sum</th>
-                    <th>
-                      <button onClick={() => handleDelete(item.id)}>
-                        Delete
-                      </button>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>{formatDate(item.transactionDate)}</td>
-                    <td>{transactionSymbol(item.type)}</td>
-                    <td>{categoryNames[item.categoryId]}</td>
-                    <td>{item.comment}</td>
-                    <td
-                      className={item.type === 'INCOME' ? 'income' : 'expense'}
-                    >
-                      {Math.abs(item.amount).toFixed(2)}
-                    </td>
+    <TableListContainer>
+      <ul>
+        {transactions.map(item => (
+          <li key={item.id}>
+            <MobileTable type={item.type === 'INCOME' ? 1 : 0}>
+              <thead>
+                <tr>
+                  <ThDate>Date</ThDate>
+                  <Th>Type</Th>
+                  <Th>Category</Th>
+                  <Th>Comment</Th>
+                  <Th>Sum</Th>
+                  <Th>
+                    <DeleteBtn onClick={() => handleDelete(item.id)}>
+                      Delete
+                    </DeleteBtn>
+                  </Th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <Td>{formatDate(item.transactionDate)}</Td>
+                  <Td>{transactionSymbol(item.type)}</Td>
+                  <Td>{categoryNames[item.categoryId]}</Td>
+                  <Td>{item.comment}</Td>
+                  <Td className={item.type === 'INCOME' ? 'income' : 'expense'}>
+                    {Math.abs(item.amount).toFixed(2)}
+                  </Td>
+                  <Td>
+                    <EditTransactionModal />
                     <button>edit</button>
-                  </tr>
-                </tbody>
-              </table>
-            </li>
-          ))}
-        </ul>
-      </container>
-    </section>
+                  </Td>
+                </tr>
+              </tbody>
+            </MobileTable>
+          </li>
+        ))}
+      </ul>
+    </TableListContainer>
   );
 };
 
