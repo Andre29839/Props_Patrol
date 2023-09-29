@@ -30,15 +30,15 @@ export const ButtonStyled = styled.button`
   }
 
   /* Вариант "primary" */
-  ${({ variant }) =>
-    variant === 'primary' &&
+  ${({ $variant }) =>
+    $variant === 'primary' &&
     css`
       background: ${({ theme }) => theme.colors.btnGradient};
     `}
 
   /* Вариант "secondary" */
-  ${({ variant }) =>
-    variant === 'secondary' &&
+  ${({ $variant }) =>
+    $variant === 'secondary' &&
     css`
       color: ${({ theme }) => theme.colors.btnVioletText};
       background: ${({ theme }) => theme.colors.btnWhiteBg};
@@ -46,8 +46,8 @@ export const ButtonStyled = styled.button`
       border-color: ${({ theme }) => theme.colors.blue};
     `}
  /* Вариант "third" */
-      ${({ variant }) =>
-    variant === 'third' &&
+      ${({ $variant }) =>
+    $variant === 'third' &&
     css`
       width: ${({ theme }) => theme.spacing(17.5)};
       height: ${({ theme }) => theme.spacing(7.5)};

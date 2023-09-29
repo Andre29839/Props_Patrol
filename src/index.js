@@ -7,9 +7,10 @@ import { BrowserRouter } from 'react-router-dom';
 import App from 'components/App/App';
 import { persistor, store } from 'redux/configureStore';
 import { ThemeProvider } from 'styled-components';
-import { theme } from 'services/styles/theme';
+import { theme } from 'styles/theme';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'modern-normalize/modern-normalize.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter basename="/Props_Patrol">
           <App />
+
           <ToastContainer autoClose={2500} theme="dark" />
         </BrowserRouter>
       </PersistGate>
