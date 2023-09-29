@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteTransactionsThunk,
@@ -6,7 +6,7 @@ import {
 } from '../../redux/transactionsRedusers/transactionsThunks';
 import { Button } from 'shared/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
- import {selectAllTransactions,selectTransactionsCategories} from '../../redux/transactionsRedusers/transactionsSelectors';
+import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);
