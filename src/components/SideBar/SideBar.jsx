@@ -28,7 +28,7 @@ const SideBar = () => {
           marB="40px"
           w="768px"
         >
-          <StyledNavAndBalanceBox maxW="336px">
+          <StyledNavAndBalanceBox>
             <Navigation />
             <Balance />
           </StyledNavAndBalanceBox>
