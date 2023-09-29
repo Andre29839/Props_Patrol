@@ -5,7 +5,7 @@ import { ButtonIcon, ModalBackdrop, ModalContent } from './ModalForm.styled';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export default function Modal({
+export default function ModalForm({
   children = '',
   handleBackdropClick = () => {},
   handleKeyDown = () => {},
