@@ -62,7 +62,7 @@ export const SwitchSlider = styled.label`
   }
 `;
 
-export const SwitchCheckbox = styled.input`
+export const SwitchCheckBox = styled.input`
   visibility: hidden;
   opacity: 0;
   width: 0;
