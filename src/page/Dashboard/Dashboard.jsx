@@ -1,15 +1,25 @@
-import Balance from 'components/Balance/Balance';
+import Header from 'components/Header/Header';
+import { SideBar } from 'components/SideBar/SideBar';
+
 import React from 'react';
+import { Suspense } from 'react';
+
 import { Outlet } from 'react-router-dom';
 
-const Dashboard = () => {
-  return (
-    <>
-      <div>Dashboard</div>
-      <Balance />
-      <Outlet />
-    </>
-  );
-};
+import { Box } from 'page/Dashboard/Dashboard.styled';
 
-export default Dashboard;
+function DashboardPage() {
+  return (
+    <div>
+      <Header />
+      <Box>
+        <SideBar />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </Box>
+    </div>
+  );
+}
+
+export default DashboardPage;
