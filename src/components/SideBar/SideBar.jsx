@@ -1,10 +1,10 @@
+import { useMediaQuery } from 'react-responsive';
 import { Balance } from 'components/Balance/Balance';
 import Currency from 'components/Currency/Currency';
-import { Navigation } from 'components/Navigation/Navigation';
+import Navigation from 'components/Navigation/Navigation';
 import { StyledNavAndBalanceBox, StyledSideBox } from './SideBar.styled';
-import { useMediaQuery } from 'react-responsive';
 
-export const SideBar = () => {
+const SideBar = () => {
   const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279.7 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
@@ -43,3 +43,5 @@ export const SideBar = () => {
     </div>
   );
 };
+
+export default SideBar;

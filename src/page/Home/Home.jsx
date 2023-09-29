@@ -1,10 +1,10 @@
-import TransactionsList from 'components/TransactionsList/TransactionsList';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   getTransactionCategoriesThunk,
   getTransactionsThunk,
 } from 'redux/transactionsRedusers/transactionsThunks';
+import TransactionsList from 'components/TransactionsList/TransactionsList';
 
 const Home = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
-import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
 import {
   closeModalLogout,
   openModalLogout,
@@ -10,6 +9,7 @@ import moneylogo from '../../images/logo.svg';
 import { LogoExit, WrapBtn, WrapHeader, HeaderStyled } from './Header.styled';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
 import ModalLogout from 'components/LogOutModal/LogOutModal';
+import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
 
 const Header = () => {
   const userData = useSelector(selectAuthData);

@@ -1,6 +1,6 @@
 import { ButtonStyled } from './Button.styled';
 
-export const Button = ({
+const Button = ({
   onClick = null,
   text,
   type = 'button',
@@ -12,3 +12,4 @@ export const Button = ({
     </ButtonStyled>
   );
 };
+export default Button;

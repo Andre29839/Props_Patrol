@@ -6,7 +6,7 @@ import {
   ActiveNavLinkMob,
 } from './Navigation.styled';
 
-export const Navigation = () => {
+const Navigation = () => {
   const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767 });
   const isTabletAndDesktop = useMediaQuery({ minWidth: 768 });
   return (
@@ -89,3 +89,5 @@ export const Navigation = () => {
     </nav>
   );
 };
+
+export default Navigation;

@@ -1,13 +1,13 @@
+import { IoMdCreate } from 'react-icons/io';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteTransactionsThunk,
   getTransactionsThunk,
 } from '../../redux/transactionsRedusers/transactionsThunks';
-import { Button } from 'components/Button/Button';
+import Button from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import { selectAllTransactions } from '../../redux/transactionsRedusers/transactionsSelectors';
-import { IoMdCreate } from 'react-icons/io';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);
