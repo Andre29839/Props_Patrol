@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { WrapperForm } from 'components/LoginForm/LoginForm.styled';
 
+import { BiSolidUserRectangle } from 'react-icons/bi';
 import styled from 'styled-components';
 
 export const WrapperFormReg = styled(WrapperForm)`
@@ -13,6 +14,7 @@ export const LinkStyled = styled(Link)`
   align-items: center;
   min-width: ${({ theme }) => theme.spacing(75)};
   min-height: ${({ theme }) => theme.spacing(12.5)};
+  margin-top: 20px;
 
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.regular};
@@ -41,7 +43,7 @@ export const LinkStyled = styled(Link)`
   }
 `;
 
-export const NameRegisterIcon = styled()`
+export const NameRegisterIcon = styled(BiSolidUserRectangle)`
   height: 24px;
   width: 24px;
   color: grey;

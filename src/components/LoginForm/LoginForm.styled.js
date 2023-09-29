@@ -1,4 +1,6 @@
 import { Field, Form } from 'formik';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { IoMdMail, IoMdLock } from 'react-icons/io';
 
 import styled from 'styled-components';
 
@@ -68,7 +70,7 @@ export const WrapperButton = styled.div`
   gap: ${({ theme }) => theme.spacing(5)};
 `;
 
-export const EmailIcon = styled()`
+export const EmailIcon = styled(IoMdMail)`
   height: 24px;
 
   color: grey;
@@ -86,7 +88,7 @@ export const WrapperIcon = styled.div`
 export const WrapperIcon2 = styled.div`
   position: relative;
 `;
-export const PasswordlIcon = styled()`
+export const PasswordlIcon = styled(IoMdLock)`
   height: 24px;
   width: 24px;
   color: grey;
@@ -110,10 +112,10 @@ export const PasswordlIconLook = styled.div`
   top: 63%;
 `;
 
-export const FaEyeStyled = styled()`
+export const FaEyeStyled = styled(FaEye)`
   cursor: pointer;
 `;
 
-export const FaEyeSlashStyled = styled()`
+export const FaEyeSlashStyled = styled(FaEyeSlash)`
   cursor: pointer;
 `;
