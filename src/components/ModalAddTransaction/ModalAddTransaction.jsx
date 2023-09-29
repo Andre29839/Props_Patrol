@@ -12,11 +12,11 @@ import {
   Heading,
   InputWrapper,
   TwoColumnRow,
-} from './ModalAddTransaction';
+} from './ModalAddTransaction.styled';
 import DateTimePicker from 'components/DateTimePicker/DateTimePicker';
 import TextArea from 'components/TextArea/TextArea';
-import { selectTransactionsCategories } from 'redux/registrationReducer/registrationSelectors';
-import { addTransactionsThunk } from 'redux/transactionsReduser/transactionsThunks';
+import { selectTransactionsCategories } from 'redux/transactionsRedusers/transactionsSelectors';
+import { addTransactionsThunk } from 'redux/transactionsRedusers/transactionsThunks';
 import Switch from './Switch/Switch';
 import CategorySelect from 'components/CategorySelect/CategorySelect';
 import Button from 'components/Button/Button';

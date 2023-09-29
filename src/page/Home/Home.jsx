@@ -10,6 +10,7 @@ import {
   MobileTransactionListWrapper,
   TransactionsListWrapper,
 } from 'components/TransactionsList/TransactionsList.styled';
+import ModalAddTransactionButton from 'components/ModalAddTransaction/ModalAddTransactionButton/ModalAddTransactionButton';
 
 const Home = () => {
   const [isMobileView, setIsMobileView] = useState(false);
@@ -46,6 +47,7 @@ const Home = () => {
           <MobileTransactionList />
         </MobileTransactionListWrapper>
       </container>
+      <ModalAddTransactionButton />
     </section>
   );
 };
