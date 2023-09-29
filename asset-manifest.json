@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/Props_Patrol/static/css/main.5eb97531.css",
-    "main.js": "/Props_Patrol/static/js/main.7321c833.js",
+    "main.js": "/Props_Patrol/static/js/main.ac85dc92.js",
     "static/js/142.bd4718db.chunk.js": "/Props_Patrol/static/js/142.bd4718db.chunk.js",
     "static/js/908.11df1705.chunk.js": "/Props_Patrol/static/js/908.11df1705.chunk.js",
     "static/js/313.8d5e1d29.chunk.js": "/Props_Patrol/static/js/313.8d5e1d29.chunk.js",
-    "static/js/598.8a9608db.chunk.js": "/Props_Patrol/static/js/598.8a9608db.chunk.js",
-    "static/js/590.3e985e4c.chunk.js": "/Props_Patrol/static/js/590.3e985e4c.chunk.js",
+    "static/js/598.d2732502.chunk.js": "/Props_Patrol/static/js/598.d2732502.chunk.js",
+    "static/js/590.0d294a90.chunk.js": "/Props_Patrol/static/js/590.0d294a90.chunk.js",
     "static/js/379.a4799385.chunk.js": "/Props_Patrol/static/js/379.a4799385.chunk.js",
     "static/js/188.6dc466d8.chunk.js": "/Props_Patrol/static/js/188.6dc466d8.chunk.js",
     "static/js/938.7a6c1bee.chunk.js": "/Props_Patrol/static/js/938.7a6c1bee.chunk.js",
@@ -24,12 +24,12 @@
     "static/media/logo.svg": "/Props_Patrol/static/media/logo.143a8f6f5dcf526cdac1808c9d0577d6.svg",
     "index.html": "/Props_Patrol/index.html",
     "main.5eb97531.css.map": "/Props_Patrol/static/css/main.5eb97531.css.map",
-    "main.7321c833.js.map": "/Props_Patrol/static/js/main.7321c833.js.map",
+    "main.ac85dc92.js.map": "/Props_Patrol/static/js/main.ac85dc92.js.map",
     "142.bd4718db.chunk.js.map": "/Props_Patrol/static/js/142.bd4718db.chunk.js.map",
     "908.11df1705.chunk.js.map": "/Props_Patrol/static/js/908.11df1705.chunk.js.map",
     "313.8d5e1d29.chunk.js.map": "/Props_Patrol/static/js/313.8d5e1d29.chunk.js.map",
-    "598.8a9608db.chunk.js.map": "/Props_Patrol/static/js/598.8a9608db.chunk.js.map",
-    "590.3e985e4c.chunk.js.map": "/Props_Patrol/static/js/590.3e985e4c.chunk.js.map",
+    "598.d2732502.chunk.js.map": "/Props_Patrol/static/js/598.d2732502.chunk.js.map",
+    "590.0d294a90.chunk.js.map": "/Props_Patrol/static/js/590.0d294a90.chunk.js.map",
     "379.a4799385.chunk.js.map": "/Props_Patrol/static/js/379.a4799385.chunk.js.map",
     "188.6dc466d8.chunk.js.map": "/Props_Patrol/static/js/188.6dc466d8.chunk.js.map",
     "938.7a6c1bee.chunk.js.map": "/Props_Patrol/static/js/938.7a6c1bee.chunk.js.map",
@@ -37,6 +37,6 @@
   },
   "entrypoints": [
     "static/css/main.5eb97531.css",
-    "static/js/main.7321c833.js"
+    "static/js/main.ac85dc92.js"
   ]
 }
