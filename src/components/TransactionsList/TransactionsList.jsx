@@ -1,19 +1,30 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
-  selectAllTransactions,
-  selectTransactionsCategories,
-} from '../../redux/transactionsRedusers/transactionsSelectors';
+  deleteTransactionsThunk,
+  getTransactionsThunk,
+} from '../../redux/transactionsRedusers/transactionsThunks';
+import { Button } from 'shared/Button/Button';
+import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
+ import {selectAllTransactions,selectTransactionsCategories} from '../../redux/transactionsRedusers/transactionsSelectors';
 
 const TransactionsList = () => {
   const transactions = useSelector(selectAllTransactions);
-  const categories = useSelector(selectTransactionsCategories);
+  const dispatch = useDispatch();
+
   const formatDate = dateString => {
     const date = new Date(dateString);
     const day = date.getDate().toString().padStart(2, '0');
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const year = date.getFullYear().toString().slice(-2);
     return `${day}.${month}.${year}`;
+  };
+
+  const handleDelete = transactionId => {
+    dispatch(deleteTransactionsThunk(transactionId))
+      .unwrap()
+      .then(() => dispatch(getTransactionsThunk()))
+      .then(() => dispatch(refreshBalanceThunk()));
   };
 
   const transactionSymbol = type =>
@@ -38,21 +49,25 @@ const TransactionsList = () => {
   }
 
   return (
-    <ul>
-      {transactions.map(
-        ({ id, transactionDate, type, categoryId, comment, amount }) => (
-          <li key={id}>
-            <p>{formatDate(transactionDate)}</p>
-            <p>{transactionSymbol(type)}</p>
-            <p>{categoryNames[categoryId]}</p>
-            <p>{comment}</p>
-            <p className={type === 'INCOME' ? 'income' : 'expense'}>
-              {(amount >= 0 ? '' : '-') + Math.abs(amount).toFixed(2)}
-            </p>
-          </li>
-        )
-      )}
-    </ul>
+    <>
+      <ul>
+        {transactions.map(
+          ({ id, transactionDate, type, categoryId, comment, amount }) => (
+            <li key={id}>
+              <p>{formatDate(transactionDate)}</p>
+              <p>{transactionSymbol(type)}</p>
+              <p>{categoryNames[categoryId]}</p>
+              <p>{comment}</p>
+              <p className={type === 'INCOME' ? 'income' : 'expense'}>
+                {(amount >= 0 ? '' : '-') + Math.abs(amount).toFixed(2)}
+              </p>
+              <button>edit</button>
+              <Button onClick={() => handleDelete(id)}>delete</Button>
+            </li>
+          )
+        )}
+      </ul>
+    </>
   );
 };
 
