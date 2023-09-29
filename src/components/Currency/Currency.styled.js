@@ -1,6 +1,24 @@
 import { Dna } from 'react-loader-spinner';
 import styled from 'styled-components';
 
+export const WrapperCurrency = styled.div`
+  background: rgba(74, 86, 226, 0.1);
+`;
+
+export const Usd = styled.span`
+  color: #ff868d;
+  position: absolute;
+  top: 120px;
+  left: 45px;
+`;
+export const Eur = styled.span`
+  color: #ff868d;
+  position: absolute;
+
+  top: 88px;
+  right: 92px;
+`;
+
 export const StyledBox = styled.div`
   /* font-family: 'Poppins Regular', sans-serif; */
   display: flex;
@@ -14,6 +32,8 @@ export const StyledBox = styled.div`
 export const StyledTable = styled.div`
   max-height: 170px;
   width: 100%;
+
+  margin-bottom: 30px;
 `;
 
 export const StyledTableHead = styled.div`
@@ -37,6 +57,7 @@ export const StyledTdBox = styled.div`
 `;
 
 export const StyledTBody = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-left: ${props => props.padL || '62px'};

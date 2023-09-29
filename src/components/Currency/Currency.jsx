@@ -7,6 +7,7 @@ import {
 } from 'redux/currencyRedusers/currencySelectors';
 import { currencyThunk } from 'redux/currencyRedusers/currencyThunk';
 import {
+  Eur,
   StyledBox,
   StyledImg,
   StyledOval,
@@ -17,6 +18,8 @@ import {
   StyledTdBox,
   StyledTh,
   StyledThBox,
+  Usd,
+  WrapperCurrency,
 } from './Currency.styled';
 
 const Currency = () => {
@@ -25,6 +28,10 @@ const Currency = () => {
   const selectedCurrency = useSelector(currencySelector);
   const isLoading = useSelector(isLoadingSelector);
   const token = useSelector(state => state.auth.token);
+
+  const currencyChart = useSelector(currencySelector);
+  const usdPurch = currencyChart[0]?.rateBuy.toFixed(2);
+  const eurPurch = currencyChart[1]?.rateBuy.toFixed(2);
 
   const updateLastUpdatedTime = () => {
     const newTime = Date.now();
@@ -54,7 +61,7 @@ const Currency = () => {
   const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   return (
-    <div>
+    <WrapperCurrency>
       {isDesktop && (
         <StyledBox ai="center" jc="center">
           {isLoading ? (
@@ -86,7 +93,7 @@ const Currency = () => {
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox>
+                        <StyledTdBox key={el.rateBuy}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -95,6 +102,8 @@ const Currency = () => {
                         </StyledTdBox>
                       );
                     })}
+                  <Usd>{usdPurch}</Usd>
+                  <Eur>{eurPurch}</Eur>
                 </StyledTBody>
               </StyledTable>
               <img
@@ -207,7 +216,7 @@ const Currency = () => {
           )}
         </StyledBox>
       )}
-    </div>
+    </WrapperCurrency>
   );
 };
 
