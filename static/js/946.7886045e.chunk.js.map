@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/946.7886045e.chunk.js","mappings":"mKAMA,UAJiB,WACf,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,YACd,C","sources":["page/Currency/Currency.jsx"],"sourcesContent":["import React from 'react';\n\nconst Currency = () => {\n  return <div>Currency</div>;\n};\n\nexport default Currency;\n"],"names":["_jsx","children"],"sourceRoot":""}
