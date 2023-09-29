@@ -1,4 +1,5 @@
 import TransactionsList from 'components/TransactionsList/TransactionsList';
+import { ListContainer } from 'components/TransactionsList/TransactionsList.styled';
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
@@ -17,13 +18,6 @@ const Home = () => {
   return (
     <section>
       <div>
-        <div>
-          <p>Date</p>
-          <p>Type</p>
-          <p>Category</p>
-          <p>Comment</p>
-          <p>Sum</p>
-        </div>
         <TransactionsList />
       </div>
     </section>

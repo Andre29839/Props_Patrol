@@ -1,7 +1,6 @@
 import { Field, Form } from 'formik';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { IoMdMail, IoMdLock } from 'react-icons/io';
-
 import styled from 'styled-components';
 
 export const WrapperForm = styled.div`
