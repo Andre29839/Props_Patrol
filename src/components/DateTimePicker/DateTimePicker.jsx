@@ -4,7 +4,7 @@ import { useField } from 'formik';
 import { StyledDateTime } from './DateTimePicker.styled';
 
 const DateTimePicker = ({ ...props }) => {
-  const [field, _, helpers] = useField(props);
+  const [field, helpers] = useField(props);
 
   return (
     <StyledDateTime
