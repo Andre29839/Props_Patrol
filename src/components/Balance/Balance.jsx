@@ -26,7 +26,7 @@ export const Balance = () => {
         </StyledBalanceBox>
       )}
       {isTablet && (
-        <StyledBalanceBox maxW="296px" padL="40px" borR="8px" marB="0px">
+        <StyledBalanceBox>
           <StyledBalanceLabel>Your balance</StyledBalanceLabel>
           <StyledBalance>
             <span>₴ </span>
@@ -37,7 +37,7 @@ export const Balance = () => {
       )}
 
       {isMobile && (
-        <StyledBalanceBox maxW="440px" padL="40px" borR="8px" marB="32px">
+        <StyledBalanceBox>
           <StyledBalanceLabel>Your balance</StyledBalanceLabel>
           <StyledBalance>
             <span>₴ </span>

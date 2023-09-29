@@ -21,13 +21,7 @@ const SideBar = () => {
       )}
 
       {isTablet && (
-        <StyledSideBox
-          display="flex"
-          flexDirection="row"
-          gap="32px"
-          marB="40px"
-          w="768px"
-        >
+        <StyledSideBox>
           <StyledNavAndBalanceBox>
             <Navigation />
             <Balance />
