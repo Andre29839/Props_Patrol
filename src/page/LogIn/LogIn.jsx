@@ -1,12 +1,10 @@
 import { LoginForm } from 'components/LoginForm/LoginForm';
-import { PublicPageBox, PublicPageContainer } from './LogIn.styled';
+import { PublicPageContainer } from './LogIn.styled';
 
 const LogIn = () => {
   return (
     <PublicPageContainer>
-      <PublicPageBox>
-        <LoginForm />
-      </PublicPageBox>
+      <LoginForm />
     </PublicPageContainer>
   );
 };

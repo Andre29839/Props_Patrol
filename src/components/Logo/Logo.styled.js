@@ -16,6 +16,7 @@ export const TitleLogo = styled.h2`
   font-style: normal;
   font-weight: 400;
   margin-top: 8px;
+  height: 40px;
 
   letter-spacing: 1.8px;
 

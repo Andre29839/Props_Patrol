@@ -10,14 +10,13 @@ export const WrapperForm = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-
   @media (min-width: 320px) and (max-width: 767px) {
     height: 100%;
+    width: 100%;
   }
   @media (min-width: 768px) {
-    width: 533px;
     padding: 80px 62px;
+    width: 533px;
   }
   border-radius: ${({ theme }) => theme.radii.normal};
   box-shadow: ${({ theme }) => theme.shadows.primary};
@@ -50,7 +49,8 @@ export const FieldStyled = styled(Field)`
   border-bottom: 2px solid grey;
   background-color: rgba(255, 255, 255, 0);
   color: grey;
-  @media (min-width: 768px) {
+
+  /* @media (min-width: 768px) {
     width: ${({ theme }) => theme.spacing(102)};
   }
   position: relative;
@@ -58,7 +58,7 @@ export const FieldStyled = styled(Field)`
     outline: none;
     border: none;
     border-bottom: 2px solid grey;
-  }
+  } */
 `;
 
 export const WrapperButton = styled.div`
