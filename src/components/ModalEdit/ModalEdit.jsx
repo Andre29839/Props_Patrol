@@ -1,7 +1,6 @@
 import { parse } from 'date-fns';
 import { Formik } from 'formik';
 import { RxSlash } from 'react-icons/rx';
-import { CiCalendarDate } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
 import { object, string, date, number } from 'yup';
 import {
@@ -21,6 +20,8 @@ import TextArea from 'components/TextArea/TextArea';
 import { patchTransactionsThunk } from 'redux/transactionsRedusers/transactionsThunks';
 import Button from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
+// import CategorySelect from 'components/CategorySelect/CategorySelect';
+import { selectTransactionsCategories } from 'redux/transactionsRedusers/transactionsSelectors';
 
 const ModalEdit = ({ closeModal, item }) => {
   const categoryNames = {
@@ -80,6 +81,7 @@ const ModalEdit = ({ closeModal, item }) => {
             val => val.toString().length <= 16
           )
           .required('Please provide transaction value.'),
+
         date: date()
           .transform(dateTransformer)
           .typeError('Please enter a valid date')
@@ -103,7 +105,6 @@ const ModalEdit = ({ closeModal, item }) => {
           <TransactionTypeDiv>
             <IncomeSpan $active={item.type === 'INCOME'}>Income</IncomeSpan>
             <RxSlash />
-            {/* <TransactionTypeSpan> &frasl; </TransactionTypeSpan> */}
             <ExpenseSpan $active={item.type === 'EXPENSE'}>Expense</ExpenseSpan>
           </TransactionTypeDiv>
           {isExpense && (
@@ -112,8 +113,10 @@ const ModalEdit = ({ closeModal, item }) => {
                 name="category"
                 autoComplete="off"
                 value={categoryNames[item.categoryId]}
-                readonly
+                readOnly
               />
+
+              <ErrorText name="category" component="div" />
             </InputWrapper>
           )}
           <TwoColumnRow>
@@ -138,7 +141,6 @@ const ModalEdit = ({ closeModal, item }) => {
                 timeFormat={false}
               />
               <ErrorText name="date" component="div" />
-              <CiCalendarDate />
             </CalendarWrapper>
           </TwoColumnRow>
           <InputWrapper>
@@ -151,17 +153,14 @@ const ModalEdit = ({ closeModal, item }) => {
             />
             <ErrorText name="comment" component="div" />
           </InputWrapper>
-          <Button type="submit" variant="registration">
-            Save
-          </Button>
+          <Button type="submit" variant="primary" text={'Save'} />
           <Button
             type="button"
-            variant="cancel"
+            variant="secondary"
             style={{ marginBotoom: 0, marginTop: '-40px' }}
             onClick={() => closeModal()}
-          >
-            Cancel
-          </Button>
+            text={'Cancel'}
+          />
         </FormikForm>
       )}
     </Formik>
