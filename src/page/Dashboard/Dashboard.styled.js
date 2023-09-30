@@ -3,13 +3,13 @@ import styled from 'styled-components';
 export const Box = styled.div`
   position: relative;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767.9px) {
     padding: 0 20px;
     max-width: 440px;
     margin: 0 auto;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
     padding: 0 32px;
     max-width: 704px;
     margin: 0 auto;
