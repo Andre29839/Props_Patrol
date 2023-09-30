@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Props_Patrol/static/css/main.35ea7d58.css",
+    "main.css": "/Props_Patrol/static/css/main.b8a1a02e.css",
     "main.js": "/Props_Patrol/static/js/main.9e2b0095.js",
     "static/js/97.0c3e6489.chunk.js": "/Props_Patrol/static/js/97.0c3e6489.chunk.js",
     "static/js/883.052e652a.chunk.js": "/Props_Patrol/static/js/883.052e652a.chunk.js",
@@ -13,9 +13,6 @@
     "static/js/623.23f0983f.chunk.js": "/Props_Patrol/static/js/623.23f0983f.chunk.js",
     "static/media/Gradient.png": "/Props_Patrol/static/media/Gradient.0d7f1b74420173be3a7a.png",
     "static/media/bg-login-tablet.jpg": "/Props_Patrol/static/media/bg-login-tablet.9083fa66202d76ae2d4e.jpg",
-    "static/media/Poppins-Regular.ttf": "/Props_Patrol/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
-    "static/media/Poppins-SemiBold.ttf": "/Props_Patrol/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
-    "static/media/Poppins-Bold.ttf": "/Props_Patrol/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/bg-register-desktop@2x.jpg": "/Props_Patrol/static/media/bg-register-desktop@2x.1006452c317b60d35d26.jpg",
     "static/media/bg-register-tablet@2x.jpg": "/Props_Patrol/static/media/bg-register-tablet@2x.010019b9d54926c0c140.jpg",
     "static/media/bg-login-web@2x.jpg": "/Props_Patrol/static/media/bg-login-web@2x.9522df4284cf229cb617.jpg",
@@ -25,9 +22,9 @@
     "static/media/bg-register-tablet.jpg": "/Props_Patrol/static/media/bg-register-tablet.832cc2c6d41a9506da99.jpg",
     "static/media/bg-login-web.jpg": "/Props_Patrol/static/media/bg-login-web.20b913d3ca3801ec00e3.jpg",
     "static/media/chart-tablet.png": "/Props_Patrol/static/media/chart-tablet.6fa2624dedd57a709426.png",
-    "static/media/logo.svg": "/Props_Patrol/static/media/logo.143a8f6f5dcf526cdac1808c9d0577d6.svg",
     "index.html": "/Props_Patrol/index.html",
-    "main.35ea7d58.css.map": "/Props_Patrol/static/css/main.35ea7d58.css.map",
+    "static/media/logo.svg": "/Props_Patrol/static/media/logo.143a8f6f5dcf526cdac1808c9d0577d6.svg",
+    "main.b8a1a02e.css.map": "/Props_Patrol/static/css/main.b8a1a02e.css.map",
     "main.9e2b0095.js.map": "/Props_Patrol/static/js/main.9e2b0095.js.map",
     "97.0c3e6489.chunk.js.map": "/Props_Patrol/static/js/97.0c3e6489.chunk.js.map",
     "883.052e652a.chunk.js.map": "/Props_Patrol/static/js/883.052e652a.chunk.js.map",
@@ -40,7 +37,7 @@
     "623.23f0983f.chunk.js.map": "/Props_Patrol/static/js/623.23f0983f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35ea7d58.css",
+    "static/css/main.b8a1a02e.css",
     "static/js/main.9e2b0095.js"
   ]
 }
