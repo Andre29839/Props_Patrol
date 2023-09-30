@@ -1,4 +1,3 @@
-import { Dna } from 'react-loader-spinner';
 import styled from 'styled-components';
 
 export const WrapperCurrency = styled.div`
@@ -97,18 +96,6 @@ export const StyledTd = styled.span`
   &:first-child {
     width: 65px;
   }
-`;
-
-export const StyledOval = styled(Dna)`
-  
-  height:40 px
-  width: 40px
-  color="#4a56e2"
-  visible:true
-  ariaLabel="oval-loading"
-  secondaryColor="#4a56e2"
-  strokeWidth={4}
-  strokeWidthSecondary={4}
 `;
 
 export const StyledImg = styled.img`
