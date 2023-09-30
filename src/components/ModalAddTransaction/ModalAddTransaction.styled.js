@@ -130,7 +130,7 @@ export const TwoColumnRow = styled.div`
     font-size: 18px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 3px;
+    /* margin-bottom: 3px; */
     outline: none;
 
     @media (max-width: 767.9px) {
@@ -153,7 +153,6 @@ export const CalendarWrapper = styled.div`
 
   svg {
     position: absolute;
-    bottom: 8px;
     right: 14px;
     width: 24px;
     height: 24px;
@@ -168,7 +167,7 @@ export const CalendarWrapper = styled.div`
 `;
 export const ErrorText = styled(ErrorMessage)`
   position: absolute;
-  top: 28px;
+  top: 30px;
   left: 0px;
   font-size: 13px;
   color: red;
