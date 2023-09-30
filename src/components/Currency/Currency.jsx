@@ -14,7 +14,6 @@ import {
   StyledOval,
   StyledTBody,
   StyledTable,
-  StyledTableHead,
   StyledTd,
   StyledTdBox,
   StyledTh,
@@ -72,13 +71,11 @@ const Currency = () => {
           ) : (
             <StyledBox>
               <StyledTable>
-                <StyledTableHead>
                   <StyledThBox>
                     <StyledTh>Currency</StyledTh>
                     <StyledTh>Purchase</StyledTh>
                     <StyledTh>Sale</StyledTh>
                   </StyledThBox>
-                </StyledTableHead>
                 <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
@@ -105,7 +102,7 @@ const Currency = () => {
         </StyledBox>
       )}
       {isTabletAndMobile && (
-        <StyledBox maxw="336px">
+        <StyledBox >
           {isLoading ? (
             <>
               <StyledOval />
@@ -138,7 +135,6 @@ const Currency = () => {
               <StyledImg
                 src={require('../../images/chart/chart-tablet.png')}
                 alt="chart"
-                w="336px"
               />
             </>
           )}
@@ -178,7 +174,6 @@ const Currency = () => {
               <StyledImg
                 src={require('../../images/chart/chart-tablet.png')}
                 alt="chart"
-                w="336px"
               />
             </>
           )}
