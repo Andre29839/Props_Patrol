@@ -16,7 +16,7 @@ export const Table = styled.table`
   color: #ffffff;
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 704px;
+    max-width: 704px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -77,7 +77,7 @@ export const ThCategory = styled(Th)`
 `;
 
 export const ThComment = styled(Th)`
-  padding-right: 104px;
+  padding-right: 71px;
 `;
 export const ThDate = styled(Th)`
   @media screen and (min-width: 768px) {
@@ -96,6 +96,12 @@ export const NoTransactionsText = styled.td`
 `;
 
 export const TransactionsListWrapper = styled.div`
+  height: 308px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
   @media (min-width: 1280px) {
     margin-top: 46px;
   }
