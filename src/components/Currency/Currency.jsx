@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
@@ -13,7 +14,6 @@ import {
   StyledOval,
   StyledTBody,
   StyledTable,
-  StyledTableHead,
   StyledTd,
   StyledTdBox,
   StyledTh,
@@ -66,34 +66,21 @@ const Currency = () => {
         <StyledBox ai="center" jc="center">
           {isLoading ? (
             <>
-              <StyledOval
-                height={40}
-                width={40}
-                color="#4a56e2"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel="oval-loading"
-                secondaryColor="#4a56e2"
-                strokeWidth={4}
-                strokeWidthSecondary={4}
-              />
+              <StyledOval />
             </>
           ) : (
             <StyledBox>
               <StyledTable>
-                <StyledTableHead>
                   <StyledThBox>
                     <StyledTh>Currency</StyledTh>
                     <StyledTh>Purchase</StyledTh>
                     <StyledTh>Sale</StyledTh>
                   </StyledThBox>
-                </StyledTableHead>
                 <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox key={el.rateBuy}>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -115,37 +102,26 @@ const Currency = () => {
         </StyledBox>
       )}
       {isTabletAndMobile && (
-        <StyledBox maxw="336px">
+        <StyledBox >
           {isLoading ? (
             <>
-              <StyledOval
-                height={40}
-                width={40}
-                color="#4a56e2"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel="oval-loading"
-                secondaryColor="#4a56e2"
-                strokeWidth={4}
-                strokeWidthSecondary={4}
-              />
+              <StyledOval />
             </>
           ) : (
             <>
               <StyledTable>
-                <StyledTableHead padL="20px" marB="8px">
+                <StyledTableHead>
                   <StyledThBox>
                     <StyledTh>Currency</StyledTh>
                     <StyledTh>Purchase</StyledTh>
                     <StyledTh>Sale</StyledTh>
                   </StyledThBox>
                 </StyledTableHead>
-                <StyledTBody padL="20px" gap="12px">
+                <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -159,44 +135,32 @@ const Currency = () => {
               <StyledImg
                 src={require('../../images/chart/chart-tablet.png')}
                 alt="chart"
-                w="336px"
               />
             </>
           )}
         </StyledBox>
       )}
       {isMobile && (
-        <StyledBox maxw="336px">
+        <StyledBox>
           {isLoading ? (
             <>
-              <StyledOval
-                height={40}
-                width={40}
-                color="#4a56e2"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel="oval-loading"
-                secondaryColor="#4a56e2"
-                strokeWidth={4}
-                strokeWidthSecondary={4}
-              />
+              <StyledOval />
             </>
           ) : (
             <>
               <StyledTable>
-                <StyledTableHead padL="20px" marB="8px">
+                <StyledTableHead>
                   <StyledThBox>
                     <StyledTh>Currency</StyledTh>
                     <StyledTh>Purchase</StyledTh>
                     <StyledTh>Sale</StyledTh>
                   </StyledThBox>
                 </StyledTableHead>
-                <StyledTBody padL="20px" gap="12px">
+                <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -210,7 +174,6 @@ const Currency = () => {
               <StyledImg
                 src={require('../../images/chart/chart-tablet.png')}
                 alt="chart"
-                w="336px"
               />
             </>
           )}
