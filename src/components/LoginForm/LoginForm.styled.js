@@ -10,7 +10,7 @@ export const WrapperForm = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 767.9px) {
     height: 100%;
     width: 100%;
   }
@@ -21,7 +21,7 @@ export const WrapperForm = styled.div`
   border-radius: ${({ theme }) => theme.radii.normal};
   box-shadow: ${({ theme }) => theme.shadows.primary};
   backdrop-filter: blur(60px);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 `;
 
 export const FormStyled = styled(Form)`
@@ -42,23 +42,13 @@ export const WrapperField = styled.div`
 export const FieldStyled = styled(Field)`
   margin-top: 40px;
   padding-left: 40px;
-  width: 280px;
+  width: 400px;
   height: ${({ theme }) => theme.spacing(9)};
   outline: none;
   border: none;
   border-bottom: 2px solid grey;
   background-color: rgba(255, 255, 255, 0);
   color: grey;
-
-  /* @media (min-width: 768px) {
-    width: ${({ theme }) => theme.spacing(102)};
-  }
-  position: relative;
-  &:focus {
-    outline: none;
-    border: none;
-    border-bottom: 2px solid grey;
-  } */
 `;
 
 export const WrapperButton = styled.div`

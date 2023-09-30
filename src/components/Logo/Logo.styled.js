@@ -20,8 +20,6 @@ export const TitleLogo = styled.h2`
 
   letter-spacing: 1.8px;
 
-  cursor: pointer;
-
   @media (min-width: 768px) {
     font-size: 27px;
   }
