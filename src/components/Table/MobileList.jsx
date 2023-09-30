@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { NoTransactionsText } from 'components/TransactionsList/TransactionsList.styled';
 import { selectAllTransactions } from 'redux/transactionsRedusers/transactionsSelectors';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 import {
@@ -11,12 +10,14 @@ import {
 
 import {
   DeleteBtn,
-  MobileTable,
   TableListContainer,
-  Td,
+  StyledTable,
+  Thead,
   Th,
-  ThDate,
-  ButtonEdit,
+  Td,
+  TdEdit,
+  Tr,
+  EditWrapper,
 } from './MobileList.styled';
 import EditTransactionModal from 'components/ModalEdit/EditTransactionModal';
 
@@ -57,49 +58,63 @@ const MobileTransactionList = () => {
     type === 'INCOME' ? '+' : type === 'EXPENSE' ? '-' : '';
 
   return transactions.length === 0 ? (
-    <NoTransactionsText colSpan="7">
-      Your transactions will be here
-    </NoTransactionsText>
+    <table>
+      <tbody>
+        <tr>
+          <td colSpan="7">Your transactions will be here</td>
+        </tr>
+      </tbody>
+    </table>
   ) : (
-    <TableListContainer>
-      <ul>
-        {transactions.map(item => (
-          <li key={item.id}>
-            <MobileTable type={item.type === 'INCOME' ? 1 : 0}>
-              <thead>
-                <tr>
-                  <ThDate>Date</ThDate>
-                  <Th>Type</Th>
-                  <Th>Category</Th>
-                  <Th>Comment</Th>
-                  <Th>Sum</Th>
-                  <Th>
-                    <DeleteBtn onClick={() => handleDelete(item.id)}>
-                      Delete
-                    </DeleteBtn>
-                  </Th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <Td>{formatDate(item.transactionDate)}</Td>
-                  <Td>{transactionSymbol(item.type)}</Td>
-                  <Td>{categoryNames[item.categoryId]}</Td>
-                  <Td>{item.comment}</Td>
-                  <Td className={item.type === 'INCOME' ? 'income' : 'expense'}>
-                    {Math.abs(item.amount).toFixed(2)}
-                  </Td>
-                  <Td>
-                    <EditTransactionModal />
-                    <ButtonEdit>edit</ButtonEdit>
-                  </Td>
-                </tr>
-              </tbody>
-            </MobileTable>
-          </li>
-        ))}
-      </ul>
-    </TableListContainer>
+    <>
+      <section>
+        <TableListContainer>
+          <ul>
+            {transactions.map(item => (
+              <li key={item.id}>
+                <StyledTable type={item.type === 'INCOME' ? 1 : 0}>
+                  <Thead>
+                    <Tr>
+                      <Th>Date</Th>
+                      <Th>Type</Th>
+                      <Th>Category</Th>
+                      <Th>Comment</Th>
+                      <Th>Sum</Th>
+                      <Th>
+                        <DeleteBtn onClick={() => handleDelete(item.id)}>
+                          Delete
+                        </DeleteBtn>
+                      </Th>
+                    </Tr>
+                  </Thead>
+                  <tbody>
+                    <Tr>
+                      <Td>{formatDate(item.transactionDate)}</Td>
+                      <Td>{transactionSymbol(item.type)}</Td>
+                      <Td>{categoryNames[item.categoryId]}</Td>
+                      <Td>{item.comment}</Td>
+                      <Td
+                        className={
+                          item.type === 'INCOME' ? 'income' : 'expense'
+                        }
+                      >
+                        {Math.abs(item.amount).toFixed(2)}
+                      </Td>
+                      <TdEdit>
+                        <EditWrapper>
+                          <EditTransactionModal item={item} />
+                          Edit
+                        </EditWrapper>
+                      </TdEdit>
+                    </Tr>
+                  </tbody>
+                </StyledTable>
+              </li>
+            ))}
+          </ul>
+        </TableListContainer>
+      </section>
+    </>
   );
 };
 

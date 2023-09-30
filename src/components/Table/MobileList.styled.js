@@ -1,29 +1,6 @@
 import styled from 'styled-components';
 
-export const ButtonEdit = styled.button`
-  background: transparent;
-  border: none;
-  color: var(--white);
-`;
-
-export const TableListSection = styled.div`
-  height: 344px;
-  overflow: auto;
-  ::-webkit-scrollbar {
-    width: 0px;
-    display: none;
-  }
-`;
 export const TableListContainer = styled.div`
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  li {
-    list-style: none;
-    max-width: 290px;
-  }
-
   li:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -32,20 +9,20 @@ export const TableListContainer = styled.div`
   }
 `;
 
-export const MobileTable = styled.table`
+export const StyledTable = styled.table`
   margin: 0;
-  max-width: 290px;
+  width: 280px;
   border-radius: 8px;
-  border-collapse: collapse;
+  height: 293px;
   color: #ffffff;
   th,
   td {
-    color: #fbfbfb;
+    white-space: pre-wrap;
   }
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1);
   position: relative;
@@ -61,16 +38,12 @@ export const MobileTable = styled.table`
     background-color: ${props => (props.type ? '#FFB627' : '#FF868D')};
   }
   th {
+    width: 103px;
     padding: 12px 0 12px 20px;
   }
 
   td {
     padding: 12px 20px 12px 0;
-    height: 43.1px;
-  }
-
-  td:last-child {
-    border-bottom: none;
   }
 
   th:not(:last-child),
@@ -80,8 +53,9 @@ export const MobileTable = styled.table`
   tbody {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 177px;
     max-width: 613.5px;
+    height: 100%;
   }
   th {
     display: flex;
@@ -93,24 +67,23 @@ export const Thead = styled.thead`
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: normal;
+  height: 100%;
+`;
+
+export const Tr = styled.tr`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 `;
 
 export const Th = styled.th`
   text-align: left;
-  padding-right: 32px;
-  width: 140px;
-`;
-
-export const ThDate = styled(Th)`
-  border-radius: 8px 0 0 8px;
-  padding: 16px 32px 16px 20px;
 `;
 
 export const Td = styled.td`
-  text-align: left;
-  min-width: 140px;
-  max-width: 140px;
+  height: 43px;
 
   &.income {
     color: #ffb627;
@@ -124,18 +97,30 @@ export const Td = styled.td`
   display: flex;
   justify-content: flex-end;
 
-  height: 18.4px;
-
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+`;
+
+export const TdEdit = styled(Td)`
+  height: 53px;
+  text-align: center;
+`;
+
+export const EditWrapper = styled.div`
+  color: var(--white-60, rgba(255, 255, 255, 0.6));
+  text-align: center;
+  font-family: Poppins;
+  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
-  &:last-child {
-    height: 53px;
-  }
-
-  border-bottom: 1px solid #4e4677;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 8px;
+  gap: 4px;
 `;
 
 export const CommonBtnStyles = styled.button`
@@ -145,7 +130,7 @@ export const CommonBtnStyles = styled.button`
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: normal;
   border: none;
   cursor: pointer;
 `;
@@ -153,7 +138,8 @@ export const CommonBtnStyles = styled.button`
 export const DeleteBtn = styled(CommonBtnStyles)`
   border-radius: 18px;
   padding: 4px 12px;
-
+  width: 69px;
+  height: 29px;
   text-align: center;
   font-size: 14px;
   font-style: normal;
