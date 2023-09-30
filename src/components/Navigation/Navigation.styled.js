@@ -136,22 +136,24 @@ export const StyledNavListMob = styled.ul`
   list-style: none;
   @media (max-width: 767px) {
     margin-top: 12px;
+    margin-bottom: 12px;
   }
 `;
 
 export const StyledNavLinkMob = styled(NavLink)`
   width: 44px;
   height: 44px;
-
   svg {
     width: 44px;
     height: 44px;
-    border-radius: 8px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    path {
+      fill: #2e225f;
+    }
   }
-  path {
-    fill: rgba(255, 255, 255, 0.4);
-  }
-  @media (max-width: 767px) {
+
+  @media (max-width: 767.9px) {
     &:active,
     &:hover {
       font-weight: 700;
@@ -168,26 +170,27 @@ export const StyledNavLinkMob = styled(NavLink)`
 `;
 
 export const ActiveNavLink = styled(StyledNavLink)`
-  /* &.active {
+  &.active {
     svg {
+      background-color: rgba(74, 86, 226, 0.5);
       filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
-      background-color: rgba(255, 255, 255, 1);
       path {
-        fill: #4a56e2;
+        fill: #fff;
         fill-opacity: 1;
       }
     }
-  } */
+  }
 `;
 
 export const ActiveNavLinkMob = styled(StyledNavLinkMob)`
-  /* &.active {
+  &.active {
     svg {
+      background-color: rgba(74, 86, 226, 0.5);
       filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
-      background-color: rgba(255, 255, 255, 1);
       path {
-        fill: rgba(115, 74, 239, 1);
+        fill: #fff;
+        fill-opacity: 1;
       }
     }
-  } */
+  }
 `;

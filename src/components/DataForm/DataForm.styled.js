@@ -28,14 +28,14 @@ export const customSelect = {
     fontSize: '16px',
     border: '1px solid var(--white-60, --transparency-60)',
     borderRadius: '8px',
-    '@media (max-width: 767.9px)': {
+    '@media screen (max-width: 767.9px)': {
       maxWidth: '440px',
       width: '100%',
     },
-    '@media (max-width: 1279.9px)': {
+    '@media screen  (max-width: 1279.9px)': {
       maxWidth: '160px',
     },
-    '@media (min-width: 1280px)': {
+    '@media screen (min-width: 1280px)': {
       maxWidth: '182px',
     },
   }),
@@ -59,8 +59,7 @@ export const customSelect = {
       width: '160px',
     },
     '@media (max-width: 767.9px)': {
-      maxWidth: '440px',
-      width: '100%',
+      width: '280px',
     },
   }),
   option: (provided, { isFocused }) => ({

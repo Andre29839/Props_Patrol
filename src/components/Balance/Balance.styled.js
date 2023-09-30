@@ -3,14 +3,12 @@ import styled from 'styled-components';
 export const StyledBalanceBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
 
   max-width: ${props => props.maxW || '424px'};
 
   padding-top: 8px;
   padding-bottom: 11px;
   padding-left: ${props => props.padL || '56px'};
-  /* margin-bottom: ${props => props.marB || '32px'}; */
 
   border-radius: ${props => props.borR || 'none'};
 
@@ -19,16 +17,21 @@ export const StyledBalanceBox = styled.div`
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
 
   @media screen and (min-width: 768px) {
-    width: 336px;
+    max-width: 480px;
     padding-left: 40px;
     border-radius: 8px;
-    /* margin-bottom: 32px; */
   }
 
   @media screen and (min-width: 320px) and (max-width: 767.9px) {
     max-width: 296px;
     padding-left: 40px;
     border-radius: 8px;
+  }
+
+  @media screen and (max-width: 767.9px) {
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 32px;
   }
 `;
 

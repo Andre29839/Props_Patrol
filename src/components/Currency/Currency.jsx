@@ -11,7 +11,6 @@ import {
   Eur,
   StyledBox,
   StyledImg,
-  StyledOval,
   StyledTBody,
   StyledTable,
   StyledTd,
@@ -65,9 +64,7 @@ const Currency = () => {
       {isDesktop && (
         <StyledBox ai="center" jc="center">
           {isLoading ? (
-            <>
-              <StyledOval />
-            </>
+            <></>
           ) : (
             <StyledBox>
               <StyledTable>
@@ -104,9 +101,7 @@ const Currency = () => {
       {isTabletAndMobile && (
         <StyledBox>
           {isLoading ? (
-            <>
-              <StyledOval />
-            </>
+            <></>
           ) : (
             <>
               <StyledTable>
@@ -141,9 +136,7 @@ const Currency = () => {
       {isMobile && (
         <StyledBox>
           {isLoading ? (
-            <>
-              <StyledOval />
-            </>
+            <></>
           ) : (
             <>
               <StyledTable>

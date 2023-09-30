@@ -11,14 +11,14 @@ export const Box = styled.div`
 
   @media screen and (min-width: 768px) and (max-width: 1279.9px) {
     padding: 0 32px;
-    max-width: 704px;
+    width: 768px;
     margin: 0 auto;
 
     display: block;
   }
   @media screen and (min-width: 1280px) {
     padding-right: 16px;
-    width: 1264px;
+    width: 1280px;
     margin: 0 auto;
     display: flex;
     gap: 69px;

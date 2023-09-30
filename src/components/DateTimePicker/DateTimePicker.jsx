@@ -7,7 +7,6 @@ import DatePicker from 'react-datepicker';
 const DateTimePicker = ({ name }) => {
   const [field] = useField(name);
   const { setFieldValue } = useFormikContext();
-
   return (
     <StyledDateTime>
       <DatePicker
