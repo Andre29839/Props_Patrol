@@ -11,7 +11,6 @@ import {
   Eur,
   StyledBox,
   StyledImg,
-  StyledOval,
   StyledTBody,
   StyledTable,
   StyledTd,

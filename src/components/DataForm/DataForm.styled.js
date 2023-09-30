@@ -33,7 +33,7 @@ export const customSelect = {
       width: '100%',
     },
     '@media screen  (max-width: 1279.9px)': {
-      // maxWidth: '160px',
+      maxWidth: '160px',
     },
     '@media screen (min-width: 1280px)': {
       maxWidth: '182px',
@@ -55,12 +55,11 @@ export const customSelect = {
     boxShadow: 'none',
     margin: '0',
 
-    '@media screen (max-width: 1279.9px)': {
+    '@media (max-width: 1279.9px)': {
       width: '160px',
     },
-    '@media screen (max-width: 767.9px)': {
-      maxWidth: '440px',
-      width: '100%',
+    '@media (max-width: 767.9px)': {
+      width: '280px',
     },
   }),
   option: (provided, { isFocused }) => ({
