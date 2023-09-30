@@ -34,9 +34,9 @@ export const StyledNavLink = styled(NavLink)`
     width: 18px;
     height: 18px;
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
     path {
-      fill: rgb(255, 255, 255);
-      fill-opacity: 0.4;
+      fill: #2e225f;
     }
   }
 
@@ -44,10 +44,10 @@ export const StyledNavLink = styled(NavLink)`
   &:hover {
     font-weight: 700;
     svg {
-      background-color: rgba(255, 255, 255, 1);
+      background-color: rgba(74, 86, 226, 0.5);
       filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
       path {
-        fill: #4a56e2;
+        fill: #fff;
         fill-opacity: 1;
       }
     }
@@ -55,7 +55,7 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 export const StyledIoMdHome = styled(IoMdHome)`
-  width: 18px;
+  /* width: 18px;
   height: 18px;
   border-radius: 5px;
   fill: none;
@@ -74,11 +74,11 @@ export const StyledIoMdHome = styled(IoMdHome)`
         fill-opacity: 1;
       }
     }
-  }
+  } */
 `;
 
 export const StyledSlGraph = styled(SlGraph)`
-  width: 18px;
+  /* width: 18px;
   height: 18px;
   border-radius: 5px;
   fill: none;
@@ -97,11 +97,11 @@ export const StyledSlGraph = styled(SlGraph)`
         fill-opacity: 1;
       }
     }
-  }
+  } */
 `;
 
 export const StyledPiCurrencyDollarSimple = styled(PiCurrencyDollarSimple)`
-  width: 44px;
+  /* width: 44px;
   height: 44px;
   border-radius: 5px;
   fill: none;
@@ -120,7 +120,7 @@ export const StyledPiCurrencyDollarSimple = styled(PiCurrencyDollarSimple)`
         fill-opacity: 1;
       }
     }
-  }
+  } */
 `;
 
 export const StyledNavListMob = styled.ul`
@@ -151,21 +151,24 @@ export const StyledNavLinkMob = styled(NavLink)`
   path {
     fill: rgba(255, 255, 255, 0.4);
   }
-
-  &:active,
-  &:hover {
-    svg {
-      filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
-      background-color: rgba(255, 255, 255, 1);
-      path {
-        fill: rgba(115, 74, 239, 1);
+  @media (max-width: 767px) {
+    &:active,
+    &:hover {
+      font-weight: 700;
+      svg {
+        background-color: rgba(74, 86, 226, 0.5);
+        filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+        path {
+          fill: #fff;
+          fill-opacity: 1;
+        }
       }
     }
   }
 `;
 
 export const ActiveNavLink = styled(StyledNavLink)`
-  &.active {
+  /* &.active {
     svg {
       filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
       background-color: rgba(255, 255, 255, 1);
@@ -174,11 +177,11 @@ export const ActiveNavLink = styled(StyledNavLink)`
         fill-opacity: 1;
       }
     }
-  }
+  } */
 `;
 
 export const ActiveNavLinkMob = styled(StyledNavLinkMob)`
-  &.active {
+  /* &.active {
     svg {
       filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
       background-color: rgba(255, 255, 255, 1);
@@ -186,5 +189,5 @@ export const ActiveNavLinkMob = styled(StyledNavLinkMob)`
         fill: rgba(115, 74, 239, 1);
       }
     }
-  }
+  } */
 `;

@@ -11,7 +11,7 @@ import {
 } from './Navigation.styled';
 
 const Navigation = () => {
-  const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767 });
+  const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767.9 });
   const isTabletAndDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
