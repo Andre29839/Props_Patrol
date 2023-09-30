@@ -11,12 +11,12 @@ export const StyledSideBox = styled.div`
   margin-bottom: ${props => props.marB || '15px'};
   max-width: ${props => props.w || '768px'};
 
-  @media (min-width: 768px) {
-    width: ${props => props.w || '675px'};
+  @media (min-width: 768px) and (max-width: 1279.9px) {
+    max-width: ${props => props.w || '768px'};
     display: flex;
     flex-direction: row;
     gap: 32px;
-    margin-bottom: ${props => props.marB || '40px'};
+    margin-bottom: ${props => props.marB || '20px'};
   }
 `;
 
