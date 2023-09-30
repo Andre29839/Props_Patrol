@@ -17,12 +17,12 @@ export const BackdropLogOut = styled.div`
 `;
 
 export const ModalLogOut = styled.div`
-  width: 300px;
   height: 100%;
   top: 50%;
   left: 50%;
   position: absolute;
   padding: 40px 72px;
+  overflow-y: auto;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
@@ -53,22 +53,6 @@ export const ModalLogOut = styled.div`
       width: 299px;
       margin-top: 0;
     }
-  }
-`;
-
-export const BtnClose = styled.button`
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: 60px;
-  right: 50px;
-  background-color: transparent;
-  padding: 2px;
-  border: none;
-
-  @media only screen and (min-width: 768px) {
-    top: 20px;
-    right: 20px;
   }
 `;
 

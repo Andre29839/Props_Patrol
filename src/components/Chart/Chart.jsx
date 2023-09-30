@@ -3,6 +3,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
 import { useSelector } from 'react-redux';
+import { ChartWrapper } from './Chart.styled';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -22,7 +23,7 @@ const colors = [
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
   if (!data || !data.categoriesSummary || data.categoriesSummary.length === 0) {
-    return;
+    return "You don't have any expence now";
   }
 
   const categories = data.categoriesSummary;
@@ -52,8 +53,10 @@ const Chart = ({ data }) => {
 
   return (
     <div>
-      <Doughnut data={chartData} options={options} />
-      {data ? <span>{totalBalance.balance}</span> : ''}
+      <ChartWrapper>
+        <Doughnut data={chartData} options={options} />
+        {data ? <span> ₴ {totalBalance.balance}</span> : ''}
+      </ChartWrapper>
     </div>
   );
 };

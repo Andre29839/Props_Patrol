@@ -2,19 +2,29 @@ import { IoExitOutline } from 'react-icons/io5';
 import styled from 'styled-components';
 
 export const HeaderStyled = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
   background: var(--header-color);
   box-shadow: var(--header-shadow);
-
-  @media only screen and (min-width: 768px) {
-    padding: 16px 32px;
-  }
 `;
 
 export const WrapHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 16px 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+  }
+`;
+
+export const WrapLogo = styled.div`
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -30,7 +40,6 @@ export const WrapHeader = styled.div`
     font-size: 13px;
     color: var(--white);
     font-weight: 400;
-    font-family: 'Poppins', sans-serif;
   }
 
   @media only screen and (min-width: 768px) {
@@ -55,6 +64,7 @@ export const WrapBtn = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 8px;
 
   span {
     color: var(--white-60);
@@ -62,7 +72,6 @@ export const WrapBtn = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-right: 8px;
   }
 
   button {
@@ -72,7 +81,7 @@ export const WrapBtn = styled.div`
     color: var(--white-60);
     align-items: center;
     vertical-align: sub;
-    padding: 4px;
+    padding: 0;
     border: none;
   }
 
@@ -85,12 +94,13 @@ export const WrapBtn = styled.div`
 
   @media only screen and (min-width: 768px) {
     span {
-      margin-right: 12px;
+      margin-right: 8px;
     }
 
     button {
       width: 66px;
       height: 32px;
+      border-left: 1px solid var(--white-60);
       color: var(--white-60);
     }
   }
@@ -103,10 +113,13 @@ export const LogoExit = styled(IoExitOutline)`
   fill: currentColor;
   transform: scaleY(1.4);
   vertical-align: sub;
-  margin-right: 4px;
+
+  @media only screen and (min-width: 768px) {
+    margin-left: 6px;
+    margin-right: 8px;
+  }
 
   @media only screen and (min-width: 1280px) {
     transform: scaleY(1.5);
-    margin-right: 6px;
   }
 `;
