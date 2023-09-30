@@ -6,7 +6,13 @@ import {
   openModalLogout,
 } from 'redux/globalReducers/globalSlice';
 import moneylogo from '../../images/logo.svg';
-import { LogoExit, WrapBtn, WrapHeader, HeaderStyled } from './Header.styled';
+import {
+  LogoExit,
+  WrapBtn,
+  WrapHeader,
+  HeaderStyled,
+  WrapLogo,
+} from './Header.styled';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
 import ModalLogout from 'components/LogOutModal/LogOutModal';
 import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
@@ -25,16 +31,18 @@ const Header = () => {
     <>
       <HeaderStyled>
         <WrapHeader>
-          <img src={moneylogo} alt="MoneyGuard_Logo" />
-          <p>Money Guard</p>
+          <WrapLogo>
+            <img src={moneylogo} alt="MoneyGuard_Logo" />
+            <p>Money Guard</p>
+          </WrapLogo>
+          <WrapBtn>
+            <span>{userData?.username}</span>
+            <button onClick={handleLogout}>
+              <LogoExit />
+              {isMobilesize ? '' : 'Exit'}
+            </button>
+          </WrapBtn>
         </WrapHeader>
-        <WrapBtn>
-          <span>{userData?.username}</span>
-          <button onClick={handleLogout}>
-            <LogoExit />
-            {isMobilesize ? '' : 'Exit'}
-          </button>
-        </WrapBtn>
       </HeaderStyled>
       {isModalShow && (
         <ModalLogout closeReducer={() => dispatch(closeModalLogout())} />

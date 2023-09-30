@@ -130,7 +130,6 @@ export const TwoColumnRow = styled.div`
     font-size: 18px;
     font-weight: 400;
     text-align: center;
-    margin-bottom: 3px;
     outline: none;
 
     @media (max-width: 767.9px) {
