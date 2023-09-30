@@ -13,7 +13,7 @@ export const StyledTable = styled.table`
   margin: 0;
   width: 280px;
   border-radius: 8px;
-  height: 293px;
+  height: auto;
   color: #ffffff;
   th,
   td {
@@ -83,8 +83,6 @@ export const Th = styled.th`
 `;
 
 export const Td = styled.td`
-  height: 43px;
-
   &.income {
     color: #ffb627;
   }
@@ -150,4 +148,8 @@ export const DeleteBtn = styled(CommonBtnStyles)`
     linear-gradient(167deg, #ffc727 0%, #9e40ba 61.46%, #7000ff 90.54%)
   );
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
+`;
+
+export const SectionHome = styled.section`
+  position: relative;
 `;
