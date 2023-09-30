@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import moment from 'moment';
+import { parse } from 'date-fns';
 import { Formik } from 'formik';
-import { CiCalendarDate } from 'react-icons/ci';
 import { useDispatch, useSelector } from 'react-redux';
 import { object, string, date, bool, mixed, number } from 'yup';
 import {
@@ -34,8 +33,8 @@ const ModalAddTransaction = ({ closeModal }) => {
     });
 
   const dateTransformer = (_, originalValue) => {
-    const parsedDate = moment(originalValue, 'DD.MM.YYYY');
-    return parsedDate.isValid() ? parsedDate.toDate() : new Date('');
+    const parsedDate = parse(originalValue, 'dd-MM-yyyy', new Date());
+    return Number(parsedDate) ? new Date('') : new Date();
   };
 
   const handleCheckboxChange = () => {
@@ -82,13 +81,20 @@ const ModalAddTransaction = ({ closeModal }) => {
           .transform(dateTransformer)
           .typeError('Please enter a valid date')
           .required('Please provide transaction date.'),
-        comment: string().notRequired(),
+        comment: string()
+          .notRequired()
+          .max(25, 'Maximum must be 25 characters')
+          .min(5, 'Minimum must be 5 characters'),
       })}
       onSubmit={(values, { setSubmitting, resetForm }) => {
-        handleSubmit(values);
-        resetForm();
-        setSubmitting(false);
-        closeModal();
+        try {
+          handleSubmit(values);
+          resetForm();
+          setSubmitting(false);
+          closeModal();
+        } catch (error) {
+          console.error(error);
+        }
       }}
       enableReinitialize
     >
@@ -134,12 +140,12 @@ const ModalAddTransaction = ({ closeModal }) => {
             </InputWrapper>
             <CalendarWrapper>
               <DateTimePicker
-                dateFormat="DD.MM.YYYY"
+                dateFormat="dd-MM-yyyy"
                 name="date"
                 type="date"
                 timeFormat={false}
               />
-              <CiCalendarDate />
+              {/* <CiCalendarDate /> */}
             </CalendarWrapper>
           </TwoColumnRow>
           <InputWrapper>
@@ -156,7 +162,7 @@ const ModalAddTransaction = ({ closeModal }) => {
           <Button
             type="button"
             variant="secondary"
-            text={'Cancel'}
+            text="Cancel"
             onClick={() => closeModal()}
           />
         </FormikForm>

@@ -48,8 +48,8 @@ export const ModalContent = styled.div`
 
 export const ButtonIcon = styled.button`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 35px;
   width: 20px;
   height: 20px;
   border: none;

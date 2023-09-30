@@ -9,31 +9,6 @@ import {
   patchTransactionsRequest,
 } from 'services/api/transactionsApi';
 
-const notifySuccess = text =>
-  toast.success(text, {
-    position: 'bottom-center',
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined,
-    theme: 'colored',
-  });
-
-const notifyError = text => {
-  toast.error(text, {
-    position: 'bottom-center',
-    autoClose: 2000,
-    hideProgressBar: true,
-    closeOnClick: false,
-    pauseOnHover: false,
-    draggable: false,
-    progress: undefined,
-    theme: 'colored',
-  });
-};
-
 export const getTransactionsStatisticThunk = createAsyncThunk(
   'transactions/getTransactionsSummaryThunk',
   async (params, { rejectWithValue }) => {
@@ -73,10 +48,10 @@ export const addTransactionsThunk = createAsyncThunk(
   async (formData, { rejectWithValue }) => {
     try {
       const newTransaction = await addTransactionsRequest(formData);
-      notifySuccess('Transaction completed successfully!');
+      toast.success('Transaction completed successfully!');
       return newTransaction;
     } catch (error) {
-      notifyError(`Transaction completed with error!`);
+      toast.error(`Transaction completed with error!`);
       return rejectWithValue(error.message);
     }
   }

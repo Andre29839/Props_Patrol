@@ -43,9 +43,8 @@ export const customStyles = {
   menu: provided => ({
     ...provided,
     borderRadius: '8px',
-    background: 'rgba(88, 62, 155, 0.8)',
+    background: 'var(--violet)',
     boxShadow: 'var(--header-shadow)',
-    backdropFilter: 'blur(9px)',
     overflow: 'hidden',
     marginTop: '1px',
   }),
@@ -108,7 +107,7 @@ export const customStyles = {
     ...provided,
     paddingLeft: '8px',
     paddingBottom: '2px',
-    color: 'var(--white)',
+    color: 'var(--white-60)',
     '@media only screen and (max-width: 767.9px)': {
       paddingLeft: '0px',
     },
