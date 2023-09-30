@@ -21,7 +21,7 @@ import { patchTransactionsThunk } from 'redux/transactionsRedusers/transactionsT
 import Button from 'components/Button/Button';
 import { refreshBalanceThunk } from 'redux/registerReducers/registerThunks';
 // import CategorySelect from 'components/CategorySelect/CategorySelect';
-import { selectTransactionsCategories } from 'redux/transactionsRedusers/transactionsSelectors';
+// import { selectTransactionsCategories } from 'redux/transactionsRedusers/transactionsSelectors';
 
 const ModalEdit = ({ closeModal, item }) => {
   const categoryNames = {
