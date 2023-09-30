@@ -18,7 +18,7 @@ export const Box = styled.div`
   }
   @media screen and (min-width: 1280px) {
     padding-right: 16px;
-    width: 1264px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     gap: 69px;

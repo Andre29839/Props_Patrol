@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const StyledBalanceBox = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
 
   max-width: ${props => props.maxW || '424px'};
 
