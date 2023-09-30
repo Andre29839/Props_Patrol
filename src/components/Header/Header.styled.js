@@ -9,7 +9,7 @@ export const HeaderStyled = styled.header`
   background: var(--header-color);
   box-shadow: var(--header-shadow);
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 767.9px) {
     padding: 16px 32px;
   }
 `;
@@ -32,7 +32,7 @@ export const WrapHeader = styled.div`
     font-weight: 400;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 767.9px) {
     width: 115px;
     height: 48px;
     text-align: center;
@@ -72,6 +72,7 @@ export const WrapBtn = styled.div`
     align-items: center;
     vertical-align: sub;
     padding: 4px;
+    border: none;
   }
 
   div {
@@ -81,7 +82,7 @@ export const WrapBtn = styled.div`
     margin-right: 6px;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 767.9px) {
     span {
       margin-right: 12px;
     }
