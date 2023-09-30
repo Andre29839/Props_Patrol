@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { ImCancelCircle } from 'react-icons/im';
 
 export const BackdropLogOut = styled.div`
-  background: rgba(34, 13, 91, 0.23);
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0px;
   left: 0px;
   overscroll-behavior: contain;
+  background: rgba(34, 13, 91, 0.23);
   z-index: 5;
 
   @media only screen and (min-width: 768px) {
@@ -50,6 +50,7 @@ export const ModalLogOut = styled.div`
     max-height: 448px;
 
     p {
+      width: 299px;
       margin-top: 0;
     }
   }
@@ -63,6 +64,7 @@ export const BtnClose = styled.button`
   right: 50px;
   background-color: transparent;
   padding: 2px;
+  border: none;
 
   @media only screen and (min-width: 768px) {
     top: 20px;

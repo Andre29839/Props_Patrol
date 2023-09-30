@@ -72,6 +72,7 @@ export const WrapBtn = styled.div`
     align-items: center;
     vertical-align: sub;
     padding: 4px;
+    border: none;
   }
 
   div {
