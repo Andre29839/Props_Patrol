@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
@@ -66,18 +67,7 @@ const Currency = () => {
         <StyledBox ai="center" jc="center">
           {isLoading ? (
             <>
-              <StyledOval
-                height={40}
-                width={40}
-                color="#4a56e2"
-                wrapperStyle={{}}
-                wrapperClass=""
-                visible={true}
-                ariaLabel="oval-loading"
-                secondaryColor="#4a56e2"
-                strokeWidth={4}
-                strokeWidthSecondary={4}
-              />
+              <StyledOval />
             </>
           ) : (
             <StyledBox>
@@ -93,7 +83,7 @@ const Currency = () => {
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox key={el.rateBuy}>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -145,7 +135,7 @@ const Currency = () => {
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
@@ -196,7 +186,7 @@ const Currency = () => {
                   {currency?.length &&
                     currency.map(el => {
                       return (
-                        <StyledTdBox>
+                        <StyledTdBox key={nanoid()}>
                           <StyledTd>{el.currencyName}</StyledTd>
                           <StyledTd>{el.rateBuy}</StyledTd>
                           <StyledTd>
