@@ -45,7 +45,7 @@ export const ModalLogOut = styled.div`
     margin-right: auto;
   }
 
-  @media only screen and (min-width: 767.9px) {
+  @media only screen and (min-width: 768px) {
     width: 533px;
     max-height: 448px;
 
@@ -66,7 +66,7 @@ export const BtnClose = styled.button`
   padding: 2px;
   border: none;
 
-  @media only screen and (min-width: 767.9px) {
+  @media only screen and (min-width: 768px) {
     top: 20px;
     right: 20px;
   }
@@ -86,7 +86,7 @@ export const CancelSvg = styled(ImCancelCircle)`
 export const WrapLogo = styled.div`
   display: none;
 
-  @media only screen and (min-width: 767.9px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,7 +108,7 @@ export const WrapLogo = styled.div`
     line-height: normal;
   }
 
-  @media only screen and (min-width: 767.9px) {
+  @media only screen and (min-width: 1280px) {
     img {
       width: 35px;
       height: 35px;
