@@ -16,7 +16,6 @@ export const PublicPageContainer = styled.div`
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
-  background: #101010;
 
   background-size: cover;
   background-image: url(${mobile});
