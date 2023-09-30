@@ -71,11 +71,11 @@ const Currency = () => {
           ) : (
             <StyledBox>
               <StyledTable>
-                  <StyledThBox>
-                    <StyledTh>Currency</StyledTh>
-                    <StyledTh>Purchase</StyledTh>
-                    <StyledTh>Sale</StyledTh>
-                  </StyledThBox>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
                 <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
@@ -102,7 +102,7 @@ const Currency = () => {
         </StyledBox>
       )}
       {isTabletAndMobile && (
-        <StyledBox >
+        <StyledBox>
           {isLoading ? (
             <>
               <StyledOval />
@@ -110,13 +110,11 @@ const Currency = () => {
           ) : (
             <>
               <StyledTable>
-                <StyledTableHead>
-                  <StyledThBox>
-                    <StyledTh>Currency</StyledTh>
-                    <StyledTh>Purchase</StyledTh>
-                    <StyledTh>Sale</StyledTh>
-                  </StyledThBox>
-                </StyledTableHead>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
                 <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
@@ -149,13 +147,11 @@ const Currency = () => {
           ) : (
             <>
               <StyledTable>
-                <StyledTableHead>
-                  <StyledThBox>
-                    <StyledTh>Currency</StyledTh>
-                    <StyledTh>Purchase</StyledTh>
-                    <StyledTh>Sale</StyledTh>
-                  </StyledThBox>
-                </StyledTableHead>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
                 <StyledTBody>
                   {currency?.length &&
                     currency.map(el => {
