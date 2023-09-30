@@ -25,6 +25,7 @@ export const Table = styled.table`
 `;
 
 export const Thead = styled.thead`
+  border-collapse: collapse;
   @media screen and (max-width: 767.5px) {
     font-size: 16px;
     font-style: normal;
@@ -95,15 +96,18 @@ export const NoTransactionsText = styled.td`
 `;
 
 export const TransactionsListWrapper = styled.div`
+  @media (min-width: 1280px) {
+    margin-top: 46px;
+  }
   @media (max-width: 767px) {
     display: none;
   }
 `;
+
 export const MobileTransactionListWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
   @media (min-width: 768px) {
     display: none;
   }

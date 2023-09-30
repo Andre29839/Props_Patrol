@@ -92,7 +92,7 @@ const MobileTransactionList = () => {
                       <Td>{formatDate(item.transactionDate)}</Td>
                       <Td>{transactionSymbol(item.type)}</Td>
                       <Td>{categoryNames[item.categoryId]}</Td>
-                      <Td>{item.comment}</Td>
+                      <Td>{item.comment ? item.comment : '-'}</Td>
                       <Td
                         className={
                           item.type === 'INCOME' ? 'income' : 'expense'
