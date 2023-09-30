@@ -5,7 +5,7 @@ import { BiSolidUserRectangle } from 'react-icons/bi';
 import styled from 'styled-components';
 
 export const WrapperFormReg = styled(WrapperForm)`
-  padding: 60px 62px;
+  padding: 40px 62px;
 `;
 
 export const LinkStyled = styled(Link)`
