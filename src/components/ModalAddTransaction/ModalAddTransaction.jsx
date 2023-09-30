@@ -145,7 +145,6 @@ const ModalAddTransaction = ({ closeModal }) => {
                 type="date"
                 timeFormat={false}
               />
-              {/* <CiCalendarDate /> */}
             </CalendarWrapper>
           </TwoColumnRow>
           <InputWrapper>
