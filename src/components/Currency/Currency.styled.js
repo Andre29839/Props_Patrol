@@ -17,12 +17,6 @@ export const StyledBox = styled.div`
   width: 100%;
   max-width: 480px;
   color: #fff;
-
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
-  }
 `;
 
 export const StyledTable = styled.div`
@@ -32,19 +26,8 @@ export const StyledTable = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media only screen and (min-width: 768px) {
-  }
-
   @media only screen and (min-width: 1280px) {
     align-items: stretch;
-  }
-`;
-
-export const StyledTableHead = styled.div`
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
   }
 `;
 
@@ -57,8 +40,6 @@ export const StyledThBox = styled.div`
   flex-direction: row;
   gap: 40px;
   align-items: center;
-  @media only screen and (min-width: 768px) {
-  }
 
   @media only screen and (min-width: 1280px) {
     justify-content: center;
@@ -71,9 +52,6 @@ export const StyledTdBox = styled.div`
   flex-direction: row;
   text-align: start;
   gap: 45px;
-
-  @media only screen and (min-width: 768px) {
-  }
 
   @media only screen and (min-width: 1280px) {
     margin: 0 auto;
@@ -89,8 +67,6 @@ export const StyledTBody = styled.div`
 
   gap: 24px;
   margin-bottom: 6px;
-  @media only screen and (min-width: 768px) {
-  }
 
   @media only screen and (min-width: 1280px) {
     margin-bottom: 36px;
@@ -98,28 +74,17 @@ export const StyledTBody = styled.div`
 `;
 
 export const StyledTh = styled.span`
-  color: var(--white, #fbfbfb);
-  /* font-family: 'Poppins SemiBold'; */
+  color: var(--white);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: calc(16 / 24);
   text-align: center;
-  &:last-child {
-  }
-  &:first-child {
-  }
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
-  }
 `;
 
 export const StyledTd = styled.span`
   display: inline-block;
-  color: var(--white, #fbfbfb);
-  /* font-family: 'Poppins Regular'; */
+  color: var(--white);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -131,11 +96,6 @@ export const StyledTd = styled.span`
   }
   &:first-child {
     width: 65px;
-  }
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
   }
 `;
 
@@ -149,22 +109,11 @@ export const StyledOval = styled(Dna)`
   secondaryColor="#4a56e2"
   strokeWidth={4}
   strokeWidthSecondary={4}
-   @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
-  }
 `;
 
 export const StyledImg = styled.img`
   display: inline-block;
   width: 100%;
-
-  @media only screen and (min-width: 768px) {
-  }
-
-  @media only screen and (min-width: 1280px) {
-  }
 `;
 
 export const Usd = styled.span`
