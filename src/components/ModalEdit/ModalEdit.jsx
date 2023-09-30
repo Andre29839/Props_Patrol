@@ -1,4 +1,4 @@
-import moment from 'moment';
+import { parse } from 'date-fns';
 import { Formik } from 'formik';
 import { RxSlash } from 'react-icons/rx';
 import { CiCalendarDate } from 'react-icons/ci';
@@ -41,8 +41,8 @@ const ModalEdit = ({ closeModal, item }) => {
   const isExpense = item.type === 'EXPENSE';
 
   const dateTransformer = (_, originalValue) => {
-    const parsedDate = moment(originalValue, 'DD.MM.YYYY');
-    return parsedDate.isValid() ? parsedDate.toDate() : new Date('');
+    const parsedDate = parse(originalValue, 'dd-MM-yyyy', new Date());
+    return Number(parsedDate) ? new Date('') : new Date();
   };
 
   const handleSubmit = values => {
@@ -84,7 +84,10 @@ const ModalEdit = ({ closeModal, item }) => {
           .transform(dateTransformer)
           .typeError('Please enter a valid date')
           .required('Please provide transaction date.'),
-        comment: string().notRequired(),
+        comment: string()
+          .notRequired()
+          .max(25, 'Maximum must be 25 characters')
+          .min(5, 'Minimum must be 5 characters'),
       })}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         handleSubmit(values);

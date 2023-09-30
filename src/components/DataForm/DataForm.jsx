@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Select from 'react-select';
 import { useDispatch } from 'react-redux';
 import { getTransactionsStatisticThunk } from 'redux/transactionsRedusers/transactionsThunks';

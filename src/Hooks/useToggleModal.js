@@ -3,10 +3,14 @@ import { useState } from 'react';
 export default function useToggleModal() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = () => setIsOpen(true);
+  const openModal = () => {
+    setIsOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
 
   const closeModal = (path = '/') => {
     setIsOpen(false);
+    document.body.style.overflow = '';
   };
 
   const toggleModal = () => setIsOpen(isOpen => !isOpen);

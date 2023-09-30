@@ -23,7 +23,7 @@ export default function ModalForm({
       <ModalContent>
         <ButtonIcon type="button" onClick={closeModal} aria-label="close modal">
           <IoIosClose
-            style={{ width: '20px', height: '20px', position: 'relative' }}
+            style={{ width: '40px', height: '40px', position: 'relative' }}
           />
         </ButtonIcon>
         {children}

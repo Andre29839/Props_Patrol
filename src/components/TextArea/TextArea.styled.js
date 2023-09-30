@@ -16,6 +16,7 @@ export const StyledTextArea = styled.textarea`
   width: 280px;
   line-height: 1.33;
   padding-left: 8px;
+  height: 30px;
 
   &::placeholder {
     color: var(--menu-list);
@@ -27,14 +28,11 @@ export const StyledTextArea = styled.textarea`
 
   @media (min-width: 768px) {
     min-height: 27px;
-    height: 27px;
     overflow: hidden;
     width: 409.5px;
   }
 
   @media (max-width: 767.9px) {
-    height: auto;
-    min-height: 85px;
     padding-left: 20px;
     padding-right: 20px;
 
