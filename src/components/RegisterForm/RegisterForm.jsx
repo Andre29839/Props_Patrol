@@ -10,7 +10,11 @@ import { Logo } from 'components/Logo/Logo';
 import { TogglePasswordIcon } from 'components/TogglePasswordVisibility/TogglePasswordVisibility';
 import { ConfirmPasswordIndicator } from 'components/ConfirmPasswordIndicator/ConfirmPasswordIndicator';
 
-import { LinkStyled, NameRegisterIcon } from './RegisterForm.styled';
+import {
+  LinkStyled,
+  NameRegisterIcon,
+  WrapperFormReg,
+} from './RegisterForm.styled';
 import {
   EmailIcon,
   FieldStyled,
@@ -18,7 +22,6 @@ import {
   PasswordlIcon,
   WrapperButton,
   WrapperField,
-  WrapperForm,
   WrapperIcon,
   WrapperIcon2,
   WrapperIcon3,
@@ -61,7 +64,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <WrapperForm>
+    <WrapperFormReg>
       <Logo />
       <Formik
         initialValues={initialValues}
@@ -149,6 +152,6 @@ export const RegisterForm = () => {
         )}
       </Formik>
       <LinkStyled to="/login">Log in</LinkStyled>
-    </WrapperForm>
+    </WrapperFormReg>
   );
 };

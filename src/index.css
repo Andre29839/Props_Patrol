@@ -1,5 +1,4 @@
 @import-normalize; /* bring in normalize.css styles */
-@import url('./stylesheet/fonts.css');
 @import './stylesheet/vars.css';
 
 body {

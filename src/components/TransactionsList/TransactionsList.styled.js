@@ -8,58 +8,12 @@ export const TableContainer = styled.div`
   }
 `;
 
-export const Table = styled.thead`
+export const Table = styled.table`
   margin: 0;
   width: 100%;
   border-radius: 8px;
   border-collapse: collapse;
   color: #ffffff;
-  th,
-  td {
-    color: #fbfbfb;
-  }
-
-  @media screen and (max-width: 767.5px) {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 1px;
-      height: 100%;
-      width: 7px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
-      background-color: ${props => (props.type ? '#FFB627' : '#FF868D')};
-    }
-    th {
-      padding: 12px 0 12px 20px;
-    }
-
-    td {
-      padding: 12px 20px 12px 0;
-    }
-
-    th:not(:last-child),
-    td:not(:last-child) {
-      border-bottom: 1px solid #6e60af;
-    }
-    tbody {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 613.5px;
-    }
-    th {
-      display: flex;
-      flex-direction: column;
-    }
-  }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     width: 704px;
@@ -80,6 +34,13 @@ export const Thead = styled.thead`
   @media screen and (min-width: 768px) {
     border-radius: 8px;
     tr th {
+      background-color: #4c3579;
+      backdrop-filter: blur(50px);
+      position: sticky;
+      top: 0;
+    }
+
+    th {
       background-color: #4c3579;
       backdrop-filter: blur(50px);
       position: sticky;
@@ -138,7 +99,6 @@ export const TransactionsListWrapper = styled.div`
     display: none;
   }
 `;
-
 export const MobileTransactionListWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -170,7 +130,6 @@ export const ButtonDelete = styled.button`
 
   &:focus,
   &:hover {
-    /* border-radius: 18px; */
     border: 1px solid yellow;
     transform: scale(1.01);
     box-shadow: 1px 5px 8px 0px rgba(0, 0, 0, 0.5);

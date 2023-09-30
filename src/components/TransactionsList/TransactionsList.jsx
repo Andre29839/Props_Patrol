@@ -11,7 +11,6 @@ import {
   ButtonDelete,
   NoTransactionsText,
   Table,
-  TableContainer,
   Td,
   TdDate,
   TdType,
@@ -19,7 +18,6 @@ import {
   ThCategory,
   ThComment,
   ThDate,
-  ThEdit,
   ThLast,
   ThType,
   Thead,
@@ -63,70 +61,59 @@ const TransactionsList = () => {
   };
 
   return (
-    <section>
-      <TableContainer>
-        <Table>
-          <Thead>
-            <tr>
-              <ThDate>Date</ThDate>
-              <ThType>Type</ThType>
-              <ThCategory>Category</ThCategory>
-              <ThComment>Comment</ThComment>
-              <Th>Sum</Th>
-              <ThEdit></ThEdit>
-              <ThLast></ThLast>
-            </tr>
-          </Thead>
-          <tbody>
-            {transactions.length === 0 ? (
-              <tr>
-                <NoTransactionsText colSpan="7">
-                  Your transactions will be here
-                </NoTransactionsText>
+    <Table>
+      <Thead>
+        <tr>
+          <ThDate>Date</ThDate>
+          <ThType>Type</ThType>
+          <ThCategory>Category</ThCategory>
+          <ThComment>Comment</ThComment>
+          <Th>Sum</Th>
+          <Th></Th>
+          <ThLast></ThLast>
+        </tr>
+      </Thead>
+      <tbody>
+        {transactions.length === 0 ? (
+          <tr>
+            <NoTransactionsText colSpan="7">
+              Your transactions will be here
+            </NoTransactionsText>
+          </tr>
+        ) : (
+          transactions.map(
+            ({ id, transactionDate, type, categoryId, comment, amount }) => (
+              <tr key={id}>
+                <TdDate>{formatDate(transactionDate)}</TdDate>
+                <TdType>{transactionSymbol(type)}</TdType>
+                <Td>{categoryNames[categoryId]}</Td>
+                <Td>{comment}</Td>
+                <Td className={type === 'INCOME' ? 'income' : 'expense'}>
+                  {Math.abs(amount).toFixed(2)}
+                </Td>
+                <Td>
+                  <EditTransactionModal
+                    item={{
+                      id,
+                      transactionDate,
+                      type,
+                      categoryId,
+                      comment,
+                      amount,
+                    }}
+                  />
+                </Td>
+                <Td>
+                  <ButtonDelete onClick={() => handleDelete(id)}>
+                    Delete
+                  </ButtonDelete>
+                </Td>
               </tr>
-            ) : (
-              transactions.map(
-                ({
-                  id,
-                  transactionDate,
-                  type,
-                  categoryId,
-                  comment,
-                  amount,
-                }) => (
-                  <tr key={id}>
-                    <TdDate>{formatDate(transactionDate)}</TdDate>
-                    <TdType>{transactionSymbol(type)}</TdType>
-                    <Td>{categoryNames[categoryId]}</Td>
-                    <Td>{comment}</Td>
-                    <Td className={type === 'INCOME' ? 'income' : 'expense'}>
-                      {Math.abs(amount).toFixed(2)}
-                    </Td>
-                    <Td>
-                      <EditTransactionModal
-                        item={{
-                          id,
-                          transactionDate,
-                          type,
-                          categoryId,
-                          comment,
-                          amount,
-                        }}
-                      />
-                    </Td>
-                    <Td>
-                      <ButtonDelete onClick={() => handleDelete(id)}>
-                        Delete
-                      </ButtonDelete>
-                    </Td>
-                  </tr>
-                )
-              )
-            )}
-          </tbody>
-        </Table>
-      </TableContainer>
-    </section>
+            )
+          )
+        )}
+      </tbody>
+    </Table>
   );
 };
 

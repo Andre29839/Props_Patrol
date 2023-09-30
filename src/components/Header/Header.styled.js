@@ -30,6 +30,7 @@ export const WrapHeader = styled.div`
     font-size: 13px;
     color: var(--white);
     font-weight: 400;
+    font-family: 'Poppins', sans-serif;
   }
 
   @media only screen and (min-width: 768px) {
@@ -72,6 +73,7 @@ export const WrapBtn = styled.div`
     align-items: center;
     vertical-align: sub;
     padding: 4px;
+    border: none;
   }
 
   div {

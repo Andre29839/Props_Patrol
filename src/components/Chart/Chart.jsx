@@ -1,47 +1,59 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import { useSelector } from 'react-redux';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
+import { useSelector } from 'react-redux';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const Chart = ({ expenseCategories }) => {
+const colors = [
+  '#9575CD',
+  '#64B5F6',
+  '#E57373',
+  '#00897B',
+  '#4CAF50',
+  '#DCE775',
+  '#1A237E',
+  '#FFE082',
+  '#FF8A65',
+  '#8D6E63',
+  '#546E7A',
+];
+const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
-  const data = {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  if (!data || !data.categoriesSummary || data.categoriesSummary.length === 0) {
+    return;
+  }
+
+  const categories = data.categoriesSummary;
+
+  const chartData = {
+    labels: '',
     datasets: [
       {
-        label: '# of Votes',
-        backgroundColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-        ],
-        borderWidth: 1,
-        data:
-          !!expenseCategories && !expenseCategories.length
-            ? [1]
-            : expenseCategories.map(item => item.total),
-        hoverOffset: 4,
+        data: categories.map(item => item.total),
+        backgroundColor: colors,
+        borderWidth: 0,
+        cutout: '70%',
       },
     ],
   };
+
+  const options = {
+    responsive: true,
+    cutout: '70%',
+
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+    },
+  };
+
   return (
     <div>
-      <span>₴ {Number(totalBalance).toFixed(2)}</span>
-      <Doughnut data={data}></Doughnut>
+      <Doughnut data={chartData} options={options} />
+      {data ? <span>{totalBalance.balance}</span> : ''}
     </div>
   );
 };

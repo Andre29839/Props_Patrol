@@ -2,87 +2,89 @@ import { Dna } from 'react-loader-spinner';
 import styled from 'styled-components';
 
 export const WrapperCurrency = styled.div`
-  background: rgba(74, 86, 226, 0.1);
-`;
-
-export const Usd = styled.span`
-  color: #ff868d;
-  position: absolute;
-  top: 120px;
-  left: 45px;
-`;
-export const Eur = styled.span`
-  color: #ff868d;
-  position: absolute;
-
-  top: 88px;
-  right: 92px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  @media only screen and (min-width: 1280px) {
+    width: 480px;
+    margin-top: 32px;
+  }
 `;
 
 export const StyledBox = styled.div`
-  /* font-family: 'Poppins Regular', sans-serif; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  max-width: ${props => props.maxw || '480px'};
+  max-width: 480px;
+  color: #fff;
 `;
 
 export const StyledTable = styled.div`
   max-height: 170px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  margin-bottom: 30px;
-`;
-
-export const StyledTableHead = styled.div`
-  background: rgba(82, 59, 126, 0.6);
-  padding-left: ${props => props.padL || '62px'};
-  margin-bottom: ${props => props.marB || '24px'};
+  @media only screen and (min-width: 1280px) {
+    align-items: stretch;
+  }
 `;
 
 export const StyledThBox = styled.div`
+  padding: 16px 30px;
+  margin-bottom: 20px;
+  background: rgba(82, 59, 126, 0.6);
+
   display: flex;
   flex-direction: row;
-  gap: 50px;
-  padding: 16px 0;
+  gap: 40px;
+  align-items: center;
+
+  @media only screen and (min-width: 1280px) {
+    justify-content: center;
+    gap: 50px;
+  }
 `;
 
 export const StyledTdBox = styled.div`
   display: flex;
   flex-direction: row;
   text-align: start;
-  gap: 50px;
+  gap: 45px;
+
+  @media only screen and (min-width: 1280px) {
+    margin: 0 auto;
+    gap: 50px;
+  }
 `;
 
 export const StyledTBody = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-left: ${props => props.padL || '62px'};
-  gap: ${props => props.gap || '24px'};
+  justify-content: space-between;
+
+  gap: 24px;
   margin-bottom: 6px;
+
+  @media only screen and (min-width: 1280px) {
+    margin-bottom: 36px;
+  }
 `;
 
 export const StyledTh = styled.span`
-  color: var(--white, #fbfbfb);
-  /* font-family: 'Poppins SemiBold'; */
+  color: var(--white);
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: calc(16 / 24);
   text-align: center;
-  &:last-child {
-  }
-  &:first-child {
-  }
 `;
 
 export const StyledTd = styled.span`
   display: inline-block;
-  color: var(--white, #fbfbfb);
-  /* font-family: 'Poppins Regular'; */
+  color: var(--white);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -98,10 +100,35 @@ export const StyledTd = styled.span`
 `;
 
 export const StyledOval = styled(Dna)`
-  filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+  
+  height:40 px
+  width: 40px
+  color="#4a56e2"
+  visible:true
+  ariaLabel="oval-loading"
+  secondaryColor="#4a56e2"
+  strokeWidth={4}
+  strokeWidthSecondary={4}
 `;
 
 export const StyledImg = styled.img`
   display: inline-block;
-  width: ${props => props.w || '480px'};
+  width: 100%;
+`;
+
+export const Usd = styled.span`
+  @media only screen and (min-width: 1280px) {
+    color: #ff868d;
+    position: absolute;
+    top: 120px;
+    left: 45px;
+  }
+`;
+export const Eur = styled.span`
+  @media only screen and (min-width: 1280px) {
+    color: #ff868d;
+    position: absolute;
+    top: 90px;
+    right: 92px;
+  }
 `;

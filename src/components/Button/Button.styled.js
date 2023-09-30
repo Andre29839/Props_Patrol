@@ -21,6 +21,10 @@ export const ButtonStyled = styled.button`
   outline: none;
   transition: transform ${({ theme }) => theme.transitions.regular};
 
+  @media (max-width: 767.9px) {
+    width: 280px;
+  }
+
   &:focus,
   &:hover {
     border-radius: 18px;

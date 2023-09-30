@@ -7,6 +7,10 @@ export const FormikForm = styled(Form)`
   align-items: center;
   justify-content: center;
   row-gap: 40px;
+
+  @media (max-width: 767.9px) {
+    width: 280px;
+  }
 `;
 export const Heading = styled.h3`
   color: var(--white);

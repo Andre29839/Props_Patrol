@@ -5,7 +5,12 @@ import moneyGuardLogo from '../../images/logo.svg';
 export const Logo = () => {
   return (
     <WrapperLogo>
-      <img src={moneyGuardLogo} alt="MoneyGuard Logo" />
+      <img
+        src={moneyGuardLogo}
+        alt="MoneyGuard Logo"
+        width={'30px'}
+        height={'30px'}
+      />
       <TitleLogo>Money Guard</TitleLogo>
     </WrapperLogo>
   );
