@@ -18,6 +18,10 @@ export const StyledSideBox = styled.div`
     flex-direction: row;
     gap: 32px;
     margin-bottom: ${props => props.marB || '20px'};
+    border-right: none;
+  }
+  @media (max-width: 767.9px) {
+    border-right: none;
   }
 `;
 
