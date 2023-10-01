@@ -175,6 +175,7 @@ export const Td = styled.td`
     }
   }
   @media screen and (min-width: 768px) {
+    padding-left: 5px;
     border-bottom: 1px solid #4e4677;
   }
 `;
