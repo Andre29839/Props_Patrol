@@ -87,7 +87,13 @@ const TransactionsList = () => {
                 <TdDate>{formatDate(transactionDate)}</TdDate>
                 <TdType>{transactionSymbol(type)}</TdType>
                 <Td>{categoryNames[categoryId]}</Td>
-                <Td>{comment}</Td>
+                <Td>
+                  {comment
+                    ? comment.length > 12
+                      ? comment.substring(0, 12) + '...'
+                      : comment
+                    : '-'}
+                </Td>
                 <Td className={type === 'INCOME' ? 'income' : 'expense'}>
                   {Math.abs(amount).toFixed(2)}
                 </Td>

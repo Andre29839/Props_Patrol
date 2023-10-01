@@ -42,8 +42,6 @@ export const StatisticsWrapper = styled.div`
 `;
 
 export const TitleChart = styled.div`
-  display: none;
-
   @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -51,8 +49,6 @@ export const TitleChart = styled.div`
 `;
 
 export const WrapTable = styled.div`
-  display: none;
-
   @media only screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;

@@ -78,7 +78,7 @@ export const ThCategory = styled(Th)`
 `;
 
 export const ThComment = styled(Th)`
-  padding-right: 71px;
+  padding-right: 60px;
 `;
 export const ThDate = styled(Th)`
   @media screen and (min-width: 768px) {
@@ -97,7 +97,7 @@ export const NoTransactionsText = styled.td`
 `;
 
 export const TransactionsListWrapper = styled.div`
-  height: 308px;
+  height: 326px;
   overflow: auto;
 
   &::-webkit-scrollbar {
@@ -106,7 +106,7 @@ export const TransactionsListWrapper = styled.div`
   @media (min-width: 1280px) {
     margin-top: 46px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 767.9px) {
     display: none;
   }
 `;

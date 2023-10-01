@@ -21,13 +21,16 @@ const colors = [
   '#8D6E63',
   '#546E7A',
 ];
+
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
-  if (!data || !data.categoriesSummary || data.categoriesSummary.length === 0) {
+
+  if (!data || data.length === 0) {
+    console.log(data);
     return <ImgMoney alt="money" src={money} />;
   }
 
-  const categories = data.categoriesSummary;
+  const categories = data;
 
   const chartData = {
     labels: '',

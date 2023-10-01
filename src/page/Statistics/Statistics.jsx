@@ -12,14 +12,22 @@ import {
 import StatisticTable from 'components/StatisticTable/StatisticTable';
 
 const Statistics = () => {
-  const result = useSelector(selectTransactionsSummary);
+  const result = useSelector(
+    state => state.transactions.summary.categoriesSummary
+  );
+  console.log(result);
+
+  const filterres = result
+    ? result.filter(item => item.type === 'EXPENSE')
+    : [];
+  console.log({ filterres });
 
   return (
     <>
       <StatisticsWrapper>
         <TitleChart>
           <TitleStatistics>Statistics</TitleStatistics>
-          <Chart data={result} />
+          <Chart data={filterres} />
         </TitleChart>
         <WrapTable>
           <DatePicker />
