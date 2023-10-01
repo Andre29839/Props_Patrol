@@ -152,4 +152,8 @@ export const DeleteBtn = styled(CommonBtnStyles)`
 
 export const SectionHome = styled.section`
   position: relative;
+
+  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+    height: 430px;
+  }
 `;

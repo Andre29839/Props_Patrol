@@ -23,7 +23,7 @@ export const StyledBalanceBox = styled.div`
   }
 
   @media screen and (min-width: 320px) and (max-width: 767.9px) {
-    max-width: 296px;
+    width: 280px;
     padding-left: 40px;
     border-radius: 8px;
   }
