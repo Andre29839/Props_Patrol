@@ -86,7 +86,11 @@ const TransactionsList = () => {
               <tr key={id}>
                 <TdDate>{formatDate(transactionDate)}</TdDate>
                 <TdType>{transactionSymbol(type)}</TdType>
-                <Td>{categoryNames[categoryId]}</Td>
+                <Td>
+                  {categoryNames[categoryId].length > 10
+                    ? categoryNames[categoryId].substring(0, 10) + '...'
+                    : categoryNames[categoryId]}
+                </Td>
                 <Td>
                   {comment
                     ? comment.length > 12

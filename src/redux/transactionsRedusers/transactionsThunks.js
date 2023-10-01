@@ -61,6 +61,7 @@ export const patchTransactionsThunk = createAsyncThunk(
   async ({ id, updatedData }, { rejectWithValue }) => {
     try {
       const editTransaction = await patchTransactionsRequest(id, updatedData);
+      toast.success('Transaction edited successfully!');
       return editTransaction;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -72,6 +73,7 @@ export const deleteTransactionsThunk = createAsyncThunk(
   async (transactionId, { rejectWithValue }) => {
     try {
       const delTransaction = await deleteTransactionsRequest(transactionId);
+      toast.success('Transaction deleted successfully!');
       return delTransaction;
     } catch (error) {
       return rejectWithValue(error.message);

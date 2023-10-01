@@ -92,8 +92,8 @@ const MobileTransactionList = () => {
                       <Td>{formatDate(item.transactionDate)}</Td>
                       <Td>{transactionSymbol(item.type)}</Td>
                       <Td>
-                        {categoryNames[item.categoryId].length > 12
-                          ? categoryNames[item.categoryId].substring(0, 12) +
+                        {categoryNames[item.categoryId].length > 9
+                          ? categoryNames[item.categoryId].substring(0, 9) +
                             '...'
                           : categoryNames[item.categoryId]}
                       </Td>
