@@ -10,6 +10,7 @@ export const StyledSideBox = styled.div`
   padding-right: ${props => props.padR || '0'};
   justify-content: ${props => props.jc || 'normal'};
   max-width: ${props => props.w || '768px'};
+  border-right: 1px solid #fff;
 
   @media (min-width: 768px) and (max-width: 1279.9px) {
     max-width: ${props => props.w || '768px'};
