@@ -57,7 +57,7 @@ export const RegisterForm = () => {
       })
       .catch(error => {
         toast.error(
-          `${error.message}! Check your password! This Password is already used!`
+          `${error.message}! Check your password eng email! It is possible that this data is already being used, or password or email is incorrect !`
         );
       });
     resetForm();
@@ -93,7 +93,7 @@ export const RegisterForm = () => {
                   autoComplete="off"
                   required
                 />
-                <EmailIcon />
+                <EmailIcon size={24} />
               </WrapperIcon>
               <FormError name="email" touched={touched} errors={errors} />
 

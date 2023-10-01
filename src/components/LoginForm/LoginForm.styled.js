@@ -28,9 +28,10 @@ export const WrapperForm = styled.div`
 
   background: radial-gradient(
     circle,
-    rgb(64, 46, 155) 5%,
-    rgb(76, 50, 113) 100%
+    rgb(64, 46, 155, 0.95) 5%,
+    rgb(76, 50, 113, 0.95) 100%
   );
+  backdrop-filter: blur(1px);
 `;
 
 export const FormStyled = styled(Form)`
@@ -55,7 +56,7 @@ export const FieldStyled = styled(Field)`
   height: ${({ theme }) => theme.spacing(9)};
   outline: none;
   border: none;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
   background-color: rgba(255, 255, 255, 0);
   color: rgba(255, 255, 255, 0.6);
   @media (min-width: 768px) {

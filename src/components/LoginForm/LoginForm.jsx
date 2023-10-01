@@ -45,7 +45,7 @@ export const LoginForm = () => {
       })
       .catch(error => {
         toast.error(
-          `${error.message}! Check your password! Password is incorrect!`
+          `${error.message}! Check your password or email! Password or email is incorrect!`
         );
       });
   };
@@ -69,7 +69,7 @@ export const LoginForm = () => {
                 autoComplete="off"
                 required
               />
-              <EmailIcon />
+              <EmailIcon size={24} />
             </WrapperIcon>
             <FormError name="email" />
             <WrapperIcon3>
