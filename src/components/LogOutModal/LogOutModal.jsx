@@ -10,6 +10,7 @@ import {
   ModalLogOut,
   WrapLogo,
 } from './LogOutModal.styled';
+import { toast } from 'react-toastify';
 
 const ModalLogout = ({ closeReducer }) => {
   const dispatch = useDispatch();
@@ -36,6 +37,9 @@ const ModalLogout = ({ closeReducer }) => {
   const handlerLogout = () => {
     dispatch(logOutThunk());
     dispatch(closeModalLogout());
+    toast.success(
+      `You have successfully logged out. We hope to see you back soon!`
+    );
   };
 
   return (

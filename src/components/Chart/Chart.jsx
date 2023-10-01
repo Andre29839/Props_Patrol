@@ -8,36 +8,36 @@ import money from '../../images/money.png';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const colors = [
-  '#FED057',
-  '#FFD8D0',
-  '#FD9498',
-  '#C5BAFF',
-  '#6E78E8',
-  '#4A56E2',
-  '#81E1FF',
-  '#24CCA7',
-  '#00AD84',
-  '#8D6E63',
-  '#546E7A',
-];
+const colorStatistics = {
+  'Main expenses': '#FED057',
+  Products: '#FFD8D0',
+  Car: '#FD9498',
+  'Self care': '#C5BAFF',
+  'Child care': '#6E78E8',
+  'Household products': '#4A56E2',
+  Education: '#81E1FF',
+  Leisure: '#24CCA7',
+  'Other expenses': '#00AD84',
+  Entertainment: '#FF69B4',
+};
 
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
 
   if (!data || data.length === 0) {
-    console.log(data);
     return <ImgMoney alt="money" src={money} />;
   }
 
   const categories = data;
+
+  const categoryColors = categories.map(item => colorStatistics[item.name]);
 
   const chartData = {
     labels: '',
     datasets: [
       {
         data: categories.map(item => item.total),
-        backgroundColor: colors,
+        backgroundColor: categoryColors,
         borderWidth: 0,
         cutout: '70%',
       },

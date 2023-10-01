@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import {
   Section,
   StyledTable,
+  StyledWrap,
   TdCategory,
   TdSum,
   ThCategory,
@@ -13,13 +14,15 @@ import {
   TotalExpense,
   Transaction,
   TransactionColor,
+  WrapIncome,
+  WrapSummary,
 } from './StatisticTable.styled';
 
 const StatisticTable = () => {
   const sumOfCategories = useSelector(
     state => state.transactions.summary.categoriesSummary
   );
-  console.log(sumOfCategories);
+
   const incomeSum = useSelector(
     state => state.transactions.summary.incomeSummary
   );
@@ -45,38 +48,43 @@ const StatisticTable = () => {
   return (
     sumOfCategories && (
       <Section>
-        <StyledTable>
-          <Thead>
-            <tr>
-              <ThCategory>Category</ThCategory>
-              <ThSum>Sum</ThSum>
-            </tr>
-          </Thead>
-          <tbody>
-            {sumOfCategories.map(category => {
-              return (
-                <tr key={nanoid()}>
-                  <TdCategory>
-                    <TransactionColor
-                      color={colorStatistics[category.name]}
-                    ></TransactionColor>
-                    <span>{category.name}</span>
-                  </TdCategory>
-                  <TdSum>{category.total}</TdSum>
-                </tr>
-              );
-            })}
-
-            <tr>
-              <Transaction>Expenses:</Transaction>
-              <TotalExpense>{expenseSum}</TotalExpense>
-            </tr>
-            <tr>
-              <Transaction>Income:</Transaction>
-              <Total>{incomeSum}</Total>
-            </tr>
-          </tbody>
-        </StyledTable>
+        <StyledWrap>
+          <StyledTable>
+            <Thead>
+              <tr>
+                <ThCategory>Category</ThCategory>
+                <ThSum>Sum</ThSum>
+              </tr>
+            </Thead>
+            <tbody>
+              {sumOfCategories.map(category => {
+                return (
+                  category.name !== 'Income' && (
+                    <tr key={nanoid()}>
+                      <TdCategory>
+                        <TransactionColor
+                          color={colorStatistics[category.name]}
+                        ></TransactionColor>
+                        <span>{category.name}</span>
+                      </TdCategory>
+                      <TdSum>{category.total}</TdSum>
+                    </tr>
+                  )
+                );
+              })}
+            </tbody>
+          </StyledTable>
+        </StyledWrap>
+        <div>
+          <WrapSummary>
+            <Transaction>Expenses:</Transaction>
+            <TotalExpense>{expenseSum}</TotalExpense>
+          </WrapSummary>
+          <WrapIncome>
+            <Transaction>Income:</Transaction>
+            <Total>{incomeSum}</Total>
+          </WrapIncome>
+        </div>
       </Section>
     )
   );
