@@ -93,8 +93,8 @@ const TransactionsList = () => {
                 </Td>
                 <Td>
                   {comment
-                    ? comment.length > 9
-                      ? comment.substring(0, 9) + '...'
+                    ? comment.length > 8
+                      ? comment.substring(0, 8) + '...'
                       : comment
                     : '-'}
                 </Td>
