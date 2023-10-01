@@ -106,7 +106,7 @@ export const TransactionsListWrapper = styled.div`
   @media (min-width: 1280px) {
     margin-top: 46px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 767.9px) {
     display: none;
   }
 `;
