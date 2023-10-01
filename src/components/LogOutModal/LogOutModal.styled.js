@@ -18,11 +18,12 @@ export const BackdropLogOut = styled.div`
 
 export const ModalLogOut = styled.div`
   height: 100%;
+  width: 100%;
   top: 50%;
   left: 50%;
   position: absolute;
   padding: 40px 72px;
-  overflow-y: auto;
+  overscroll-behavior: contain;
   transform: translate(-50%, -50%);
   background: radial-gradient(
     circle,
