@@ -1,20 +1,11 @@
 import styled from 'styled-components';
 
-export const TableContainer = styled.div`
-  height: 344px;
-  ::-webkit-scrollbar {
-    width: 0px;
-    display: none;
-    position: absolute;
-  }
-`;
-
 export const Table = styled.table`
   margin: 0;
   width: 100%;
   border-radius: 8px;
   border-collapse: collapse;
-  color: #ffffff;
+  color: var(--total-white);
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     max-width: 704px;
@@ -55,7 +46,6 @@ export const Th = styled.th`
   text-align: left;
   @media screen and (min-width: 768px) {
     padding-right: 32px;
-    width: ${props => props.columnWidth}px;
   }
 `;
 
@@ -88,8 +78,6 @@ export const ThDate = styled(Th)`
 `;
 
 export const NoTransactionsText = styled.td`
-  color: #fff;
-  font-family: Poppins;
   font-size: 22px;
   line-height: 1.5;
   text-align: center;
@@ -151,24 +139,20 @@ export const Td = styled.td`
   text-align: left;
 
   &.income {
-    color: #ffb627;
+    color: var(--yellow);
   }
 
   &.expense {
-    color: #ff868d;
+    color: var(--dashboard-text);
   }
 
   @media screen and (max-width: 767.5px) {
     text-align: right;
     display: flex;
     justify-content: flex-end;
-
     height: 18.4px;
-
     font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    line-height: 1.5;
     letter-spacing: 0.32px;
     &:last-child {
       height: 24.7px;

@@ -14,7 +14,7 @@ export const StyledTable = styled.table`
   width: 280px;
   border-radius: 8px;
   height: auto;
-  color: #ffffff;
+  color: var(--total-white);
   th,
   td {
     white-space: pre-wrap;
@@ -24,7 +24,7 @@ export const StyledTable = styled.table`
   flex-direction: row;
   align-items: flex-end;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--transparency-10);
   position: relative;
   &:before {
     content: '';
@@ -35,7 +35,8 @@ export const StyledTable = styled.table`
     width: 7px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background-color: ${props => (props.type ? '#FFB627' : '#FF868D')};
+    background-color: ${props =>
+      props.type ? 'var(--yellow)' : 'var(--dashboard-text)'};
   }
   th {
     width: 103px;
@@ -65,7 +66,6 @@ export const StyledTable = styled.table`
 
 export const Thead = styled.thead`
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: normal;
   height: 100%;
@@ -84,11 +84,11 @@ export const Th = styled.th`
 
 export const Td = styled.td`
   &.income {
-    color: #ffb627;
+    color: var(--yellow);
   }
 
   &.expense {
-    color: #ff868d;
+    color: var(--dashboard-text);
   }
 
   text-align: right;
@@ -96,7 +96,6 @@ export const Td = styled.td`
   justify-content: flex-end;
 
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.32px;
@@ -110,19 +109,18 @@ export const TdEdit = styled(Td)`
 export const EditWrapper = styled.div`
   color: var(--white-60, rgba(255, 255, 255, 0.6));
   text-align: center;
-  font-family: Poppins;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
   display: flex;
   text-align: center;
   justify-content: center;
-  padding-top: 8px;
+  padding-top: 4px;
   gap: 4px;
 `;
 
 export const CommonBtnStyles = styled.button`
-  color: #ffffff;
+  color: var(--total-white);
   text-align: center;
 
   font-size: 14px;
