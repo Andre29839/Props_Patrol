@@ -78,7 +78,7 @@ export const ThCategory = styled(Th)`
 `;
 
 export const ThComment = styled(Th)`
-  padding-right: 71px;
+  padding-right: 60px;
 `;
 export const ThDate = styled(Th)`
   @media screen and (min-width: 768px) {

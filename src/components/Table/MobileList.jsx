@@ -91,8 +91,19 @@ const MobileTransactionList = () => {
                     <Tr>
                       <Td>{formatDate(item.transactionDate)}</Td>
                       <Td>{transactionSymbol(item.type)}</Td>
-                      <Td>{categoryNames[item.categoryId]}</Td>
-                      <Td>{item.comment ? item.comment : '-'}</Td>
+                      <Td>
+                        {categoryNames[item.categoryId].length > 12
+                          ? categoryNames[item.categoryId].substring(0, 12) +
+                            '...'
+                          : categoryNames[item.categoryId]}
+                      </Td>
+                      <Td>
+                        {item.comment
+                          ? item.comment.length > 10
+                            ? item.comment.substring(0, 10) + '...'
+                            : item.comment
+                          : '-'}
+                      </Td>
                       <Td
                         className={
                           item.type === 'INCOME' ? 'income' : 'expense'
