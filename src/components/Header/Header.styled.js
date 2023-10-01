@@ -93,7 +93,6 @@ export const WrapBtn = styled.div`
     }
 
     button {
-      width: 66px;
       height: 32px;
       border-left: 1px solid var(--white-60);
       color: var(--white-60);

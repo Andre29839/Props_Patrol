@@ -31,7 +31,7 @@ export const StyledTable = styled.div`
 `;
 
 export const StyledThBox = styled.div`
-  padding: 16px 30px;
+  padding: 16px 29px;
   margin-bottom: 20px;
   background: rgba(82, 59, 126, 0.6);
 
