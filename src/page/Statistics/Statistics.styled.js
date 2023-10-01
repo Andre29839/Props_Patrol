@@ -7,7 +7,7 @@ export const TitleStatistics = styled.h2`
   margin-bottom: 8px;
   color: var(--white);
   @media only screen and (min-width: 768px) {
-    margin-top: 20px;
+    margin-top: 0;
     margin-bottom: 20px;
   }
   @media only screen and (min-width: 1280px) {
@@ -37,7 +37,27 @@ export const StatisticsWrapper = styled.div`
 
   @media only screen and (min-width: 1280px) {
     justify-content: flex-start;
-    padding-left: 70px;
     padding-right: 28px;
+  }
+`;
+
+export const TitleChart = styled.div`
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+export const WrapTable = styled.div`
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 1280px) {
+    padding-top: 92px;
   }
 `;

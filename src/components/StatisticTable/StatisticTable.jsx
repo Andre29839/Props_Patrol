@@ -1,7 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { StatisticTab, TransactionColor } from './StatisticTable.styled';
 import { nanoid } from 'nanoid';
+import { useSelector } from 'react-redux';
+import {
+  Section,
+  StyledTable,
+  TdCategory,
+  TdSum,
+  ThCategory,
+  ThSum,
+  Thead,
+  Total,
+  TotalExpense,
+  Transaction,
+  TransactionColor,
+} from './StatisticTable.styled';
 
 const StatisticTable = () => {
   const sumOfCategories = useSelector(
@@ -33,40 +45,40 @@ const StatisticTable = () => {
 
   return (
     sumOfCategories && (
-      <section>
-        <StatisticTab>
-          <thead>
+      <Section>
+        <StyledTable>
+          <Thead>
             <tr>
-              <th>Category</th>
-              <th>Sum</th>
+              <ThCategory>Category</ThCategory>
+              <ThSum>Sum</ThSum>
             </tr>
-          </thead>
+          </Thead>
           <tbody>
             {sumOfCategories.map(category => {
               return (
                 <tr key={nanoid()}>
-                  <td>
+                  <TdCategory>
                     <TransactionColor
                       color={colorStatistics[category.name]}
                     ></TransactionColor>
-                  </td>
-                  <td>{category.name}</td>
-                  <td>{category.total}</td>
+                    <span>{category.name}</span>
+                  </TdCategory>
+                  <TdSum>{category.total}</TdSum>
                 </tr>
               );
             })}
 
             <tr>
-              <td>Expense:</td>
-              <td>{incomeSum}</td>
+              <Transaction>Expenses:</Transaction>
+              <TotalExpense>{incomeSum}</TotalExpense>
             </tr>
             <tr>
-              <td>Income:</td>
-              <td>{expenseSum}</td>
+              <Transaction>Income:</Transaction>
+              <Total>{expenseSum}</Total>
             </tr>
           </tbody>
-        </StatisticTab>
-      </section>
+        </StyledTable>
+      </Section>
     )
   );
 };

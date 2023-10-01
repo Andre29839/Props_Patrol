@@ -33,7 +33,7 @@ export const customSelect = {
       width: '100%',
     },
     '@media screen  (max-width: 1279.9px)': {
-      maxWidth: '160px',
+      maxWidth: '150px',
     },
     '@media screen (min-width: 1280px)': {
       maxWidth: '182px',
@@ -56,7 +56,7 @@ export const customSelect = {
     margin: '0',
 
     '@media (max-width: 1279.9px)': {
-      width: '160px',
+      width: '150px',
     },
     '@media (max-width: 767.9px)': {
       width: '280px',

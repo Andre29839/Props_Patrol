@@ -3,7 +3,13 @@ import DatePicker from 'components/DataForm/DataForm';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectTransactionsSummary } from 'redux/transactionsRedusers/transactionsSelectors';
-import { StatisticsWrapper, TitleStatistics } from './Statistics.styled';
+import {
+  StatisticsWrapper,
+  TitleChart,
+  TitleStatistics,
+  WrapTable,
+} from './Statistics.styled';
+import StatisticTable from 'components/StatisticTable/StatisticTable';
 
 const Statistics = () => {
   const result = useSelector(selectTransactionsSummary);
@@ -11,9 +17,14 @@ const Statistics = () => {
   return (
     <>
       <StatisticsWrapper>
-        <TitleStatistics>Statistics</TitleStatistics>
-        <Chart data={result} />
-        <DatePicker />
+        <TitleChart>
+          <TitleStatistics>Statistics</TitleStatistics>
+          <Chart data={result} />
+        </TitleChart>
+        <WrapTable>
+          <DatePicker />
+          <StatisticTable />
+        </WrapTable>
       </StatisticsWrapper>
     </>
   );

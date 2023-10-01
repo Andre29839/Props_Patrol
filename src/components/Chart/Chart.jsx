@@ -3,27 +3,28 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { selectAuthData } from 'redux/registerReducers/registerSelector';
 import { useSelector } from 'react-redux';
-import { ChartWrapper } from './Chart.styled';
+import { ChartWrapper, ImgMoney } from './Chart.styled';
+import money from '../../images/money.png';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const colors = [
-  '#9575CD',
-  '#64B5F6',
-  '#E57373',
-  '#00897B',
-  '#4CAF50',
-  '#DCE775',
-  '#1A237E',
-  '#FFE082',
-  '#FF8A65',
+  '#FED057',
+  '#FFD8D0',
+  '#FD9498',
+  '#C5BAFF',
+  '#6E78E8',
+  '#4A56E2',
+  '#81E1FF',
+  '#24CCA7',
+  '#00AD84',
   '#8D6E63',
   '#546E7A',
 ];
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
   if (!data || !data.categoriesSummary || data.categoriesSummary.length === 0) {
-    return "You don't have any expence now";
+    return <ImgMoney alt="money" src={money} />;
   }
 
   const categories = data.categoriesSummary;
