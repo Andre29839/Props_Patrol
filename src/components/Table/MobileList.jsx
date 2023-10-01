@@ -99,8 +99,8 @@ const MobileTransactionList = () => {
                       </Td>
                       <Td>
                         {item.comment
-                          ? item.comment.length > 10
-                            ? item.comment.substring(0, 10) + '...'
+                          ? item.comment.length > 8
+                            ? item.comment.substring(0, 8) + '...'
                             : item.comment
                           : '-'}
                       </Td>
