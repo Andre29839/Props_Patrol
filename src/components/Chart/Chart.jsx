@@ -22,11 +22,6 @@ const colors = [
   '#546E7A',
 ];
 
-// const categoryType = value => {
-//   const expenceCategory = value.filter(category => category.type === 'EXPENSE');
-//   return expenceCategory;
-// };
-
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
 
@@ -34,12 +29,6 @@ const Chart = ({ data }) => {
     console.log(data);
     return <ImgMoney alt="money" src={money} />;
   }
-  // const expenseSum = data => {
-  //   const exp = data.filter(item => item.type === 'EXPENSE');
-  //   console.log(exp);
-  // };
-  // expenseSum(data);
-  // console.log(123);
 
   const categories = data;
 
