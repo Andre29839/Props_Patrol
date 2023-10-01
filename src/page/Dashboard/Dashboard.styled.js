@@ -4,8 +4,7 @@ export const Box = styled.div`
   position: relative;
 
   @media screen and (max-width: 767.9px) {
-    padding: 0 20px;
-    max-width: 440px;
+    max-width: 400px;
     margin: 0 auto;
   }
 

@@ -24,7 +24,7 @@ export const StyledNavLink = styled(NavLink)`
   flex-direction: row;
   gap: 20px;
   align-items: center;
-  color: var(--white, #fbfbfb);
+  color: var(--white);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -134,7 +134,7 @@ export const StyledNavListMob = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-  @media (max-width: 767px) {
+  @media (max-width: 767.9px) {
     margin-top: 12px;
     margin-bottom: 12px;
   }

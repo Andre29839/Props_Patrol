@@ -28,15 +28,16 @@ export const AddBtn = styled(CommonBtnStyles)`
 `;
 
 export const BtnRightCorner = styled.div`
-  position: fixed;
+  position: absolute;
 
   @media screen and (max-width: 767.9px) {
-    right: 20px;
+    right: auto;
     bottom: 20px;
+    position: fixed;
   }
 
   @media screen and (min-width: 768px) {
-    right: 40px;
+    right: 12px;
     bottom: 40px;
   }
 `;

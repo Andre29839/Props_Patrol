@@ -5,6 +5,7 @@ export const TableContainer = styled.div`
   ::-webkit-scrollbar {
     width: 0px;
     display: none;
+    position: absolute;
   }
 `;
 
