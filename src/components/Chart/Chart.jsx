@@ -21,13 +21,27 @@ const colors = [
   '#8D6E63',
   '#546E7A',
 ];
+
+// const categoryType = value => {
+//   const expenceCategory = value.filter(category => category.type === 'EXPENSE');
+//   return expenceCategory;
+// };
+
 const Chart = ({ data }) => {
   const totalBalance = useSelector(selectAuthData);
-  if (!data || !data.categoriesSummary || data.categoriesSummary.length === 0) {
+
+  if (!data || data.length === 0) {
+    console.log(data);
     return <ImgMoney alt="money" src={money} />;
   }
+  // const expenseSum = data => {
+  //   const exp = data.filter(item => item.type === 'EXPENSE');
+  //   console.log(exp);
+  // };
+  // expenseSum(data);
+  // console.log(123);
 
-  const categories = data.categoriesSummary;
+  const categories = data;
 
   const chartData = {
     labels: '',
