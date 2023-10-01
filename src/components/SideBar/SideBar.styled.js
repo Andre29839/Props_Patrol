@@ -23,5 +23,4 @@ export const StyledSideBox = styled.div`
 export const StyledNavAndBalanceBox = styled.div`
   width: 100%;
   max-width: ${props => props.maxW || '480px'};
-  margin-bottom: 28px;
 `;
