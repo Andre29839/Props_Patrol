@@ -2,10 +2,7 @@ import { nanoid } from 'nanoid';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
-import {
-  currencySelector,
-  isLoadingSelector,
-} from 'redux/currencyRedusers/currencySelectors';
+import { currencySelector } from 'redux/currencyRedusers/currencySelectors';
 import { currencyThunk } from 'redux/currencyRedusers/currencyThunk';
 import {
   Eur,
@@ -25,7 +22,6 @@ const Currency = () => {
   const [currency, setCurrency] = useState([]);
   const dispatch = useDispatch();
   const selectedCurrency = useSelector(currencySelector);
-  const isLoading = useSelector(isLoadingSelector);
   const token = useSelector(state => state.auth.token);
 
   const currencyChart = useSelector(currencySelector);
