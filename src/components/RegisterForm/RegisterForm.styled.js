@@ -21,7 +21,7 @@ export const WrapperFormReg = styled(WrapperForm)`
     background-image: url(${mobile2x});
   }
   @media (min-width: 768px) {
-    padding: 80px 62px;
+    padding: 40px 62px;
     width: 533px;
   }
   border-radius: ${({ theme }) => theme.radii.normal};
@@ -29,8 +29,8 @@ export const WrapperFormReg = styled(WrapperForm)`
 
   background: radial-gradient(
     circle,
-    rgb(64, 46, 155) 5%,
-    rgb(76, 50, 113) 100%
+    rgb(64, 46, 155, 0.95) 5%,
+    rgb(76, 50, 113, 0.95) 100%
   );
 `;
 
