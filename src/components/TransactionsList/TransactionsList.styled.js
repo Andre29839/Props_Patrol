@@ -97,7 +97,7 @@ export const NoTransactionsText = styled.td`
 `;
 
 export const TransactionsListWrapper = styled.div`
-  height: 308px;
+  height: 326px;
   overflow: auto;
 
   &::-webkit-scrollbar {
