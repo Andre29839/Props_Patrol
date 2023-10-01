@@ -6,7 +6,6 @@ export const WrapperCurrency = styled.div`
   flex-direction: column;
   align-items: center;
   width: 320px;
-
   @media only screen and (min-width: 1280px) {
     width: 480px;
     margin-top: 32px;
