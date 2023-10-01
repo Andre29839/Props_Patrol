@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import PrivateRoute from './PrivateRoutes/PrivateRoutes';
 import PublicRoute from './PublicRoutes/PublicRoutes';
@@ -18,7 +18,7 @@ const UserRoutes = () => {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route element={<PublicRoute />}>
-          <Route path="/" element={<LogIn />} />
+          <Route index element={<Navigate to="/login" />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/register" element={<Register />} />
         </Route>

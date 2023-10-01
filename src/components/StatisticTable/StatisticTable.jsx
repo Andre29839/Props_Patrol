@@ -28,7 +28,6 @@ const StatisticTable = () => {
     state => state.transactions.summary.expenseSummary
   );
 
-  console.log(sumOfCategories);
   const colorStatistics = {
     'Main expenses': '#FED057',
     Products: '#FFD8D0',
@@ -70,11 +69,11 @@ const StatisticTable = () => {
 
             <tr>
               <Transaction>Expenses:</Transaction>
-              <TotalExpense>{incomeSum}</TotalExpense>
+              <TotalExpense>{expenseSum}</TotalExpense>
             </tr>
             <tr>
               <Transaction>Income:</Transaction>
-              <Total>{expenseSum}</Total>
+              <Total>{incomeSum}</Total>
             </tr>
           </tbody>
         </StyledTable>

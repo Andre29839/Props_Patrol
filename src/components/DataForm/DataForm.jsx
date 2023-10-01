@@ -51,20 +51,25 @@ const DatePicker = () => {
     return { value: year, label: year.toString() };
   });
 
+  const currentDate = new Date();
+  const currentMonth = currentDate.getMonth() + 1;
+
+  const currentMonthObject = months.find(month => month.value === currentMonth);
+
   return (
     <SelectBox>
       <Select
         options={months}
         styles={customSelect}
         onChange={handleMonthChange}
-        placeholder="Select month"
+        placeholder={currentMonthObject.label}
         isSearchable={false}
       />
       <Select
         options={years}
         styles={customSelect}
         onChange={handleSelectYear}
-        placeholder="Select year"
+        placeholder={currentYear}
         isSearchable={false}
       />
     </SelectBox>
