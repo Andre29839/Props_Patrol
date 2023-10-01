@@ -93,7 +93,7 @@ export const WrapLogo = styled.div`
     line-height: normal;
   }
 
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 768px) {
     img {
       width: 35px;
       height: 35px;

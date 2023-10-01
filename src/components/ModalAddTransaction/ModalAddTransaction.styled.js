@@ -152,6 +152,7 @@ export const CalendarWrapper = styled.div`
 
   svg {
     position: absolute;
+    top: -2px;
     right: 14px;
     width: 24px;
     height: 24px;

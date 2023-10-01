@@ -14,19 +14,17 @@ const Statistics = () => {
   const result = useSelector(
     state => state.transactions.summary.categoriesSummary
   );
-  console.log(result);
 
-  const filterres = result
+  const filterExpense = result
     ? result.filter(item => item.type === 'EXPENSE')
     : [];
-  console.log({ filterres });
 
   return (
     <>
       <StatisticsWrapper>
         <TitleChart>
           <TitleStatistics>Statistics</TitleStatistics>
-          <Chart data={filterres} />
+          <Chart data={filterExpense} />
         </TitleChart>
         <WrapTable>
           <DatePicker />

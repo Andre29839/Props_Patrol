@@ -114,11 +114,18 @@ const ModalAddTransaction = ({ closeModal }) => {
                 placeholder="Select a category"
                 value={values.category}
                 onChange={option => setFieldValue('category', option)}
-                options={categories?.map(option => ({
-                  value: option.type,
-                  label: option.name,
-                  id: option.id,
-                }))}
+                options={categories
+                  ?.map(option => {
+                    if (option.name !== 'Income') {
+                      return {
+                        value: option.type,
+                        label: option.name,
+                        id: option.id,
+                      };
+                    }
+                    return null;
+                  })
+                  .filter(Boolean)}
               />
               <ErrorText name="category" component="div" />
             </InputWrapper>

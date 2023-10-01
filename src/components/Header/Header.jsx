@@ -20,7 +20,7 @@ import { selectIsModalLogOut } from 'redux/globalReducers/globalSelectors';
 const Header = () => {
   const userData = useSelector(selectAuthData);
   const isModalShow = useSelector(selectIsModalLogOut);
-  const isMobilesize = useMediaQuery({ query: '(max-width:767px)' });
+  const isMobilesize = useMediaQuery({ query: '(max-width:767.9px)' });
   const dispatch = useDispatch();
 
   const handleLogout = () => {

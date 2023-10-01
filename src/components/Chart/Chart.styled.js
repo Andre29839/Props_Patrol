@@ -29,6 +29,11 @@ export const ChartWrapper = styled.div`
 `;
 
 export const ImgMoney = styled.img`
+  width: 200px;
+
+  @media only screen and (min-width: 768px) {
+    width: 250px;
+  }
   @media only screen and (min-width: 1280px) {
     width: 288px;
   }

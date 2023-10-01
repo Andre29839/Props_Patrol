@@ -9,47 +9,57 @@ export const TransactionColor = styled.span`
 `;
 
 export const Section = styled.div`
-  padding-top: 20px;
-  padding-bottom: 45px;
-  padding-left: 10px;
-  width: 300px;
-  padding-right: 10px;
+  margin-top: 20px;
+`;
 
-  @media screen and (max-width: 767px) {
-    padding-left: 0px;
-    margin-bottom: 45px;
+export const StyledWrap = styled.div`
+  max-height: 390px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
   }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
-    padding-left: 0px;
-    padding-bottom: 12px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    padding-left: 0px;
-    padding-bottom: 45px;
-  }
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
 `;
 
 export const StyledTable = styled.table`
   margin: 0;
   border-radius: 8px;
   border-collapse: collapse;
-  color: var(--total-white);
+  color: var(--white);
+  width: 281px;
 
   th,
   td {
     height: 55.1px;
   }
 
-  @media screen and (max-width: 767px) {
-    max-width: 440px;
-    width: 100%;
+  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
+    width: 319px;
   }
-  @media screen and (min-width: 768px) {
-    width: 311px;
-  }
+
   @media screen and (min-width: 1280px) {
-    width: 395px;
+    width: 399px;
+
+    th,
+    td {
+      height: 55.2px;
+    }
+  }
+`;
+
+export const WrapSummary = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const WrapIncome = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 4px;
   }
 `;
 
@@ -59,8 +69,9 @@ export const Thead = styled.thead`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  tr th {
-    background-color: rgba(82, 59, 126, 0.6);
+
+  tr {
+    background-color: var(--background-table);
     backdrop-filter: blur(50px);
   }
 `;
@@ -98,9 +109,7 @@ export const TdCategory = styled(Td)`
 `;
 
 export const TdColor = styled(Td)`
-  background-color: ${({ categoryColor }) => categoryColor};
   border-radius: 2px;
-
   margin-right: 16px;
 `;
 
@@ -108,34 +117,35 @@ export const TdSum = styled(Td)`
   text-align: right;
 `;
 
-export const TotalExpense = styled.td`
+export const TotalExpense = styled.div`
   text-align: right;
   padding: 16px 16px 0 0;
 
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 128.56%;
+  line-height: 1.5;
   color: var(--dashboard-text);
 `;
 
-export const Total = styled.td`
+export const Total = styled.div`
   text-align: right;
   padding: 16px 16px 0 0;
 
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 128.56%;
+  line-height: 1.5;
   color: var(--yellow);
 `;
 
-export const Transaction = styled.td`
+export const Transaction = styled.div`
   text-align: left;
   padding: 16px 0 0 16px;
 
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 128.56%;
+  line-height: 1.5;
+  color: var(--white);
 `;

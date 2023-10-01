@@ -4,24 +4,18 @@ import styled from 'styled-components';
 export const HeaderStyled = styled.header`
   background: var(--header-color);
   box-shadow: var(--header-shadow);
+  margin: 0 auto;
+  padding: 12px 20px;
+
+  @media only screen and (min-width: 768px) {
+    padding: 16px 32px;
+  }
 `;
 
 export const WrapHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 12px 20px;
-
-  @media only screen and (min-width: 768px) {
-    max-width: 768px;
-    padding: 16px 32px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    max-width: 1280px;
-  }
 `;
 
 export const WrapLogo = styled.div`
