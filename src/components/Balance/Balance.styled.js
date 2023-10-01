@@ -15,11 +15,14 @@ export const StyledBalanceBox = styled.div`
   background: rgba(82, 59, 126, 0.6);
 
   box-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  @media screen and (min-width: 1280px) {
+    border-radius: 0px;
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 480px;
     padding-left: 40px;
-    border-radius: 8px;
   }
 
   @media screen and (min-width: 320px) and (max-width: 767.9px) {

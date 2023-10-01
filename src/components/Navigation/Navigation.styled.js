@@ -14,8 +14,8 @@ export const StyledNavList = styled.ul`
   list-style: none;
   padding: 0;
   padding-left: 19px;
-  padding-top: 42px;
-  padding-bottom: 28px;
+  padding-top: 52px;
+  padding-bottom: 52px;
 `;
 
 export const StyledNavLink = styled(NavLink)`

@@ -18,6 +18,7 @@ const DateTimePicker = ({ name }) => {
             setFieldValue(field.name, values, format(values, 'dd-MM-yyyy'));
           }
         }}
+        dateFormat="dd.MM.yyyy"
       />
       <IconStyled />
     </StyledDateTime>

@@ -32,7 +32,7 @@ export const BtnRightCorner = styled.div`
 `;
 
 export const BoxTableList = styled.div`
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: 768px) and (max-width: 1279.9px) {
     width: 704px;
     display: block;
   }
