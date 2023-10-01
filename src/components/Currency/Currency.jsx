@@ -2,7 +2,10 @@ import { nanoid } from 'nanoid';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
-import { currencySelector } from 'redux/currencyRedusers/currencySelectors';
+import {
+  currencySelector,
+  isLoadingSelector,
+} from 'redux/currencyRedusers/currencySelectors';
 import { currencyThunk } from 'redux/currencyRedusers/currencyThunk';
 import {
   Eur,
@@ -22,6 +25,7 @@ const Currency = () => {
   const [currency, setCurrency] = useState([]);
   const dispatch = useDispatch();
   const selectedCurrency = useSelector(currencySelector);
+  const isLoading = useSelector(isLoadingSelector);
   const token = useSelector(state => state.auth.token);
 
   const currencyChart = useSelector(currencySelector);
@@ -51,101 +55,117 @@ const Currency = () => {
     }
   }, [dispatch, selectedCurrency, token]);
 
-  const isMobile = useMediaQuery({ maxWidth: 767.9 });
-  const isTabletAndMobile = useMediaQuery({ minWidth: 768, maxWidth: 1279.9 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTabletAndMobile = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
 
   return (
     <WrapperCurrency>
       {isDesktop && (
-        <StyledBox>
-          <StyledBox>
-            <StyledTable>
-              <StyledThBox>
-                <StyledTh>Currency</StyledTh>
-                <StyledTh>Purchase</StyledTh>
-                <StyledTh>Sale</StyledTh>
-              </StyledThBox>
-              <StyledTBody>
-                {currency?.length &&
-                  currency.map(el => {
-                    return (
-                      <StyledTdBox key={nanoid()}>
-                        <StyledTd>{el.currencyName}</StyledTd>
-                        <StyledTd>{el.rateBuy}</StyledTd>
-                        <StyledTd>
-                          {el.rateSell.toString().slice(0, -2)}
-                        </StyledTd>
-                      </StyledTdBox>
-                    );
-                  })}
-                <Usd>{usdPurch}</Usd>
-                <Eur>{eurPurch}</Eur>
-              </StyledTBody>
-            </StyledTable>
-            <img
-              src={require('../../images/chart/chart-web.png')}
-              alt="chart"
-            />
-          </StyledBox>
+        <StyledBox ai="center" jc="center">
+          {isLoading ? (
+            <></>
+          ) : (
+            <StyledBox>
+              <StyledTable>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
+                <StyledTBody>
+                  {currency?.length &&
+                    currency.map(el => {
+                      return (
+                        <StyledTdBox key={nanoid()}>
+                          <StyledTd>{el.currencyName}</StyledTd>
+                          <StyledTd>{el.rateBuy}</StyledTd>
+                          <StyledTd>
+                            {el.rateSell.toString().slice(0, -2)}
+                          </StyledTd>
+                        </StyledTdBox>
+                      );
+                    })}
+                  <Usd>{usdPurch}</Usd>
+                  <Eur>{eurPurch}</Eur>
+                </StyledTBody>
+              </StyledTable>
+              <img
+                src={require('../../images/chart/chart-web.png')}
+                alt="chart"
+              />
+            </StyledBox>
+          )}
         </StyledBox>
       )}
       {isTabletAndMobile && (
         <StyledBox>
-          <>
-            <StyledTable>
-              <StyledThBox>
-                <StyledTh>Currency</StyledTh>
-                <StyledTh>Purchase</StyledTh>
-                <StyledTh>Sale</StyledTh>
-              </StyledThBox>
-              <StyledTBody>
-                {currency?.length &&
-                  currency.map(el => {
-                    return (
-                      <StyledTdBox key={nanoid()}>
-                        <StyledTd>{el.currencyName}</StyledTd>
-                        <StyledTd>{el.rateBuy}</StyledTd>
-                        <StyledTd>
-                          {el.rateSell.toString().slice(0, -2)}
-                        </StyledTd>
-                      </StyledTdBox>
-                    );
-                  })}
-              </StyledTBody>
-            </StyledTable>
-            <StyledImg
-              src={require('../../images/chart/chart-tablet.png')}
-              alt="chart"
-            />
-          </>
+          {isLoading ? (
+            <></>
+          ) : (
+            <>
+              <StyledTable>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
+                <StyledTBody>
+                  {currency?.length &&
+                    currency.map(el => {
+                      return (
+                        <StyledTdBox key={nanoid()}>
+                          <StyledTd>{el.currencyName}</StyledTd>
+                          <StyledTd>{el.rateBuy}</StyledTd>
+                          <StyledTd>
+                            {el.rateSell.toString().slice(0, -2)}
+                          </StyledTd>
+                        </StyledTdBox>
+                      );
+                    })}
+                </StyledTBody>
+              </StyledTable>
+              <StyledImg
+                src={require('../../images/chart/chart-tablet.png')}
+                alt="chart"
+              />
+            </>
+          )}
         </StyledBox>
       )}
       {isMobile && (
         <StyledBox>
-          <StyledTable>
-            <StyledThBox>
-              <StyledTh>Currency</StyledTh>
-              <StyledTh>Purchase</StyledTh>
-              <StyledTh>Sale</StyledTh>
-            </StyledThBox>
-            <StyledTBody>
-              {currency?.length &&
-                currency.map(el => {
-                  return (
-                    <StyledTdBox key={nanoid()}>
-                      <StyledTd>{el.currencyName}</StyledTd>
-                      <StyledTd>{el.rateBuy}</StyledTd>
-                      <StyledTd>{el.rateSell.toString().slice(0, -2)}</StyledTd>
-                    </StyledTdBox>
-                  );
-                })}
-            </StyledTBody>
-          </StyledTable>
-          <StyledImg
-            src={require('../../images/chart/chart-tablet.png')}
-            alt="chart"
-          />
+          {isLoading ? (
+            <></>
+          ) : (
+            <>
+              <StyledTable>
+                <StyledThBox>
+                  <StyledTh>Currency</StyledTh>
+                  <StyledTh>Purchase</StyledTh>
+                  <StyledTh>Sale</StyledTh>
+                </StyledThBox>
+                <StyledTBody>
+                  {currency?.length &&
+                    currency.map(el => {
+                      return (
+                        <StyledTdBox key={nanoid()}>
+                          <StyledTd>{el.currencyName}</StyledTd>
+                          <StyledTd>{el.rateBuy}</StyledTd>
+                          <StyledTd>
+                            {el.rateSell.toString().slice(0, -2)}
+                          </StyledTd>
+                        </StyledTdBox>
+                      );
+                    })}
+                </StyledTBody>
+              </StyledTable>
+              <StyledImg
+                src={require('../../images/chart/chart-tablet.png')}
+                alt="chart"
+              />
+            </>
+          )}
         </StyledBox>
       )}
     </WrapperCurrency>

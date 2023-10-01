@@ -6,8 +6,8 @@ import { StyledNavAndBalanceBox, StyledSideBox } from './SideBar.styled';
 import { useLocation } from 'react-router-dom';
 
 const SideBar = () => {
-  const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767.9 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279.9 });
+  const isMobile = useMediaQuery({ minWidth: 240, maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279.7 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   const location = useLocation();
   const homeBalance = location.pathname;
