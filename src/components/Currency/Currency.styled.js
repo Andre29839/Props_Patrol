@@ -37,7 +37,7 @@ export const StyledThBox = styled.div`
 
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 37px;
   align-items: center;
 
   @media only screen and (min-width: 1280px) {
@@ -115,7 +115,7 @@ export const Eur = styled.span`
   @media only screen and (min-width: 1280px) {
     color: #ff868d;
     position: absolute;
-    top: 90px;
+    top: 86px;
     right: 92px;
   }
 `;

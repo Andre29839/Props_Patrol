@@ -9,7 +9,12 @@ const EditTransactionModal = ({ item }) => {
     useToggleModal();
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+      }}
+    >
       <EditBtn
         onClick={() => {
           openModal();
