@@ -6,6 +6,7 @@ export const HeaderStyled = styled.header`
   box-shadow: var(--header-shadow);
   margin: 0 auto;
   padding: 12px 20px;
+  width: 100%;
 
   @media only screen and (min-width: 768px) {
     padding: 16px 32px;
