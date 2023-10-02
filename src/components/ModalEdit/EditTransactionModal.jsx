@@ -4,7 +4,7 @@ import ModalForm from 'components/ModalForm/ModalForm';
 import ModalEdit from './ModalEdit';
 import { EditBtn } from 'components/ModalAddTransaction/ModalAddTransactionButton/ModalAddTransactionButton.styled';
 import { EditWrapper } from 'components/Table/MobileList.styled';
-import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const EditTransactionModal = ({ item }) => {
   const { isOpen, openModal, closeModal, handleKeyDown, handleBackdropClick } =
