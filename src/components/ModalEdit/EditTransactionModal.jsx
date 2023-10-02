@@ -3,10 +3,14 @@ import useToggleModal from 'Hooks/useToggleModal';
 import ModalForm from 'components/ModalForm/ModalForm';
 import ModalEdit from './ModalEdit';
 import { EditBtn } from 'components/ModalAddTransaction/ModalAddTransactionButton/ModalAddTransactionButton.styled';
+import { EditWrapper } from 'components/Table/MobileList.styled';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
 
 const EditTransactionModal = ({ item }) => {
   const { isOpen, openModal, closeModal, handleKeyDown, handleBackdropClick } =
     useToggleModal();
+
+  const isMobile = useMediaQuery({ maxWidth: 767.9 });
 
   return (
     <div
@@ -20,7 +24,10 @@ const EditTransactionModal = ({ item }) => {
           openModal();
         }}
       >
-        <BiPencil />
+        <EditWrapper>
+          <BiPencil />
+          {isMobile && 'Edit'}
+        </EditWrapper>
       </EditBtn>
 
       {isOpen && (

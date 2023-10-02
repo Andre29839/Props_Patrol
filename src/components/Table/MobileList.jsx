@@ -112,7 +112,6 @@ const MobileTransactionList = () => {
                       <TdEdit>
                         <EditWrapper>
                           <EditTransactionModal item={item} />
-                          Edit
                         </EditWrapper>
                       </TdEdit>
                     </Tr>

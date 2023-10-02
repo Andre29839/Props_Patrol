@@ -6,4 +6,5 @@ export const StyledBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 `;

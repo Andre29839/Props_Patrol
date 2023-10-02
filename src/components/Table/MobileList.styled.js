@@ -117,6 +117,7 @@ export const EditWrapper = styled.div`
   justify-content: center;
   padding-top: 4px;
   gap: 4px;
+  align-items: center;
 `;
 
 export const CommonBtnStyles = styled.button`
