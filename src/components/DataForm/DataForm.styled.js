@@ -44,7 +44,6 @@ export const customSelect = {
     ...provided,
     color: 'var(--white)',
     fontSize: '16px',
-    marginLeft: '20px',
   }),
   control: provided => ({
     ...provided,
