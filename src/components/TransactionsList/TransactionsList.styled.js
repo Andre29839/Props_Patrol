@@ -86,7 +86,8 @@ export const NoTransactionsText = styled.td`
   @media screen and (max-width: 768.9px) {
     font-size: 18px;
     line-height: normal;
-    padding: 40px 14px;
+    color: var(--total-white);
+    padding: 30px 14px;
   }
 `;
 
