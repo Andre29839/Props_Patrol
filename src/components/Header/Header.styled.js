@@ -5,18 +5,32 @@ export const HeaderStyled = styled.header`
   background: var(--header-color);
   box-shadow: var(--header-shadow);
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 12px 0;
   width: 100%;
 
   @media only screen and (min-width: 768px) {
-    padding: 16px 32px;
+    padding: 16px 0px;
   }
 `;
 
 export const WrapHeader = styled.div`
   display: flex;
-  justify-content: space-between;
+
+  gap: 110px;
   align-items: center;
+  width: 280px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    width: 688px;
+    gap: 408px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    width: 1200px;
+    /* gap: 430px; */
+    justify-content: space-between;
+  }
 `;
 
 export const WrapLogo = styled.div`
@@ -38,7 +52,8 @@ export const WrapLogo = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    width: 115px;
+    padding-left: 0px;
+    width: 150px;
     height: 48px;
     text-align: center;
 

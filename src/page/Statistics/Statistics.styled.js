@@ -22,8 +22,8 @@ export const StatisticsWrapper = styled.div`
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -37,7 +37,6 @@ export const StatisticsWrapper = styled.div`
 
   @media only screen and (min-width: 1280px) {
     justify-content: flex-start;
-    padding-right: 28px;
   }
 `;
 
