@@ -62,6 +62,13 @@ export const FieldStyled = styled(Field)`
   @media (min-width: 768px) {
     width: 409px;
   }
+  &::-webkit-autofill,
+  &::-webkit-contacts-auto-fill-button,
+  &::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+  }
 `;
 
 export const WrapperButton = styled.div`

@@ -44,9 +44,7 @@ export const LoginForm = () => {
         );
       })
       .catch(error => {
-        toast.error(
-          `${error}! Check your password or email! Password or email is incorrect!`
-        );
+        toast.error(`${error}! Check your password or email!`);
       });
   };
 
