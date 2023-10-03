@@ -56,10 +56,8 @@ export const RegisterForm = () => {
         );
       })
       .catch(error => {
-        console.log('error', error);
         toast.error(`${error}`);
       });
-    // resetForm();
   };
 
   return (
