@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/Props_Patrol/static/css/main.3004138b.css",
-    "main.js": "/Props_Patrol/static/js/main.24ddecde.js",
-    "static/js/97.e61fd4c3.chunk.js": "/Props_Patrol/static/js/97.e61fd4c3.chunk.js",
-    "static/js/73.5632da8e.chunk.js": "/Props_Patrol/static/js/73.5632da8e.chunk.js",
+    "main.js": "/Props_Patrol/static/js/main.5e7edfa7.js",
+    "static/js/97.7bc8d028.chunk.js": "/Props_Patrol/static/js/97.7bc8d028.chunk.js",
+    "static/js/73.6e45c4c8.chunk.js": "/Props_Patrol/static/js/73.6e45c4c8.chunk.js",
     "static/js/9.69fdaabf.chunk.js": "/Props_Patrol/static/js/9.69fdaabf.chunk.js",
     "static/js/598.53b92324.chunk.js": "/Props_Patrol/static/js/598.53b92324.chunk.js",
     "static/js/590.4eda0b1e.chunk.js": "/Props_Patrol/static/js/590.4eda0b1e.chunk.js",
@@ -11,6 +11,7 @@
     "static/js/355.a575088c.chunk.js": "/Props_Patrol/static/js/355.a575088c.chunk.js",
     "static/js/569.1385ae5d.chunk.js": "/Props_Patrol/static/js/569.1385ae5d.chunk.js",
     "static/js/385.0a3588dd.chunk.js": "/Props_Patrol/static/js/385.0a3588dd.chunk.js",
+    "static/js/963.df6dffb9.chunk.js": "/Props_Patrol/static/js/963.df6dffb9.chunk.js",
     "static/media/Gradient.png": "/Props_Patrol/static/media/Gradient.519113a645fa909dcaa5.png",
     "static/media/bg-register-desktop@2x.jpg": "/Props_Patrol/static/media/bg-register-desktop@2x.7208adbe318b1dd9d0be.jpg",
     "static/media/bg-register-tablet@2x.jpg": "/Props_Patrol/static/media/bg-register-tablet@2x.010019b9d54926c0c140.jpg",
@@ -27,19 +28,20 @@
     "index.html": "/Props_Patrol/index.html",
     "static/media/logo.svg": "/Props_Patrol/static/media/logo.143a8f6f5dcf526cdac1808c9d0577d6.svg",
     "main.3004138b.css.map": "/Props_Patrol/static/css/main.3004138b.css.map",
-    "main.24ddecde.js.map": "/Props_Patrol/static/js/main.24ddecde.js.map",
-    "97.e61fd4c3.chunk.js.map": "/Props_Patrol/static/js/97.e61fd4c3.chunk.js.map",
-    "73.5632da8e.chunk.js.map": "/Props_Patrol/static/js/73.5632da8e.chunk.js.map",
+    "main.5e7edfa7.js.map": "/Props_Patrol/static/js/main.5e7edfa7.js.map",
+    "97.7bc8d028.chunk.js.map": "/Props_Patrol/static/js/97.7bc8d028.chunk.js.map",
+    "73.6e45c4c8.chunk.js.map": "/Props_Patrol/static/js/73.6e45c4c8.chunk.js.map",
     "9.69fdaabf.chunk.js.map": "/Props_Patrol/static/js/9.69fdaabf.chunk.js.map",
     "598.53b92324.chunk.js.map": "/Props_Patrol/static/js/598.53b92324.chunk.js.map",
     "590.4eda0b1e.chunk.js.map": "/Props_Patrol/static/js/590.4eda0b1e.chunk.js.map",
     "923.224505e4.chunk.js.map": "/Props_Patrol/static/js/923.224505e4.chunk.js.map",
     "355.a575088c.chunk.js.map": "/Props_Patrol/static/js/355.a575088c.chunk.js.map",
     "569.1385ae5d.chunk.js.map": "/Props_Patrol/static/js/569.1385ae5d.chunk.js.map",
-    "385.0a3588dd.chunk.js.map": "/Props_Patrol/static/js/385.0a3588dd.chunk.js.map"
+    "385.0a3588dd.chunk.js.map": "/Props_Patrol/static/js/385.0a3588dd.chunk.js.map",
+    "963.df6dffb9.chunk.js.map": "/Props_Patrol/static/js/963.df6dffb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3004138b.css",
-    "static/js/main.24ddecde.js"
+    "static/js/main.5e7edfa7.js"
   ]
 }
