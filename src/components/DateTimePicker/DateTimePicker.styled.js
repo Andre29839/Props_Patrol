@@ -3,6 +3,7 @@ import { CiCalendarDate } from 'react-icons/ci';
 
 export const IconStyled = styled(CiCalendarDate)`
   position: absolute;
+  cursor: pointer;
 `;
 
 export const StyledDateTime = styled.div`
