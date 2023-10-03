@@ -56,11 +56,10 @@ export const RegisterForm = () => {
         );
       })
       .catch(error => {
-        toast.error(
-          `${error.message}! Check your password eng email! It is possible that this data is already being used, or password or email is incorrect !`
-        );
+        console.log('error', error);
+        toast.error(`${error}`);
       });
-    resetForm();
+    // resetForm();
   };
 
   return (

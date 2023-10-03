@@ -10,6 +10,7 @@ export const registerSchema = yup.object().shape({
       return true;
     })
     .required('required field')
+    .min(2, 'Too Short!')
     .max(30, 'the name must contain a maximum of 30 characters'),
   email: yup
     .string()

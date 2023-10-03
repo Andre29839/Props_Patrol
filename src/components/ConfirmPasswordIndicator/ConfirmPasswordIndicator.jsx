@@ -9,7 +9,7 @@ export const ConfirmPasswordIndicator = ({
   const width = passwordsMatch ? '100%' : '50%';
   return (
     confirmPassword && (
-      <IndicatorWrapper passwordsMatch={passwordsMatch} style={{ width }} />
+      <IndicatorWrapper $passwordsMatch={passwordsMatch} style={{ width }} />
     )
   );
 };
