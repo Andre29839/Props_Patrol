@@ -15,7 +15,7 @@ export const registerThunk = createAsyncThunk(
       const data = await registerRequest(formData);
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response.data.message);
     }
   }
 );
@@ -26,7 +26,7 @@ export const logInThunk = createAsyncThunk(
       const data = await logInRequest(formData);
       return data;
     } catch (error) {
-      return rejectWithValue(error.message);
+      return rejectWithValue(error.response.data.message);
     }
   }
 );

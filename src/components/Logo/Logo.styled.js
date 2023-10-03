@@ -24,3 +24,17 @@ export const TitleLogo = styled.h2`
     font-size: 27px;
   }
 `;
+
+export const LogoForm = styled.img`
+  width: 25px;
+  height: 25px;
+  margin-bottom: 3px;
+  transition: transform ${({ theme }) => theme.transitions.regular};
+  outline: none;
+
+  @media screen and (min-width: 768px) {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 5px;
+  }
+`;
