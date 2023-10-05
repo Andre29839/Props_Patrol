@@ -11,7 +11,6 @@ export const WrapperFormReg = styled(WrapperForm)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 
   @media (min-width: 320px) and (max-width: 767.9px) {
     height: 100%;
